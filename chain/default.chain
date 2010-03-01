@@ -2,7 +2,7 @@
 <chain:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chain="http://www.obeo.fr/acceleo/chain">
   <repository>
     <files xsi:type="chain:Model" path="/becontent.html.gen/default/default.becontent"/>
-    <files xsi:type="chain:Folder" path="/becontent.html.gen/chain"/>
+    <files xsi:type="chain:Folder" path="/becontent.html.gen/generatedFiles"/>
     <files xsi:type="chain:Log" path="/becontent.html.gen/chain/default.log.txt"/>
     <files xsi:type="chain:EmfMetamodel" path="http://becontent.metamodel"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/becontent/html/gen/default2.mt"/>
