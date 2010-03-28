@@ -1,8 +1,3 @@
-<%
-metamodel http://becontent.metamodel
-%>
-
-<%script type="becontent.CustomEntity" name="default2" file="<%name%>.html"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--NewPage-->
@@ -10,7 +5,7 @@ metamodel http://becontent.metamodel
 <HEAD>
 <meta name="collection" content="api">
 <TITLE>
-<%name.toUpperCase()%>
+ZODIACO
 </TITLE>
  <STYLE type="text/css">
  	/* Javadoc style sheet */
@@ -47,9 +42,9 @@ metamodel http://becontent.metamodel
 
 <BODY BGCOLOR="white" >
 	<H2>
-	<FONT SIZE="-1"><%current().eClass().name%></FONT>
+	<FONT SIZE="-1">CustomEntity</FONT>
 	<BR>
-	<%name%></H2>
+	zodiaco</H2>
 	<HR>
 	<A NAME="element_summary"><!-- --></A>
 	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -65,14 +60,14 @@ metamodel http://becontent.metamodel
 				<CODE>Variable Name: </CODE>
 			</TD>
 			<TD>
-				<CODE><B><%current().variableName%></B></CODE>
+				<CODE><B>zodiaco</B></CODE>
 			</TD>
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
 				<CODE>Is Owned:</CODE></FONT></TD>
 			<TD>
-				<CODE><B><%current().isOwned()%></B></CODE>
+				<CODE><B>false</B></CODE>
 			</TD>
 		</TR>
 	</TABLE>
@@ -86,16 +81,22 @@ metamodel http://becontent.metamodel
 				</FONT>
 			</TH>
 		</TR>
-		<%for (fields){%>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
 				<CODE>Name: </CODE>
 			</TD>
 			<TD>
-				<CODE><B><a href="#link_<%current().metamodel::name%>"><%current().metamodel::name%></a></B></CODE>
+				<CODE><B><a href="#link_name">name</a></B></CODE>
 			</TD>
 		</TR>
-		<%}%>
+		<TR BGCOLOR="white" CLASS="TableRowColor">
+			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+				<CODE>Name: </CODE>
+			</TD>
+			<TD>
+				<CODE><B><a href="#link_data">data</a></B></CODE>
+			</TD>
+		</TR>
 	</TABLE>
 	<HR />
 	<A NAME="attribute_detail"><!-- --></A>
@@ -106,23 +107,21 @@ metamodel http://becontent.metamodel
 			</TH>
 		</TR>
 	</TABLE>
-	<%for (fields){%>
-	<A NAME="link_<%current().metamodel::name%>"><!-- --></A>
-    <%if (current().eClass().name.equalsIgnoreCase("AttributeVarchar")) {%>
+	<A NAME="link_name"><!-- --></A>
     <DL>
-    <h3><i ><%current().metamodel::name%></i></h3>
-    <h5>Type: <i ><%current().eClass().name%></i></h5>
-    <DD>Length: <i ><%current().metamodel::length%></i></DD>
-    <DD>isTextSearch: <i ><%current().isTextSearch()%></i></DD>
-    <DD>isPresented: <i ><%current().metamodel::isPresented()%></i></DD>
-    <DD>isSearchPresentationHead: <i ><%current().metamodel::isSearchPresentationHead()%></i></DD>
-    <DD>isSearchPresentationBody: <i ><%current().metamodel::isSearchPresentationBody()%></i></DD>
-    <DD>isPresented: <i ><%current().metamodel::isPresented()%></i></DD>
-    <DD>Length: <i ><%current().metamodel::length%></i></DD>
-    <DD>PrimaryKey: <i ><%(current().isPrimaryKey)%></i></DD>
-    <DD>Mandatory: <i ><%(current().isMandatory)%></i></DD>
-    <%}%>
+    <h3><i >name</i></h3>
+    <h5>Type: <i >AttributeVarchar</i></h5>
+    <DD>Length: <i >40</i></DD>
+    <DD>isTextSearch: <i >true</i></DD>
+    <DD>isPresented: <i >true</i></DD>
+    <DD>isSearchPresentationHead: <i >false</i></DD>
+    <DD>isSearchPresentationBody: <i >false</i></DD>
+    <DD>isPresented: <i >true</i></DD>
+    <DD>Length: <i >40</i></DD>
+    <DD>PrimaryKey: <i >false</i></DD>
+    <DD>Mandatory: <i >false</i></DD>
     <HR>
-	<%}%>
+	<A NAME="link_data"><!-- --></A>
+    <HR>
 </BODY>
 </HTML>
