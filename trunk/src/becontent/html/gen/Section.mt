@@ -10,7 +10,7 @@ metamodel http://becontent.metamodel
 <HEAD>
 <meta name="collection" content="api">
 <TITLE>
-<% name.toUpperCase() %>
+<%name.toUpperCase()%>
 </TITLE>
  <STYLE type="text/css">
  	/* Javadoc style sheet */
@@ -47,9 +47,9 @@ metamodel http://becontent.metamodel
 
 <BODY BGCOLOR="white" >
 	<H2>
-	<FONT SIZE="-1"><% current().eClass().name %></FONT>
+	<FONT SIZE="-1"><%current().eClass().name%></FONT>
 	<BR>
-	<% name %></H2>
+	<%name%></H2>
 	<HR>
 	<A NAME="element_summary"><!-- --></A>
 	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -65,68 +65,25 @@ metamodel http://becontent.metamodel
 				<CODE>Name: </CODE>
 			</TD>
 			<TD>
-				<CODE><B><% current().eClass().name %></B></CODE>
+				<CODE><B><%name%></B></CODE>
 			</TD>
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
 				<CODE>Text: </CODE></FONT></TD>
 			<TD>
-				<CODE><B><% text %></B></CODE>
+				<CODE><B><%text%></B></CODE>
 			</TD>
 		</TR>
-	</TABLE>
-	<HR />
-	<A NAME="attribute_summary"><!-- --></A>
-	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-			<TH ALIGN="left" COLSPAN="2">
-				<FONT SIZE="+2">
-				<B>Attribute Summary</B>
-				</FONT>
-			</TH>
-		</TR>
-		<%--
-		<%for (fields){%>
+		<%if helper != null {%>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Name: </CODE>
-			</TD>
+				<CODE>Helper: </CODE></FONT></TD>
 			<TD>
-				<CODE><B><a href="#link_<%current().metamodel::name%>"><%current().metamodel::name%></a></B></CODE>
+				<CODE><B><%helper%></B></CODE>
 			</TD>
-		</TR>
 		<%}%>
-		--%>
-	</TABLE>
-	<HR />
-	<A NAME="attribute_detail"><!-- --></A>
-	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-			<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-				<B>Attribute Detail</B></FONT>
-			</TH>
 		</TR>
 	</TABLE>
-	<%--
-	<%for (fields){%>
-	<A NAME="link_<%current().metamodel::name%>"><!-- --></A>
-    <%if (current().eClass().name.equalsIgnoreCase("AttributeVarchar")) {%>
-    <DL>
-    <h3><i ><%current().metamodel::name%></i></h3>
-    <h5>Type: <i ><%current().eClass().name%></i></h5>
-    <DD>Length: <i ><%current().metamodel::length%></i></DD>
-    <DD>isTextSearch: <i ><%current().isTextSearch()%></i></DD>
-    <DD>isPresented: <i ><%current().metamodel::isPresented()%></i></DD>
-    <DD>isSearchPresentationHead: <i ><%current().metamodel::isSearchPresentationHead()%></i></DD>
-    <DD>isSearchPresentationBody: <i ><%current().metamodel::isSearchPresentationBody()%></i></DD>
-    <DD>isPresented: <i ><%current().metamodel::isPresented()%></i></DD>
-    <DD>Length: <i ><%current().metamodel::length%></i></DD>
-    <DD>PrimaryKey: <i ><%(current().isPrimaryKey)%></i></DD>
-    <DD>Mandatory: <i ><%(current().isMandatory)%></i></DD>
-    <%}%>
-    <HR>
-	<%}%>
-	--%>
 </BODY>
 </HTML>
