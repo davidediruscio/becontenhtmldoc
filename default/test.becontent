@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<becontent:BeContentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:becontent="http://becontent.metamodel">
+  <modelElements xsi:type="becontent:CustomEntity" name="persone" variableName="persone" rssFilter="" >
+    <fields xsi:type="becontent:AttributeVarchar" isTextSearch="true" isSearchPresentationHead="true" name="name" length="50"/>
+    <fields xsi:type="becontent:AttributeVarchar" isPresented="true" name="surname" length="50"/>
+    <fields xsi:type="becontent:AttributeDate" name="birthday"/>
+    <fields xsi:type="becontent:AttributeFile" name="photo"/>
+    <fields xsi:type="becontent:AttributeText" name="resume"/>
+  </modelElements>
+</becontent:BeContentModel>
