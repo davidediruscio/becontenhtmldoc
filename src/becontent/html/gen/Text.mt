@@ -2,7 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.Text" name="Text" file="<%name%>.html"%>
+<%script type="becontent.Text" name="Text" file="<%current().eClass().name%>_<%name%>.html"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--NewPage-->
