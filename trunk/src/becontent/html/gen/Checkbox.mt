@@ -2,7 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.Checkbox" name="Checkbox" file="<%name%>.html"%>
+<%script type="becontent.Checkbox" name="Checkbox" file="<%current().eClass().name%>_<%name%>.html"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--NewPage-->
