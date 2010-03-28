@@ -7,9 +7,11 @@
     <files xsi:type="chain:EmfMetamodel" path="http://becontent.metamodel"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/default2.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Section.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Text.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="default" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="Section" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.5" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Text" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.6" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
