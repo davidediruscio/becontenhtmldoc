@@ -2,14 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.Section" name="Section" post="trim()"%>
-
-	<H2>
-	<FONT SIZE="-1"><%current().eClass().name%></FONT>
-	<BR>
-	<%name%></H2>
-	<HR>
-	<A NAME="element_summary"><!-- --></A>
+<%script type="becontent.Section" name="Generate" post="trim()"%>
 	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 			<TH ALIGN="left" COLSPAN="2">
