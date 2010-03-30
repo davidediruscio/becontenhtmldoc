@@ -2,7 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.CustomEntity" name="default2" file="<%current().eClass().name%>_<%name%>.html"%>
+<%script type="becontent.EntityManagerPage" name="EntityManagerPage" file="<%current().eClass().name%>_<%fileName%>.html"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--NewPage-->
@@ -10,7 +10,7 @@ metamodel http://becontent.metamodel
 <HEAD>
 <meta name="collection" content="api">
 <TITLE>
-<%name.toUpperCase()%>
+<% fileName.toUpperCase() %>
 </TITLE>
  <STYLE type="text/css">
  	/* Javadoc style sheet */
@@ -47,9 +47,9 @@ metamodel http://becontent.metamodel
 
 <BODY BGCOLOR="white" >
 	<H2>
-	<FONT SIZE="-1"><%current().eClass().name%></FONT>
+	<FONT SIZE="-1"><% current().eClass().name %></FONT>
 	<BR>
-	<%name%></H2>
+	<% fileName %></H2>
 	<HR>
 	<A NAME="element_summary"><!-- --></A>
 	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -62,17 +62,17 @@ metamodel http://becontent.metamodel
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Variable Name: </CODE>
+				<CODE>Name: </CODE>
 			</TD>
 			<TD>
-				<CODE><B><%current().variableName%></B></CODE>
+				<CODE><B><% current().eClass().name %></B></CODE>
 			</TD>
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Is Owned:</CODE></FONT></TD>
+				<CODE>Skin: </CODE></FONT></TD>
 			<TD>
-				<CODE><B><%current().isOwned()%></B></CODE>
+				<CODE><B><% skin %></B></CODE>
 			</TD>
 		</TR>
 	</TABLE>
@@ -86,6 +86,14 @@ metamodel http://becontent.metamodel
 				</FONT>
 			</TH>
 		</TR>
+		<%for (eContents().filter("Form")){%>
+			<%for (elements){%>
+				<%if (eClass().name.equalsIgnoreCase("Section")){%>
+					<%current().generateSectionDeclaration()%>
+				<%}%>
+			<%}%>
+		<%}%>
+		<%--
 		<%for (fields){%>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
@@ -96,6 +104,7 @@ metamodel http://becontent.metamodel
 			</TD>
 		</TR>
 		<%}%>
+		--%>
 	</TABLE>
 	<HR />
 	<A NAME="attribute_detail"><!-- --></A>
@@ -106,6 +115,7 @@ metamodel http://becontent.metamodel
 			</TH>
 		</TR>
 	</TABLE>
+	<%--
 	<%for (fields){%>
 	<A NAME="link_<%current().metamodel::name%>"><!-- --></A>
     <%if (current().eClass().name.equalsIgnoreCase("AttributeVarchar")) {%>
@@ -124,5 +134,6 @@ metamodel http://becontent.metamodel
     <%}%>
     <HR>
 	<%}%>
+	--%>
 </BODY>
 </HTML>
