@@ -110,7 +110,7 @@
   </modelElements>
   <modelElements xsi:type="becontent:EntityManagerPage" fileName="persone" skin="">
     <forms mainEntity="//@modelElements.19">
-      <elements xsi:type="becontent:Section" name="" text="Person"/>
+      <elements xsi:type="becontent:Section" name="personSection" text="Person"/>
       <elements xsi:type="becontent:Text" name="name" label="Name" isMandatory="true"/>
       <elements xsi:type="becontent:Text" name="surname" label="Surname"/>
       <elements xsi:type="becontent:Date" name="birthday" label="Birthday" isMandatory="true"/>
