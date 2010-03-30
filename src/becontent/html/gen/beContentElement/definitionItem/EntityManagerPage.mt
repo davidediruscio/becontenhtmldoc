@@ -1,5 +1,7 @@
 <%
 metamodel http://becontent.metamodel
+import becontent.html.gen.Section
+import becontent.html.gen.Text
 %>
 
 <%script type="becontent.EntityManagerPage" name="EntityManagerPage" file="<%current().eClass().name%>_<%fileName%>.html"%>
@@ -42,6 +44,22 @@ metamodel http://becontent.metamodel
 	.NavBarCell2    { font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
 	.NavBarCell3    { font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
  </STYLE>
+	<script type="text/javascript">
+	<!--
+	    function toggle_visibility(id) {
+	       var e = document.getElementById('div_'+ id);
+	       var span = document.getElementById('span_'+ id);
+	       if(e.style.display == 'block'){
+	          e.style.display = 'none';
+	          span.innerHTML = '-->'
+	       } else {
+	          e.style.display = 'block';
+	          span.innerHTML = '<--'
+	       }
+	    }
+	//-->
+	</script>
+ 
 
 </HEAD>
 
@@ -70,70 +88,24 @@ metamodel http://becontent.metamodel
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Skin: </CODE></FONT></TD>
+				<CODE>Skin: </CODE>
 			<TD>
-				<CODE><B><% skin %></B></CODE>
+				<CODE><B><% skin %></B> </CODE>
 			</TD>
-		</TR>
-	</TABLE>
-	<HR />
-	<A NAME="attribute_summary"><!-- --></A>
-	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-			<TH ALIGN="left" COLSPAN="2">
-				<FONT SIZE="+2">
-				<B>Attribute Summary</B>
-				</FONT>
-			</TH>
 		</TR>
 		<%for (eContents().filter("Form")){%>
 			<%for (elements){%>
-				<%if (eClass().name.equalsIgnoreCase("Section")){%>
-					<%current().generateSectionDeclaration()%>
-				<%}%>
+					<TR BGCOLOR="white" CLASS="TableRowColor">
+						<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+							<CODE><%current().eClass().name%>: </CODE>
+						<TD>
+							<CODE><B><%current().name%></B> <a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');"> <span id="span_<%current().eClass().name%>_<%current().name%>">--></span> </a></CODE>
+							<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().Generate()%></div>
+						</TD>
+					</TR>				
+	
 			<%}%>
-		<%}%>
-		<%--
-		<%for (fields){%>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Name: </CODE>
-			</TD>
-			<TD>
-				<CODE><B><a href="#link_<%current().metamodel::name%>"><%current().metamodel::name%></a></B></CODE>
-			</TD>
-		</TR>
-		<%}%>
-		--%>
+		<%}%>	
 	</TABLE>
-	<HR />
-	<A NAME="attribute_detail"><!-- --></A>
-	<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-			<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-				<B>Attribute Detail</B></FONT>
-			</TH>
-		</TR>
-	</TABLE>
-	<%--
-	<%for (fields){%>
-	<A NAME="link_<%current().metamodel::name%>"><!-- --></A>
-    <%if (current().eClass().name.equalsIgnoreCase("AttributeVarchar")) {%>
-    <DL>
-    <h3><i ><%current().metamodel::name%></i></h3>
-    <h5>Type: <i ><%current().eClass().name%></i></h5>
-    <DD>Length: <i ><%current().metamodel::length%></i></DD>
-    <DD>isTextSearch: <i ><%current().isTextSearch()%></i></DD>
-    <DD>isPresented: <i ><%current().metamodel::isPresented()%></i></DD>
-    <DD>isSearchPresentationHead: <i ><%current().metamodel::isSearchPresentationHead()%></i></DD>
-    <DD>isSearchPresentationBody: <i ><%current().metamodel::isSearchPresentationBody()%></i></DD>
-    <DD>isPresented: <i ><%current().metamodel::isPresented()%></i></DD>
-    <DD>Length: <i ><%current().metamodel::length%></i></DD>
-    <DD>PrimaryKey: <i ><%(current().isPrimaryKey)%></i></DD>
-    <DD>Mandatory: <i ><%(current().isMandatory)%></i></DD>
-    <%}%>
-    <HR>
-	<%}%>
-	--%>
 </BODY>
 </HTML>
