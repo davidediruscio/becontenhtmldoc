@@ -44,6 +44,22 @@ import becontent.html.gen.Text
 	.NavBarCell2    { font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
 	.NavBarCell3    { font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
  </STYLE>
+	<script type="text/javascript">
+	<!--
+	    function toggle_visibility(id) {
+	       var e = document.getElementById('div_'+ id);
+	       var span = document.getElementById('span_'+ id);
+	       if(e.style.display == 'block'){
+	          e.style.display = 'none';
+	          span.innerHTML = '-->'
+	       } else {
+	          e.style.display = 'block';
+	          span.innerHTML = '<--'
+	       }
+	    }
+	//-->
+	</script>
+ 
 
 </HEAD>
 
@@ -74,21 +90,19 @@ import becontent.html.gen.Text
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
 				<CODE>Skin: </CODE>
 			<TD>
-				<CODE><B><% skin %></B> >></CODE>
+				<CODE><B><% skin %></B> </CODE>
 			</TD>
 		</TR>
 		<%for (eContents().filter("Form")){%>
 			<%for (elements){%>
-				<%if (eClass().name.equalsIgnoreCase("Section")){%>
 					<TR BGCOLOR="white" CLASS="TableRowColor">
 						<TD ALIGN="right" VALIGN="top" WIDTH="10%">
 							<CODE><%current().eClass().name%>: </CODE>
 						<TD>
-							<CODE><B><%current().name%></B> <a href="#" onClick="window.document.getElementById('divnascosto').style.display='block';" >>></a></CODE>
-							<div id="divnascosto" style="display: none;"><%current().Section()%></div>
+							<CODE><B><%current().name%></B> <a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');"> <span id="span_<%current().eClass().name%>_<%current().name%>">--></span> </a></CODE>
+							<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().Generate()%></div>
 						</TD>
 					</TR>				
-				<%}%>
 	
 			<%}%>
 		<%}%>	
