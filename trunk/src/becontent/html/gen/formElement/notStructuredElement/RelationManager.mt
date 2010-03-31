@@ -13,7 +13,7 @@ metamodel http://becontent.metamodel
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Name: </CODE>
+				<CODE>name: </CODE>
 			</TD>
 			<TD>
 				<CODE><B><%name%></B></CODE>
@@ -21,21 +21,21 @@ metamodel http://becontent.metamodel
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Label: </CODE></FONT></TD>
+				<CODE>label: </CODE></FONT></TD>
 			<TD>
 				<CODE><B><%label%></B></CODE>
 			</TD>
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Orientation: </CODE></FONT></TD>
+				<CODE>orientation: </CODE></FONT></TD>
 			<TD>
 				<CODE><B><%orientation%></B></CODE>
 			</TD>
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Restrict condition: </CODE></FONT></TD>
+				<CODE>restrictCondition: </CODE></FONT></TD>
 			<TD>
 				<CODE><B><%restrictCondition%></B></CODE>
 			</TD>
@@ -43,7 +43,7 @@ metamodel http://becontent.metamodel
 		<%if helper != null {%>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Helper: </CODE></FONT></TD>
+				<CODE>helper: </CODE></FONT></TD>
 			<TD>
 				<CODE><B><%helper%></B></CODE>
 			</TD>
