@@ -45,7 +45,7 @@ metamodel http://becontent.metamodel
 	</TABLE>
 
 
-<%script type="becontent.Date" name="Text" file="<%current().eClass().name%>_<%name%>.html"%>
+<%script type="becontent.Date" name="Date" file="<%current().eClass().name%>_<%name%>.html"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--NewPage-->
 <HTML>

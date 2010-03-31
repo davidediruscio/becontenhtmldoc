@@ -2,7 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.Password" name="Generate" post="trim()"%>
+<%script type="becontent.FileToFolder" name="Generate" post="trim()"%>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 			<TH ALIGN="left" COLSPAN="2">
@@ -28,13 +28,6 @@ metamodel http://becontent.metamodel
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>Size: </CODE></FONT></TD>
-			<TD>
-				<CODE><B><%size%></B></CODE>
-			</TD>
-		</TR>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
 				<CODE>isMandatory: </CODE></FONT></TD>
 			<TD>
 				<CODE><B><%isMandatory%></B></CODE>
@@ -42,9 +35,16 @@ metamodel http://becontent.metamodel
 		</TR>
 		<TR BGCOLOR="white" CLASS="TableRowColor">
 			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>maxLength: </CODE></FONT></TD>
+				<CODE>Extension: </CODE></FONT></TD>
 			<TD>
-				<CODE><B><%maxLength%></B></CODE>
+				<CODE><B><%extension%></B></CODE>
+			</TD>
+		</TR>
+		<TR BGCOLOR="white" CLASS="TableRowColor">
+			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+				<CODE>Extension message: </CODE></FONT></TD>
+			<TD>
+				<CODE><B><%extensionMessage%></B></CODE>
 			</TD>
 		</TR>
 		<%if helper != null {%>
@@ -59,7 +59,7 @@ metamodel http://becontent.metamodel
 	</TABLE>
 
 
-<%script type="becontent.Password" name="Password" file="<%current().eClass().name%>_<%name%>.html"%>
+<%script type="becontent.FileToFolder" name="FileToFolder" file="<%current().eClass().name%>_<%name%>.html"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--NewPage-->
 <HTML>
