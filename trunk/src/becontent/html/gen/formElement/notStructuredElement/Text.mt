@@ -3,60 +3,56 @@ metamodel http://becontent.metamodel
 %>
 
 <%script type="becontent.Text" name="Generate" post="trim()"%>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-			<TH ALIGN="left" COLSPAN="2">
-				<FONT SIZE="+2">
-				<B>Element Summary</B>
-				</FONT>
-			</TH>
-		</TR>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>name: </CODE>
-			</TD>
-			<TD>
+		<DIV class="detailDiv">
+			<SPAN class="detailLabel">
+				<CODE>Name: </CODE>
+			</SPAN>
+			<SPAN class="detailValue">
 				<CODE><B><%name%></B></CODE>
-			</TD>
-		</TR>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
-				<CODE>label: </CODE></FONT></TD>
-			<TD>
+			</SPAN>
+		</DIV>
+		<DIV class="detailDiv">
+			<SPAN class="detailLabel">
+				<CODE>Label: </CODE></FONT></TD>
+			</SPAN>
+			<SPAN class="detailValue">
 				<CODE><B><%label%></B></CODE>
-			</TD>
-		</TR>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+			</SPAN>
+		</DIV>
+		<DIV class="detailDiv">
+			<SPAN class="detailLabel">
 				<CODE>size: </CODE></FONT></TD>
-			<TD>
+			</SPAN>
+			<SPAN class="detailValue">
 				<CODE><B><%size%></B></CODE>
-			</TD>
-		</TR>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+			</SPAN>
+		</DIV>
+		<DIV class="detailDiv">
+			<SPAN class="detailLabel">
 				<CODE>isMandatory: </CODE></FONT></TD>
-			<TD>
+			</SPAN>
+			<SPAN class="detailValue">
 				<CODE><B><%isMandatory%></B></CODE>
-			</TD>
-		</TR>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+			</SPAN>
+		</DIV>
+		<DIV class="detailDiv">
+			<SPAN class="detailLabel">
 				<CODE>maxLength: </CODE></FONT></TD>
-			<TD>
+			</SPAN>
+			<SPAN class="detailValue">
 				<CODE><B><%maxLength%></B></CODE>
-			</TD>
-		</TR>
+			</SPAN>
+		</DIV>
 		<%if helper != null {%>
-		<TR BGCOLOR="white" CLASS="TableRowColor">
-			<TD ALIGN="right" VALIGN="top" WIDTH="10%">
+		<DIV class="detailDiv">
+			<SPAN class="detailLabel">
 				<CODE>helper: </CODE></FONT></TD>
-			<TD>
+			</SPAN>
+			<SPAN class="detailValue">
 				<CODE><B><%helper%></B></CODE>
-			</TD>
+			</SPAN>
+		</DIV>
 		<%}%>
-		</TR>
-	</TABLE>
 
 
 <%script type="becontent.Text" name="Text" file="<%current().eClass().name%>_<%name%>.html"%>
