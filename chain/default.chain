@@ -5,17 +5,11 @@
     <files xsi:type="chain:Folder" path="/becontent.html.gen/generatedFiles"/>
     <files xsi:type="chain:Log" path="/becontent.html.gen/chain/default.log.txt"/>
     <files xsi:type="chain:EmfMetamodel" path="http://becontent.metamodel"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/default2.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Section.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/EntityManagerPage.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Text.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Checkbox.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/definitionItem/EntityManagerPage.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/definitionItem/entity/CustomEntity.mt"/>
   </repository>
   <actions>
-    <actions xsi:type="chain:Generate" documentation="default" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
-    <actions xsi:type="chain:Generate" documentation="Section" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.5" folder="//@repository/@files.1"/>
-    <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.6" folder="//@repository/@files.1"/>
-    <actions xsi:type="chain:Generate" documentation="Text" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.6" folder="//@repository/@files.1"/>
-    <actions xsi:type="chain:Generate" documentation="Checkbox" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.7" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.5" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
