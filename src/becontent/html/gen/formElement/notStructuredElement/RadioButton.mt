@@ -2,7 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.RadioButton" name="Generate" post="trim()"%>
+<%script type="becontent.RadioButton" name="generate" post="trim()"%>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 		<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 			<TH ALIGN="left" COLSPAN="2">
@@ -94,6 +94,6 @@ metamodel http://becontent.metamodel
 	<%name%></H2>
 	<HR>
 	<A NAME="element_summary"><!-- --></A>
-	<%Generate()%>
+	<%generate()%>
 </BODY>
 </HTML>
