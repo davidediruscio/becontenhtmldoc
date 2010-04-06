@@ -105,7 +105,7 @@ metamodel http://becontent.metamodel
 					<CODE><%current().eClass().name%>: </CODE>
 				<TD>
 					<CODE><B><%current().name%></B> <a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');"> <span id="span_<%current().eClass().name%>_<%current().name%>">--></span> </a></CODE>
-					<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().Generate()%></div>
+					<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().generate()%></div>
 				</TD>
 			</TR>				
 		<%}%>	

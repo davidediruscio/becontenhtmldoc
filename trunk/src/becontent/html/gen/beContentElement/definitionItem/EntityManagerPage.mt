@@ -1,5 +1,6 @@
 <%
 metamodel http://becontent.metamodel
+import becontent.html.gen.services.HTMLUtils
 import becontent.html.gen.formElement.notStructuredElement.Checkbox
 import becontent.html.gen.formElement.notStructuredElement.Color
 import becontent.html.gen.formElement.notStructuredElement.Date
@@ -32,33 +33,15 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	<TITLE>
 	<% fileName.toUpperCase() %>
 	</TITLE>
- 	<STYLE type="text/css">
- 		/* beContentModelDoc style sheet */
- 		.detailDiv   { background-color: #FFFFFF; width: 100%; }
-		.detailLabel { float: left; vertical-align: top; width: 20%; }
-		.detailValue { float: right; width: 80%; }
-	</STYLE>
-	<script type="text/javascript">
-	<!--
-	    function toggle_visibility(id) {
-	       var e = document.getElementById('div_'+ id);
-	       var span = document.getElementById('span_'+ id);
-	       if(e.style.display == 'block'){
-	          e.style.display = 'none';
-	          span.innerHTML = '-->'
-	       } else {
-	          e.style.display = 'block';
-	          span.innerHTML = '<--'
-	       }
-	    }
-	//-->
-	</script>
+ 	<% generateCSS() %>
+ 	<% generateJS() %>
 </HEAD>
 <BODY>
 	<H2>
-	<FONT SIZE="-1"><% current().eClass().name %></FONT>
-	<BR>
-	<% fileName %></H2>
+		<FONT SIZE="-1"><% current().eClass().name %></FONT>
+		<BR>
+		<% fileName %>
+	</H2>
 	<HR>
 	<DIV style="width: 100%; padding: 3px; ">
 		<DIV style="float: left; background-color: #CCCCFF; width: 100%;" >
@@ -90,7 +73,7 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 					</SPAN>
 					<SPAN class="detailValue">
 						<CODE><B><%current().name%></B> <a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');"> <span id="span_<%current().eClass().name%>_<%current().name%>">--></span> </a></CODE>
-						<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().Generate()%></div>
+						<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().generate()%></div>
 					</SPAN>
 				</DIV>				
 			<%}%>

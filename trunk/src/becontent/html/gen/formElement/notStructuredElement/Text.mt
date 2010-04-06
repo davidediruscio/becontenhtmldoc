@@ -2,7 +2,7 @@
 metamodel http://becontent.metamodel
 %>
 
-<%script type="becontent.Text" name="Generate" post="trim()"%>
+<%script type="becontent.Text" name="generate" post="trim()"%>
 		<DIV class="detailDiv">
 			<SPAN class="detailLabel">
 				<CODE>Name: </CODE>
@@ -104,6 +104,6 @@ metamodel http://becontent.metamodel
 	<%name%></H2>
 	<HR>
 	<A NAME="element_summary"><!-- --></A>
-	<%Generate()%>
+	<%generate()%>
 </BODY>
 </HTML>
