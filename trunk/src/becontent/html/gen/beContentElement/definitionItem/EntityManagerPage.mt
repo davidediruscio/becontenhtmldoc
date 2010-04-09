@@ -43,41 +43,11 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 			<B>Element Summary</B>
 			</FONT>
 		</DIV>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>Name: </CODE>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><% fileName %></B></CODE>
-			</SPAN>
-		</DIV>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>Skin: </CODE>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><% skin %></B>&nbsp;</CODE>
-			</SPAN>
-		</DIV>
+		<% generateDetailDiv("Name", fileName ) %>
+		<% generateDetailDiv("Skin", skin ) %>
 		<%for (eContents().filter("Form")){%>
 			<%for (elements){%>
-				<DIV class="detailDiv">
-					<SPAN class="detailLabel">
-						<CODE><%current().eClass().name%>: </CODE>
-					</SPAN>
-					<SPAN class="detailValue">
-						<a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');">
-							<CODE><B>
-							<%if ( current().name != null ){%>
-								<%current().name%>
-							<%}else{%>
-								...
-							<%}%>
-							</B></CODE>
-						</a>
-						<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().generate()%></div>
-					</SPAN>
-				</DIV>				
+				<% generateDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 			<%}%>
 		<%}%>	
 	</DIV>
