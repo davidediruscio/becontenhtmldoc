@@ -1,6 +1,6 @@
 <%
 metamodel http://becontent.metamodel
-import becontent.html.gen.services.HTMLUtils
+import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.formElement.notStructuredElement.Checkbox
 import becontent.html.gen.formElement.notStructuredElement.Color
 import becontent.html.gen.formElement.notStructuredElement.Date
@@ -27,16 +27,10 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 
 <%script type="becontent.EntityManagerPage" name="EntityManagerPage" file="<%current().eClass().name%>_<%fileName%>.html"%>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<HTML>
-<HEAD>
-	<TITLE>
-	<% fileName.toUpperCase() %>
-	</TITLE>
- 	<% generateCSS() %>
- 	<% generateJS() %>
-</HEAD>
+<% generateHeader( fileName.toUpperCase() ) %>
 <BODY>
+	<%-- QUESTO BLOCCO H2 POI LO SPOSTIAMO DENTRO AD UN METODO DELL'HTMLGENERATOR
+		 STE --%>
 	<H2>
 		<FONT SIZE="-1"><% current().eClass().name %></FONT>
 		<BR>
@@ -54,7 +48,7 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 				<CODE>Name: </CODE>
 			</SPAN>
 			<SPAN class="detailValue">
-				<CODE><B><% current().eClass().name %></B></CODE>
+				<CODE><B><% fileName %></B></CODE>
 			</SPAN>
 		</DIV>
 		<DIV class="detailDiv">
@@ -72,7 +66,15 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 						<CODE><%current().eClass().name%>: </CODE>
 					</SPAN>
 					<SPAN class="detailValue">
-						<CODE><B><%current().name%></B> <a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');"> <span id="span_<%current().eClass().name%>_<%current().name%>">--></span> </a></CODE>
+						<a href="#" onclick="toggle_visibility('<%current().eClass().name%>_<%current().name%>');">
+							<CODE><B>
+							<%if ( current().name != null ){%>
+								<%current().name%>
+							<%}else{%>
+								...
+							<%}%>
+							</B></CODE>
+						</a>
 						<div id="div_<%current().eClass().name%>_<%current().name%>" style="display: none;"><%current().generate()%></div>
 					</SPAN>
 				</DIV>				
