@@ -3,6 +3,18 @@ metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 %>
 
+<%script type="becontent.EntityManagerPage" name="generate" post="trim()"%>
+	<% generateDetailDiv("Name", name ) %>
+	<% generateDetailDiv("Skin", skin ) %>
+	<%for (eContents().filter("Form")){%>
+		<%for (elements){%>
+			<% generateDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<%}%>
+	<%}%>	
+		
+<%script type="becontent.CustomEntity" name="EntityManagerPage" file="<%current().eClass().name%>_<%name%>.html"%>
+	<% generateHTML( name.toUpperCase(), current().generate() ) %>
+
 <%script type="becontent.CustomEntity" name="CustomEntity" file="<%current().eClass().name%>_<%name%>.html"%>
 
 <% generateHeader( name.toUpperCase() ) %>

@@ -101,7 +101,7 @@ public class HTMLGenerator {
 	 * @throws ENodeCastException 
 	 * @throws ENodeCastException 
 	 */
-	public String generateDetailDiv(ENode node, String label, String value, String innerDiv) throws ENodeCastException {
+	public String generateInnerDetailDiv(ENode node, String label, String value, String innerDiv) throws ENodeCastException {
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append(" <DIV class=\"detailDiv\"> \n")
 				.append(" 	<SPAN class=\"detailLabel\"> \n")
@@ -116,4 +116,59 @@ public class HTMLGenerator {
 				.append(" </DIV> \n");
 		return toReturn.toString();
 	}	
+
+	/**
+	 * Generate the HTML code of the detail div of an element attribute
+	 * 
+	 * @param node
+	 * @param label
+	 * @param value
+	 * @return
+	 * @throws ENodeCastException 
+	 */
+	public String generateReferenceDetailDiv(ENode node, String label, String value) throws ENodeCastException{
+		StringBuffer toReturn = new StringBuffer();
+		toReturn.append(" <DIV class=\"detailDiv\"> \n")
+				.append(" 	<SPAN class=\"detailLabel\"> \n")
+				.append("   	<CODE>" + label + ": </CODE> \n")
+				.append(" 	</SPAN> \n")
+				.append(" 	<SPAN class=\"detailValue\"> \n")
+				.append(" 		<CODE><B><a href=\"").append(node.getEObject().eClass().getName()+"_"+value+".html\">"+value+"</a></B></CODE> \n")
+				.append(" 	</SPAN> \n")
+				.append(" </DIV> \n");
+		return toReturn.toString();
+	}
+	
+	public String generateBody(ENode node, String elementName, String content) throws ENodeCastException{
+		StringBuffer toReturn = new StringBuffer();
+		toReturn.append(" <BODY> \n")
+				.append(" 	<H2> \n")
+				.append(" 		<FONT SIZE=\"-1\">").append(node.getEObject().eClass().getName()).append("</FONT> \n")
+				.append(" 		<BR> \n")
+				.append(" 		").append(elementName).append(" \n")
+				.append(" 	</H2> \n")
+				.append(" 	<HR> \n")
+				.append(" 	<DIV style=\"width: 100%; padding: 3px; \"> \n")
+				.append(" 		<DIV style=\"float: left; background-color: #CCCCFF; width: 100%;\" > \n")
+				.append(" 			<FONT SIZE=\"+2\"> \n")
+				.append(" 			<B>Element Summary</B> \n")
+				.append(" 			</FONT> \n")
+				.append(" 		</DIV> \n")
+				.append(" ").append(content).append(" \n")
+				.append(" 	</DIV> \n")
+				.append(" </BODY> \n")
+				.append(" </HTML> \n");
+		return toReturn.toString();
+	}
+
+	public String generateHTML(ENode node, String elementName, String bodyContent) {
+		StringBuffer toReturn = new StringBuffer();
+		try {
+			toReturn.append(generateHeader(node, elementName)).append(generateBody(node, elementName, bodyContent));
+		} catch (ENodeCastException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		return toReturn.toString();
+	}
 }

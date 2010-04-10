@@ -25,31 +25,14 @@ import becontent.html.gen.formElement.notStructuredElement.Textarea
 import becontent.html.gen.formElement.notStructuredElement.Year
 %>
 
+<%script type="becontent.EntityManagerPage" name="generate" post="trim()"%>
+	<% generateDetailDiv("Name", fileName ) %>
+	<% generateDetailDiv("Skin", skin ) %>
+	<%for (eContents().filter("Form")){%>
+		<%for (elements){%>
+			<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<%}%>
+	<%}%>	
+		
 <%script type="becontent.EntityManagerPage" name="EntityManagerPage" file="<%current().eClass().name%>_<%fileName%>.html"%>
-
-<% generateHeader( fileName.toUpperCase() ) %>
-<BODY>
-	<%-- QUESTO BLOCCO H2 POI LO SPOSTIAMO DENTRO AD UN METODO DELL'HTMLGENERATOR
-		 STE --%>
-	<H2>
-		<FONT SIZE="-1"><% current().eClass().name %></FONT>
-		<BR>
-		<% fileName %>
-	</H2>
-	<HR>
-	<DIV style="width: 100%; padding: 3px; ">
-		<DIV style="float: left; background-color: #CCCCFF; width: 100%;" >
-			<FONT SIZE="+2">
-			<B>Element Summary</B>
-			</FONT>
-		</DIV>
-		<% generateDetailDiv("Name", fileName ) %>
-		<% generateDetailDiv("Skin", skin ) %>
-		<%for (eContents().filter("Form")){%>
-			<%for (elements){%>
-				<% generateDetailDiv(current().eClass().name, current().name, current().generate() ) %>
-			<%}%>
-		<%}%>	
-	</DIV>
-</BODY>
-</HTML>
+	<% generateHTML( fileName.toUpperCase(), current().generate() ) %>
