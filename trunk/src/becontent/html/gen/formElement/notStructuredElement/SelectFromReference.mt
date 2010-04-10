@@ -4,75 +4,17 @@ import becontent.html.gen.services.HTMLGenerator
 %>
 
 <%script type="becontent.SelectFromReference" name="generate" post="trim()"%>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>name: </CODE>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><%name%></B></CODE>
-			</SPAN>
-		</DIV>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>label: </CODE></FONT>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><%label%></B></CODE>
-			</SPAN>
-		</DIV>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>isMandatory: </CODE></FONT>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><%isMandatory%></B></CODE>
-			</SPAN>
-		</DIV>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>restrictCondition: </CODE></FONT>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><%restrictCondition%></B></CODE>
-			</SPAN>
-		</DIV>
-		<%for (referredEntity) {%> 
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>referredEntity: </CODE></FONT>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><a href="<%current().eClass().name%>_<%name%>.html"><%name%></a></B></CODE>
-			</SPAN>
-		</DIV>
-		<%}%>
-		<%if helper != null {%>
-		<DIV class="detailDiv">
-			<SPAN class="detailLabel">
-				<CODE>helper: </CODE></FONT>
-			</SPAN>
-			<SPAN class="detailValue">
-				<CODE><B><%helper%></B></CODE>
-			</SPAN>
-		</DIV>
-		<%}%>
+	<% generateDetailDiv("Name", name ) %>
+	<% generateDetailDiv("Label", label ) %>
+	<% generateDetailDiv("IsMandatory", isMandatory ) %>
+	<% generateDetailDiv("RestrictCondition", restrictCondition ) %>
+	<%for (referredEntity) {%> 
+		<% generateReferenceDetailDiv("ReferredEntity", current().name ) %>
+	<%}%>
+	<%if ( helper != null ) {%>
+		<% generateDetailDiv("Helper", helper ) %>
+	<%}%>
 
 
 <%script type="becontent.SelectFromReference" name="SelectFromReference" file="<%current().eClass().name%>_<%name%>.html"%>
-<% generateHeader( name.toUpperCase() ) %>
-<BODY BGCOLOR="white" >
-	<H2>
-	<FONT SIZE="-1"><%current().eClass().name%></FONT>
-	<BR>
-	<%name%></H2>
-	<HR>
-	<DIV style="width: 100%; padding: 3px; ">
-		<DIV style="float: left; background-color: #CCCCFF; width: 100%;" >
-			<FONT SIZE="+2">
-			<B>Element Summary</B>
-			</FONT>
-		</DIV>	
-		<%generate()%>
-	</DIV>
-</BODY>
-</HTML>
+	<% generateHTML( name.toUpperCase(), current().generate() ) %>
