@@ -1,7 +1,17 @@
 <%
 metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
+import becontent.html.gen.services.names
 %>
+
+<%script type="becontent.Text" name="generateFilename" post="trim()"%>
+	<%for (ancestor().nReverse()) {%>
+		<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+			<%current().getCompleteName().trim()%>/
+		<%}%>
+	<%}%>
+	<%getCompleteName().trim()%>.html
+
 
 <%script type="becontent.Text" name="generate" post="trim()"%>	
 	<% generateDetailDiv("Name", name ) %>
@@ -14,5 +24,5 @@ import becontent.html.gen.services.HTMLGenerator
 	<%}%>
 
 
-<%script type="becontent.Text" name="Text" file="<%current().eClass().name%>_<%name%>.html"%>
+<%script type="becontent.Text" name="Text" file="<%generateFilename()%>"%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
