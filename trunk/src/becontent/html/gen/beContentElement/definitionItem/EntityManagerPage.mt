@@ -1,6 +1,7 @@
 <%
 metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
+import becontent.html.gen.services.names
 import becontent.html.gen.formElement.notStructuredElement.Checkbox
 import becontent.html.gen.formElement.notStructuredElement.Color
 import becontent.html.gen.formElement.notStructuredElement.Date
@@ -25,8 +26,9 @@ import becontent.html.gen.formElement.notStructuredElement.Textarea
 import becontent.html.gen.formElement.notStructuredElement.Year
 %>
 
+
 <%script type="becontent.EntityManagerPage" name="generateFilename" post="trim()"%>
-	<%current().eClass().name%>_<%fileName%>.html
+	<%current().getCompleteName()%>.html
 
 <%script type="becontent.EntityManagerPage" name="generate" post="trim()"%>
 	<% generateDetailDiv("Name", fileName ) %>
