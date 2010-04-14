@@ -25,6 +25,9 @@ import becontent.html.gen.formElement.notStructuredElement.Textarea
 import becontent.html.gen.formElement.notStructuredElement.Year
 %>
 
+<%script type="becontent.EntityManagerPage" name="generateFilename" post="trim()"%>
+	<%current().eClass().name%>_<%fileName%>.html
+
 <%script type="becontent.EntityManagerPage" name="generate" post="trim()"%>
 	<% generateDetailDiv("Name", fileName ) %>
 	<% generateDetailDiv("Skin", skin ) %>
@@ -34,5 +37,5 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 		<%}%>
 	<%}%>	
 		
-<%script type="becontent.EntityManagerPage" name="EntityManagerPage" file="<%current().eClass().name%>_<%fileName%>.html"%>
+<%script type="becontent.EntityManagerPage" name="EntityManagerPage" file="<%current().generateFilename()%>"%>
 	<% generateHTML( fileName.toUpperCase(), current().generate() ) %>
