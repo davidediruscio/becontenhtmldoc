@@ -1,5 +1,6 @@
 <%
 metamodel http://becontent.metamodel
+import becontent.html.gen.services.StringService
 %>
 
 
@@ -7,18 +8,13 @@ metamodel http://becontent.metamodel
 
 
 <%script type="becontent.EntityManagerPage" name="getCompleteName" post="trim()"%>
-	<%current().eClass().name%>_<%fileName%>
+<%Cleaner(current().eClass().name+"_"+fileName)%>
 
 
 <%script type="becontent.Form" name="getCompleteName" post="trim()"%>
-	<%if (name != null) {%>
-		<%current().eClass().name%>_<%name%>
-	<%}else{%>
-		<%current().eClass().name%>_
-	<%}%>
-	
+<%Cleaner(current().eClass().name+"_"+name)%>
 
 
 <%script type="becontent.Text" name="getCompleteName" post="trim()"%>
-	<%current().eClass().name%>_<%current().name%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
 
