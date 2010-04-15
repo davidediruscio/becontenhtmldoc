@@ -5,7 +5,7 @@
          point="fr.obeo.acceleo.gen.module">
       <module
 			category="beContent"
-            chainPath="chain/webapp.chain"
+            chainPath="chain/default.chain"
             description="Generatore beContent to Php"
             title="beContent to Php">
 		<parameter
@@ -16,7 +16,7 @@
                description="Source code output folder"
                dialog="FOLDER_SELECTION"/>
           <parameter
-               defaultFile="default/default_.becontent"
+               defaultFile="default/default.becontent"
                description="Input beContent model"
                dialog="FILE_SELECTION"
                extensions="becontent"/>
