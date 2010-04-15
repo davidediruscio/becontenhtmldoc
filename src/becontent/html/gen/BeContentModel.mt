@@ -21,16 +21,17 @@ import becontent.html.gen.formElement.notStructuredElement.Text
 
 
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
-<html>
-<head>
-<title>Index</title>
-</head>
-<body>
-EntityManagerPage<br />
-<br />
-<%generateEntityManagerPage()%>
-<br />
-Text<br />
-<br />
-<%generateText()%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Index</title>
+	</head>
+	<body>
+		EntityManagerPage	
+		<br /><br />
+		<%generateEntityManagerPage()%> 
+		<br />
+		Text
+		<br /><br />
+		<%generateText()%>
+	</body>
 </html>
