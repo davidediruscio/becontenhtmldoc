@@ -1,0 +1,10 @@
+package becontent.html.gen.services;
+
+import fr.obeo.acceleo.gen.template.eval.ENode;
+import fr.obeo.acceleo.gen.template.eval.ENodeCastException;
+
+public class StringService {
+	public String Cleaner(ENode node, String toClean) {
+		return toClean.replaceAll("\n", "");
+	}
+}
