@@ -9,7 +9,10 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/definitionItem/entity/CustomEntity.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/BeContentModel.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Text.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/Form.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/form/Form.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/form/ExtendedForm.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/CustomPager.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Validation.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
@@ -17,5 +20,8 @@
     <actions xsi:type="chain:Generate" documentation="BeContentModel" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.6" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="Text" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.7" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="Form" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.8" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ExtendedForm" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.9" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="CustomPager" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.10" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Validation" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.11" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>

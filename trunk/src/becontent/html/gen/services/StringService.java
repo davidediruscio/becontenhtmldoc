@@ -23,7 +23,7 @@ public class StringService {
 		return res;
 	}
 	
-	public String getGeneratedFilesPath(ENode node){
+	public static String getGeneratedFilesPath(ENode node){
 		return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+"/generatedFiles/";		
 	}
 }
