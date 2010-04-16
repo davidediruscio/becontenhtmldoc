@@ -655,6 +655,35 @@
     <children xmi:type="notation:Node" xmi:id="_hFL0ICOhEd-6td3VTWUSNg" type="4181"/>
     <children xmi:type="notation:Node" xmi:id="_hFL0ISOhEd-6td3VTWUSNg" type="4182"/>
     <children xmi:type="notation:Node" xmi:id="_hFL0IiOhEd-6td3VTWUSNg" type="5004">
+      <children xmi:type="notation:Node" xmi:id="_ZpTcoEmZEd-qhv-ewpwc4Q" type="2081">
+        <children xmi:type="notation:Node" xmi:id="_ZpUDsEmZEd-qhv-ewpwc4Q" type="4175"/>
+        <children xmi:type="notation:Node" xmi:id="_ZpUDsUmZEd-qhv-ewpwc4Q" type="4176"/>
+        <children xmi:type="notation:Node" xmi:id="_ZpUqwEmZEd-qhv-ewpwc4Q" type="5008">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_ZpUqwUmZEd-qhv-ewpwc4Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_ZpUqwkmZEd-qhv-ewpwc4Q"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_ZpTcoUmZEd-qhv-ewpwc4Q" fontName="Sans"/>
+        <element xmi:type="becontent:Form" href="default.becontent#//@modelElements.23/@forms.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZpTcokmZEd-qhv-ewpwc4Q"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_vQDioEmZEd-qhv-ewpwc4Q" type="2082">
+        <children xmi:type="notation:Node" xmi:id="_vQEJsEmZEd-qhv-ewpwc4Q" type="4177"/>
+        <children xmi:type="notation:Node" xmi:id="_vQEwwEmZEd-qhv-ewpwc4Q" type="4178"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_vQDioUmZEd-qhv-ewpwc4Q"/>
+        <styles xmi:type="notation:FillStyle" xmi:id="_vQDiokmZEd-qhv-ewpwc4Q"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_vQDio0mZEd-qhv-ewpwc4Q"/>
+        <element xmi:type="becontent:CustomPager" href="default.becontent#//@modelElements.23/@customPagers.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vQDipEmZEd-qhv-ewpwc4Q" x="429" y="20" width="107" height="53"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_GW0p4EmaEd-qhv-ewpwc4Q" type="2083">
+        <children xmi:type="notation:Node" xmi:id="_GW14AEmaEd-qhv-ewpwc4Q" type="4179"/>
+        <children xmi:type="notation:Node" xmi:id="_GW2fEEmaEd-qhv-ewpwc4Q" type="4180"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_GW0p4UmaEd-qhv-ewpwc4Q"/>
+        <styles xmi:type="notation:FillStyle" xmi:id="_GW0p4kmaEd-qhv-ewpwc4Q"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_GW0p40maEd-qhv-ewpwc4Q"/>
+        <element xmi:type="becontent:Validation" href="default.becontent#//@modelElements.23/@validations.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GW0p5EmaEd-qhv-ewpwc4Q" x="427" y="73" width="108" height="54"/>
+      </children>
       <styles xmi:type="notation:SortingStyle" xmi:id="_hFL0IyOhEd-6td3VTWUSNg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_hFL0JCOhEd-6td3VTWUSNg"/>
     </children>

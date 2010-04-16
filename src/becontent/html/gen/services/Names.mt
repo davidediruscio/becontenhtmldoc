@@ -60,3 +60,25 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.CustomEntity" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- CustomPager --%>
+<%script type="becontent.CustomPager" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.CustomPager" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current()._id_model)%>
+
+<%-- Validation --%>
+<%script type="becontent.Validation" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Validation" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current()._id_model)%>
+

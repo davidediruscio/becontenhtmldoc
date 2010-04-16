@@ -162,10 +162,12 @@
     <fields xsi:type="becontent:AttributeVarchar" name="name" length="100"/>
   </modelElements>
   <modelElements xsi:type="becontent:EntityManagerPage" fileName="hobby" skin="">
-    <forms name="hobby" mainEntity="//@modelElements.22">
+    <forms name="hobby" method="post" description="Descrizione form" mainEntity="//@modelElements.22" customPager="//@modelElements.23/@customPagers.0" validations="//@modelElements.23/@validations.0">
       <elements xsi:type="becontent:Text" name="name" label="Name" size="50" maxLength="100"/>
       <elements xsi:type="becontent:Editor" name="description" label="Description" rows="10" columns="70"/>
     </forms>
+    <customPagers className="nomeClasse" length="5" template="template" query="query" filter="filtro" order="ordine" _id_model="idModello"/>
+    <validations message="Messaggio" firstElement="//@modelElements.17/@forms.0/@elements.3" secondElement="//@modelElements.20/@forms.0/@elements.1" _id_model="idModello"/>
   </modelElements>
   <modelElements xsi:type="becontent:CustomEntity" name="demo" variableName="demo">
     <fields xsi:type="becontent:AttributeVarchar" isPresented="true" name="attributo1" length="50"/>
