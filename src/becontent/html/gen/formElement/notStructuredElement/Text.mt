@@ -2,17 +2,8 @@
 metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.StringService
-import becontent.html.gen.services.names
+import becontent.html.gen.services.Names
 %>
-
-<%script type="becontent.Text" name="generateFilename" post="trim()"%>
-<%for (ancestor().nReverse()) {%>
-	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
-<%current().getCompleteName().trim()+"/"%>
-	<%}%>
-<%}%>
-<%getCompleteName().trim()+".html"%>
-
 
 <%script type="becontent.Text" name="generate" post="trim()"%>	
 <% generateDetailDiv("Name", name ) %>
