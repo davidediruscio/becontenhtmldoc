@@ -123,14 +123,14 @@ public class HTMLGenerator {
 	 * @return
 	 * @throws ENodeCastException 
 	 */
-	public String generateReferenceDetailDiv(ENode node, String label, String value) throws ENodeCastException{
+	public String generateReferenceDetailDiv(ENode node, String label, String path, String name) throws ENodeCastException{
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append(" <div class=\"detailDiv\"> \n")
 				.append(" 	<span class=\"detailLabel\"> \n")
 				.append("   	<code>" + label + ": </code> \n")
 				.append(" 	</span> \n")
 				.append(" 	<span class=\"detailValue\"> \n")
-				.append(" 		<code><b><a href=\"").append(node.getEObject().eClass().getName()+"_"+value+".html\">"+value+"</a></b></code> \n")
+				.append(" 		<code><b><a href=\""+ path +"\">"+ (!"".equals(name)?name:"...") +"</a></b></code> \n")
 				.append(" 	</span> \n")
 				.append(" </div> \n");
 		return toReturn.toString();
