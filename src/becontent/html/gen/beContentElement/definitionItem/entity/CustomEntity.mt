@@ -10,7 +10,7 @@ import becontent.html.gen.services.HTMLGenerator
 	<% generateDetailDiv("Presentation String", presentationString ) %>
 	<% generateDetailDiv("Rss Filter", rssFilter ) %>
 	<%for (fields){%>
-		
+		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	
 
