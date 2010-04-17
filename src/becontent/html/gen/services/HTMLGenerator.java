@@ -2,7 +2,6 @@ package becontent.html.gen.services;
 
 import fr.obeo.acceleo.gen.template.eval.ENode;
 import fr.obeo.acceleo.gen.template.eval.ENodeCastException;
-import becontent.html.gen.services.*;
 
 public class HTMLGenerator {
 	
