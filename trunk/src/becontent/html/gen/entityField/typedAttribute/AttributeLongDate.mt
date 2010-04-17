@@ -5,9 +5,9 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.AttributeColor" name="generate" post="trim"%>
+<%script type="becontent.AttributeLongDate" name="generate" post="trim"%>
 	<% generateDetailDiv("Name", name ) %>
 	<% generateDetailDiv("Is Mandatory", isMandatory ) %>
 
-<%script type="becontent.AttributeColor" name="AttributeColor" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.AttributeLongDate" name="AttributeLongDate" file="<%Cleaner(current().generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
