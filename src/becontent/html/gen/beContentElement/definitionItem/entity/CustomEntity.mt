@@ -1,6 +1,20 @@
 <%
 metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
+import becontent.html.gen.services.Names
+import becontent.html.gen.services.StringService
+import becontent.html.gen.entityField.reference.Reference
+import becontent.html.gen.entityField.typedAttribute.AttributeColor
+import becontent.html.gen.entityField.typedAttribute.AttributeDate
+import becontent.html.gen.entityField.typedAttribute.AttributeFile
+import becontent.html.gen.entityField.typedAttribute.AttributeFileToFolder
+import becontent.html.gen.entityField.typedAttribute.AttributeImage
+import becontent.html.gen.entityField.typedAttribute.AttributeInteger
+import becontent.html.gen.entityField.typedAttribute.AttributeLongDate
+import becontent.html.gen.entityField.typedAttribute.AttributePassword
+import becontent.html.gen.entityField.typedAttribute.AttributePosition
+import becontent.html.gen.entityField.typedAttribute.AttributeText
+import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
 %>
 
 <%script type="becontent.CustomEntity" name="generate" post="trim()" %>
@@ -14,5 +28,5 @@ import becontent.html.gen.services.HTMLGenerator
 	<%}%>
 	
 
-<%script type="becontent.CustomEntity" name="CustomEntity" file="<%current().eClass().name%>_<%name%>.html"%>
+<%script type="becontent.CustomEntity" name="CustomEntity" file="<%Cleaner(current().generateFilename())%>" %>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
