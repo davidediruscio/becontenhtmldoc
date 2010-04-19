@@ -6,13 +6,13 @@ import becontent.html.gen.services.Names
 %>
 
 <%script type="becontent.Text" name="generate" post="trim()"%>	
-<% generateDetailDiv("Name", name ) %>
-<% generateDetailDiv("Label", label ) %>
-<% generateDetailDiv("Size", size ) %>
-<% generateDetailDiv("IsMandatory", isMandatory ) %>
-<% generateDetailDiv("MaxLength", maxLength ) %>
+<% generateDetailDiv("name", name ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("size", size ) %>
+<% generateDetailDiv("isMandatory", isMandatory ) %>
+<% generateDetailDiv("maxLength", maxLength ) %>
 <%if helper != null {%>
-	<% generateDetailDiv("Helper", helper ) %>
+	<% generateDetailDiv("helper", helper ) %>
 <%}%>
 
 
