@@ -60,6 +60,17 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Color" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- Date --%>
+<%script type="becontent.Date" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Date" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
 <%-- SelectFromReference --%>
 <%script type="becontent.SelectFromReference" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
