@@ -236,6 +236,39 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Section" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- Select --%>
+<%script type="becontent.Select" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Select" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- Textarea --%>
+<%script type="becontent.Textarea" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Textarea" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- Year --%>
+<%script type="becontent.Year" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Year" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
 <%-- CustomEntity --%>
 <%script type="becontent.CustomEntity" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
