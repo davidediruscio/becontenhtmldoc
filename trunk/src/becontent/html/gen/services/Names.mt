@@ -225,6 +225,17 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.CustomEntity" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- Reference --%>
+<%script type="becontent.Reference" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Reference" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
 <%-- AttributeColor --%>
 <%script type="becontent.AttributeColor" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
