@@ -181,6 +181,17 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Position" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- RadioButton --%>
+<%script type="becontent.RadioButton" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.RadioButton" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
 <%-- SelectFromReference --%>
 <%script type="becontent.SelectFromReference" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
