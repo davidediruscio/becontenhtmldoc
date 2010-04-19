@@ -27,7 +27,7 @@ import becontent.html.gen.formElement.notStructuredElement.Text
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
 <%generateHeader("BeContent Model")%>
 	<body>
-		CusotmEntity	
+		CustomEntity	
 		<ul>
 		<%generateCustomEntity()%> 
 		</ul>
