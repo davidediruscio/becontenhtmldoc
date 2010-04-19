@@ -16,5 +16,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Checkbox" name="Checkbox" file="Cleaner(generateFilename())"%>
+<%script type="becontent.Checkbox" name="Checkbox" file="<%Cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
