@@ -12,7 +12,7 @@ import becontent.html.gen.services.Names
 <% generateDetailDiv("value", value ) %>
 <% generateDetailDiv("isChecked", isChecked ) %>
 <%if helper != null {%>
-	<% generateDetailDiv("Helper", helper ) %>
+	<% generateDetailDiv("helper", helper ) %>
 <%}%>
 
 
