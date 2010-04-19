@@ -80,5 +80,6 @@
     <actions xsi:type="chain:Generate" documentation="RadioButton" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.37" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="RadioFromReference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.38" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="RelationManager" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.39" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Reference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.40" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
