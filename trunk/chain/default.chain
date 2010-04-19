@@ -40,6 +40,7 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Position.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/RadioButton.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/RadioFromReference.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/entityField/reference/Reference.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
@@ -77,5 +78,6 @@
     <actions xsi:type="chain:Generate" documentation="Position" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.36" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="RadioButton" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.37" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="RadioFromReference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.38" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="RadioFromReference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.39" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
