@@ -11,5 +11,5 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("Is Primary Key", isPrimaryKey ) %>
 	<% generateDetailDiv("Length", length ) %>
 
-<%script type="becontent.AttributeVarchar" name="AttributeVarchar" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.AttributeVarchar" name="AttributeVarchar" file="<%Cleaner(generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
