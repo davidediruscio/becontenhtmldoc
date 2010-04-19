@@ -16,8 +16,8 @@ public class HTMLGenerator {
 		toReturn.append(" <style type=\"text/css\"> \n")
 				.append(" 	/* beContentModelDoc style sheet */ \n")
 				.append(" 	.detailDiv   { background-color: #FFFFFF; width: 100%; clear: both;  border: 1px solid #cccccc; line-height: 1.2em; } \n")
-				.append(" 	.detailLabel { float: left; vertical-align: top; width: 20%; } \n")
-				.append(" 	.detailValue { float: right; width: 80%; } \n")
+				.append(" 	.detailLabel { float: left; vertical-align: top; width: 25%; } \n")
+				.append(" 	.detailValue { float: right; width: 75%; } \n")
 				.append(" 	.detailValue a { text-decoration: none; } \n")
 				.append(" 	ul { list-style: circle; } \n")
 				.append(" </style> \n");
