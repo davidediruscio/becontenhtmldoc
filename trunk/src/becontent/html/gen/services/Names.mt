@@ -225,6 +225,17 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.RelationManager" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- Section --%>
+<%script type="becontent.Section" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Section" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
 <%-- CustomEntity --%>
 <%script type="becontent.CustomEntity" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
