@@ -214,6 +214,116 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.CustomEntity" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().name)%>
 
+<%-- AttributeColor --%>
+<%script type="becontent.AttributeColor" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeColor" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeDate --%>
+<%script type="becontent.AttributeDate" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeDate" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeFile --%>
+<%script type="becontent.AttributeFile" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeFile" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeFileToFolder --%>
+<%script type="becontent.AttributeFileToFolder" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeFileToFolder" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeImage --%>
+<%script type="becontent.AttributeImage" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeImage" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeInteger --%>
+<%script type="becontent.AttributeInteger" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeInteger" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeLongDate --%>
+<%script type="becontent.AttributeLongDate" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeLongDate" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributePassword --%>
+<%script type="becontent.AttributePassword" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributePassword" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeText --%>
+<%script type="becontent.AttributeText" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeText" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- AttributeVarchar --%>
+<%script type="becontent.AttributeVarchar" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.AttributeVarchar" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
+
 <%-- CustomPager --%>
 <%script type="becontent.CustomPager" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
