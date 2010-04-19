@@ -25,6 +25,7 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Image.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Link.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/LongDate.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Password.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
@@ -47,5 +48,6 @@
     <actions xsi:type="chain:Generate" documentation="Image" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.21" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="Link" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.22" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="LongDate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.23" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Password" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.24" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
