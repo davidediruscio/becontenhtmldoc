@@ -3,7 +3,7 @@ metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
-import becontent.html.gen.entityField.reference.Reference
+import becontent.html.gen.entityField.Reference
 import becontent.html.gen.entityField.typedAttribute.AttributeColor
 import becontent.html.gen.entityField.typedAttribute.AttributeDate
 import becontent.html.gen.entityField.typedAttribute.AttributeFile
