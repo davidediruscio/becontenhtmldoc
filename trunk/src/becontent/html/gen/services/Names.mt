@@ -423,3 +423,13 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Validation" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current()._id_model)%>
 
+<%-- Channel --%>
+<%script type="becontent.Channel" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%>
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Channel" name="getCompleteName" post="trim()"%>
+<%Cleaner(current().eClass().name+"_"+current()._id_model)%>
