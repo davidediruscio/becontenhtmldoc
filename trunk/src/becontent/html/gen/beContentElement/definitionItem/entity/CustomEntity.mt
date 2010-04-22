@@ -30,7 +30,7 @@ import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
 		<% generateReferenceDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (handler){%>
-		<% generateReferenceDetailDiv(current().eClass().name, current().filename, current().generate() ) %>
+		<% generateReferenceDetailDiv(current().eClass().name, current().fileName, current().generate() ) %>
 	<%}%>
 
 <%script type="becontent.CustomEntity" name="CustomEntity" file="<%Cleaner(current().generateFilename())%>" %>
