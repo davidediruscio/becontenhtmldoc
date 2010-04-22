@@ -5,7 +5,7 @@
     <files xsi:type="chain:Folder" path="/becontent.html.gen/generatedFiles"/>
     <files xsi:type="chain:Log" path="/becontent.html.gen/chain/default.log.txt"/>
     <files xsi:type="chain:EmfMetamodel" path="http://becontent.metamodel"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/definitionItem/EntityManagerPage.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/EntityManagerPage.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/definitionItem/entity/CustomEntity.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/BeContentModel.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Text.mt"/>
@@ -41,7 +41,7 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/RadioButton.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/RadioFromReference.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/RelationManager.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/entityField/reference/Reference.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/entityField/Reference.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Section.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Select.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/SelectFromReference.mt"/>
