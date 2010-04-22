@@ -7,7 +7,7 @@ import becontent.html.gen.services.StringService
 
 <%script type="becontent.AttributePassword" name="generate" post="trim"%>
 	<% generateDetailDiv("Name", name ) %>
-	<% generateDetailDiv("Is Mandatory", isMandatory ) %>
+	<% generateDetailDiv("IsMandatory", isMandatory ) %>
 
 <%script type="becontent.AttributePassword" name="AttributePassword" file="<%Cleaner(current().generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
