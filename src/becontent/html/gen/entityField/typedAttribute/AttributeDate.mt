@@ -7,7 +7,7 @@ import becontent.html.gen.services.StringService
 
 <%script type="becontent.AttributeDate" name="generate" post="trim"%>
 	<% generateDetailDiv("Name", name ) %>
-	<% generateDetailDiv("Is Mandatory", isMandatory ) %>
+	<% generateDetailDiv("IsMandatory", isMandatory ) %>
 
 <%script type="becontent.AttributeDate" name="AttributeDate" file="<%Cleaner(generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

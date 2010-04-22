@@ -6,10 +6,10 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.EntityField" name="generate" post="trim()"%>
- <% generateDetailDiv("Is Presented", isPresented ) %>
- <% generateDetailDiv("Is Search Presentation Body", isSearchPresentationBody ) %>
- <% generateDetailDiv("Is Search Presentation Head", isSearchPresentationHead ) %>
- <% generateDetailDiv("Is Text Search", isTextSearch ) %>
+ <% generateDetailDiv("IsPresented", isPresented ) %>
+ <% generateDetailDiv("IsSearchPresentationBody", isSearchPresentationBody ) %>
+ <% generateDetailDiv("IsSearchPresentationHead", isSearchPresentationHead ) %>
+ <% generateDetailDiv("IsTextSearch", isTextSearch ) %>
  
 <%script type="becontent.EntityField" name="EntityField" file="<%Cleaner(current().generateFilename())%>"%>
  <% generateHTML( current.eClass().name, current().generate() ) %>
