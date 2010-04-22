@@ -3,7 +3,6 @@ metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
-import becontent.html.gen.EntityField
 import becontent.html.gen.entityField.Reference
 import becontent.html.gen.entityField.typedAttribute.AttributeColor
 import becontent.html.gen.entityField.typedAttribute.AttributeDate
@@ -16,7 +15,6 @@ import becontent.html.gen.entityField.typedAttribute.AttributePassword
 import becontent.html.gen.entityField.typedAttribute.AttributePosition
 import becontent.html.gen.entityField.typedAttribute.AttributeText
 import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
-import becontent.html.gen.beContentElement.Channel
 %>
 
 <%script type="becontent.CustomEntity" name="generate" post="trim()" %>
@@ -29,6 +27,9 @@ import becontent.html.gen.beContentElement.Channel
 		<% generateReferenceDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (rss){%>
+		<% generateReferenceDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+	<%}%>
+	<%for (handler){%>
 		<% generateReferenceDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 
