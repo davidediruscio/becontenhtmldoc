@@ -15,6 +15,8 @@ import becontent.html.gen.entityField.typedAttribute.AttributePassword
 import becontent.html.gen.entityField.typedAttribute.AttributePosition
 import becontent.html.gen.entityField.typedAttribute.AttributeText
 import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
+import becontent.html.gen.beContentElement.Handler
+import becontent.html.gen.beContentElement.Channel
 %>
 
 <%script type="becontent.CustomEntity" name="generate" post="trim()" %>

@@ -10,6 +10,6 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("MainSkinWithPager", mainSkinWithPager ) %>
 	<% generateDetailDiv("MainSkinPagerLength", mainSkinPagerLength ) %>
 	<% generateDetailDiv("MainSkinPlaceholder", mainSkinPlaceholder ) %>
-	<%for (viewItems) {%> 
-		<% generateReferenceDetailDiv("ViewItems", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
-	<%}%>
+	<%--<%for (viewItems) {%> 
+		<% generateReferenceDetailDiv("ViewItems", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName ) %>
+	<%}%>--%>
