@@ -49,6 +49,11 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Year.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/Channel.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/Handler.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/viewItem/Template.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/viewItem/Skinlet.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/viewItem/Skin.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/viewItem/Content.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/JoinEntity.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
@@ -95,5 +100,10 @@
     <actions xsi:type="chain:Generate" documentation="Year" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.45" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="Channel" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.46" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="Handler" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.47" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Template" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.48" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Skinlet" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.49" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Skin" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.50" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Content" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.51" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="JoinEntity" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.52" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>

@@ -33,7 +33,7 @@ public class HTMLGenerator {
 	public String generateJS(ENode node){
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append(" <script type=\"text/javascript\"> \n")
-				
+				.append(" <!-- \n")
 				.append(" 	function toggle_visibility(id) { \n")
 				.append(" 		var e = document.getElementById('div_'+ id); \n")
 				.append(" 		if (e.style.display == 'block'){ \n")
@@ -42,7 +42,7 @@ public class HTMLGenerator {
 				.append(" 			e.style.display = 'block'; \n")
 				.append(" 		} \n")
 				.append(" 	} \n")
-				
+				.append(" 	//--> \n")
 				.append(" </script> \n");
 		return toReturn.toString();
 	}	
