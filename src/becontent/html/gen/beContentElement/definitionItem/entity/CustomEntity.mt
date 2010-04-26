@@ -26,13 +26,13 @@ import becontent.html.gen.beContentElement.Channel
 	<% generateDetailDiv("PresentationString", presentationString ) %>
 	<% generateDetailDiv("RssFilter", rssFilter ) %>
 	<%for (fields){%>
-		<% generateReferenceDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (rss){%>
-		<% generateReferenceDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (handler){%>
-		<% generateReferenceDetailDiv(current().eClass().name, current().fileName, current().generate() ) %>
+		<% generateInnerDetailDiv(current().eClass().name, current().fileName, current().generate() ) %>
 	<%}%>
 
 <%script type="becontent.CustomEntity" name="CustomEntity" file="<%Cleaner(current().generateFilename())%>" %>
