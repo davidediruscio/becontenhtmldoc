@@ -13,5 +13,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Hidden" name="Hidden" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Hidden" name="Hidden" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

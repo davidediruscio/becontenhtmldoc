@@ -8,7 +8,7 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Skin" name="generate" post="trim"%>
 	<% generateDetailDiv("name", name ) %>
 
-<%script type="becontent.Skin" name="Skin" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.Skin" name="Skin" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
 
 

@@ -16,5 +16,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Link" name="Link" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Link" name="Link" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

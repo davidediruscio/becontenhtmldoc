@@ -17,5 +17,5 @@ import becontent.html.gen.services.Names
 	<% generateDetailDiv("helper", helper ) %>
 <%}%>
 
-<%script type="becontent.RadioFromReference" name="RadioFromReference" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.RadioFromReference" name="RadioFromReference" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

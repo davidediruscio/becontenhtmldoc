@@ -14,6 +14,6 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv( "order", order ) %>
 	<% generateDetailDiv( "_id_model", _id_model ) %>
 
-<%script type="becontent.CustomPager" name="CustomPager" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.CustomPager" name="CustomPager" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML( _id_model.toUpperCase(), current().generate() ) %>
 

@@ -9,5 +9,5 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("path", path ) %>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 
-<%script type="becontent.Template" name="Template" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.Template" name="Template" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML(_id_model.toUpperCase(), current().generate() ) %>

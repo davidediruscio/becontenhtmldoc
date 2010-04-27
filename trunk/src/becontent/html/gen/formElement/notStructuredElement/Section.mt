@@ -13,5 +13,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Section" name="Section" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Section" name="Section" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

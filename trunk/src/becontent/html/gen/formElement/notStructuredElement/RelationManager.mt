@@ -15,5 +15,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.RelationManager" name="RelationManager" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.RelationManager" name="RelationManager" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

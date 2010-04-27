@@ -16,5 +16,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Password" name="Password" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Password" name="Password" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

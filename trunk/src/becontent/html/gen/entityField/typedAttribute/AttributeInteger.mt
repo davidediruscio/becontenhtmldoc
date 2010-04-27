@@ -10,5 +10,5 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("isMandatory", isMandatory ) %>
 	<% generateDetailDiv("isPrimaryKey", isPrimaryKey ) %>
 
-<%script type="becontent.AttributeInteger" name="AttributeInteger" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.AttributeInteger" name="AttributeInteger" file="<%cleaner(current().generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

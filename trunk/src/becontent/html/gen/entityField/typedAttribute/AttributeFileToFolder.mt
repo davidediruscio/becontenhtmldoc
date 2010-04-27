@@ -9,8 +9,8 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("name", name ) %>
 	<% generateDetailDiv("isMandatory", isMandatory ) %>
 	<%for (fileExtensions){%>
-		<% generateReferenceDetailDiv("fileExtensions", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model) %>
+		<% generateReferenceDetailDiv("fileExtensions", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model) %>
 	<%}%>
 
-<%script type="becontent.AttributeFileToFolder" name="AttributeFileToFolder" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.AttributeFileToFolder" name="AttributeFileToFolder" file="<%cleaner(current().generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

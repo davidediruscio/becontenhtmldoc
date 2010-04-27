@@ -9,7 +9,7 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("template", template ) %>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 	
-<%script type="becontent.Skinlet" name="Skinlet" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.Skinlet" name="Skinlet" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML(_id_model.toUpperCase(), current().generate() ) %>
 
 

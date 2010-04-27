@@ -15,5 +15,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Select" name="Select" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Select" name="Select" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
