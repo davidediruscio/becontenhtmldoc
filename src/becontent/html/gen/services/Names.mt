@@ -445,17 +445,6 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Handler" name="getCompleteName" post="trim()"%>
 <%Cleaner(current().eClass().name+"_"+current().fileName)%>
 
-<%-- ViewItem --%>
-<%script type="becontent.ViewItem" name="generateFilename" post="trim()"%>
-<%for (ancestor().nReverse()) {%>
-	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
-		<%current().getCompleteName().trim()+"/"%>
-	<%}%>
-<%}%> 
-<%current().getCompleteName().trim()+".html"%>
-<%script type="becontent.ViewItem" name="getCompleteName" post="trim()"%>
-<%Cleaner(current().eClass().name+"_"+current()._id_model)%>
-
 <%-- Template --%>
 <%script type="becontent.Template" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>

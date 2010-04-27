@@ -7,11 +7,11 @@ import becontent.html.gen.services.StringService
 
 <%script type="becontent.JoinEntity" name="generate" post="trim"%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
-	<%for (joinRule) {%>
-		<% generateReferenceDetailDiv("joinRule", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+	<%for (joinRule) {%>		
+		<% generateReferenceDetailDiv("joinRule", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
 	<%if referredEntity != null {%> 
-		<% generateReferenceDetailDiv("referredEntity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<% generateReferenceDetailDiv("referredEntity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
 
 <%script type="becontent.JoinEntity" name="JoinEntity" file="<%Cleaner(current().generateFilename())%>" %>

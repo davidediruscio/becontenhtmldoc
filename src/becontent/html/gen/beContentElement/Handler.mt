@@ -15,4 +15,4 @@ import becontent.html.gen.services.StringService
 	<%}%>--%>
 	
 <%script type="becontent.Handler" name="Handler" file="<%Cleaner(current().generateFilename())%>" %>
-	<% generateHTML( fileName.toUpperCase(), current().generate() ) %>
+	<% generateHTML(fileName.toUpperCase(), current().generate() ) %>
