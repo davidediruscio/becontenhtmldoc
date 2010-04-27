@@ -6,10 +6,13 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.Handler" name="generate" post="trim"%>
-	<% generateDetailDiv("FileName", fileName ) %>
-	<% generateDetailDiv("MainSkinWithPager", mainSkinWithPager ) %>
-	<% generateDetailDiv("MainSkinPagerLength", mainSkinPagerLength ) %>
-	<% generateDetailDiv("MainSkinPlaceholder", mainSkinPlaceholder ) %>
+	<% generateDetailDiv("fileName", fileName ) %>
+	<% generateDetailDiv("mainSkinWithPager", mainSkinWithPager ) %>
+	<% generateDetailDiv("mainSkinPagerLength", mainSkinPagerLength ) %>
+	<% generateDetailDiv("mainSkinPlaceholder", mainSkinPlaceholder ) %>
 	<%--<%for (viewItems) {%> 
 		<% generateReferenceDetailDiv("ViewItems", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName ) %>
 	<%}%>--%>
+	
+<%script type="becontent.Handler" name="Handler" file="<%Cleaner(current().generateFilename())%>" %>
+	<% generateHTML( fileName.toUpperCase(), current().generate() ) %>

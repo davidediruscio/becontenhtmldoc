@@ -15,24 +15,22 @@ import becontent.html.gen.entityField.typedAttribute.AttributePassword
 import becontent.html.gen.entityField.typedAttribute.AttributePosition
 import becontent.html.gen.entityField.typedAttribute.AttributeText
 import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
-import becontent.html.gen.beContentElement.Handler
-import becontent.html.gen.beContentElement.Channel
 %>
 
 <%script type="becontent.CustomEntity" name="generate" post="trim()" %>
-	<% generateDetailDiv("Name", name ) %>
-	<% generateDetailDiv("VariableName", variableName ) %>
-	<% generateDetailDiv("IsOwned", isOwned ) %>
-	<% generateDetailDiv("PresentationString", presentationString ) %>
-	<% generateDetailDiv("RssFilter", rssFilter ) %>
+	<% generateDetailDiv("name", name ) %>
+	<% generateDetailDiv("variableName", variableName ) %>
+	<% generateDetailDiv("isOwned", isOwned ) %>
+	<% generateDetailDiv("presentationString", presentationString ) %>
+	<% generateDetailDiv("rssFilter", rssFilter ) %>
 	<%for (fields){%>
-		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<% generateInnerDetailDiv( current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (rss){%>
-		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<% generateReferenceDetailDiv( "rss", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().generate() ) %>
 	<%}%>
 	<%for (handler){%>
-		<% generateInnerDetailDiv(current().eClass().name, current().fileName, current().generate() ) %>
+		<% generateReferenceDetailDiv( "handler", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().generate() ) %>
 	<%}%>
 
 <%script type="becontent.CustomEntity" name="CustomEntity" file="<%Cleaner(current().generateFilename())%>" %>

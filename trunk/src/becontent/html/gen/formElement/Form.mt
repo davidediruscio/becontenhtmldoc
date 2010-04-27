@@ -29,19 +29,19 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	
 <%script type="becontent.Form" name="generate" post="trim()"%>
 	<%for (mainEntity) {%> 
-		<% generateReferenceDetailDiv("Main Entity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<% generateReferenceDetailDiv("mainEntity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 	<%}%>
-	<% generateDetailDiv("Name", name ) %>
-	<% generateDetailDiv("Method", method ) %>
-	<% generateDetailDiv("Description", description ) %>
+	<% generateDetailDiv("name", name ) %>
+	<% generateDetailDiv("method", method ) %>
+	<% generateDetailDiv("description", description ) %>
 	<%for (elements){%>
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>	
 	<%for (customPager) {%> 
-		<% generateReferenceDetailDiv("Custom Pager", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<% generateReferenceDetailDiv("customPager", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
 	<%for (validations) {%> 
-		<% generateReferenceDetailDiv("Validations", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<% generateReferenceDetailDiv("validations", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
 	
 <%script type="becontent.Form" name="Form" file="<%Cleaner(current().generateFilename())%>"%>

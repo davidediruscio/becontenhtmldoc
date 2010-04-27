@@ -6,10 +6,12 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.JoinEntity" name="generate" post="trim"%>
-	<% generateDetailDiv("Id_Model", _id_model ) %>
-	<% generateReferenceDetailDiv("JoinRule", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
-	<%for (referredEntity) {%> 
-		<% generateReferenceDetailDiv("ReferredEntity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+	<% generateDetailDiv("_id_model", _id_model ) %>
+	<%for (joinRule) {%>
+		<% generateReferenceDetailDiv("joinRule", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+	<%}%>
+	<%if referredEntity != null {%> 
+		<% generateReferenceDetailDiv("referredEntity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 	<%}%>
 
 <%script type="becontent.JoinEntity" name="JoinEntity" file="<%Cleaner(current().generateFilename())%>" %>

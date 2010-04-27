@@ -487,7 +487,7 @@ import becontent.html.gen.services.StringService
 <%}%> 
 <%current().getCompleteName().trim()+".html"%>
 <%script type="becontent.Skin" name="getCompleteName" post="trim()"%>
-<%Cleaner(current().eClass().name+"_"+current()._id_model)%>
+<%Cleaner(current().eClass().name+"_"+current().name)%>
 
 <%-- Content --%>
 <%script type="becontent.Content" name="generateFilename" post="trim()"%>
