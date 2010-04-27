@@ -6,10 +6,10 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.AttributeVarchar" name="generate" post="trim"%>
-	<% generateDetailDiv("Name", name ) %>
-	<% generateDetailDiv("IsMandatory", isMandatory ) %>
-	<% generateDetailDiv("IsPrimaryKey", isPrimaryKey ) %>
-	<% generateDetailDiv("Length", length ) %>
+	<% generateDetailDiv("name", name ) %>
+	<% generateDetailDiv("isMandatory", isMandatory ) %>
+	<% generateDetailDiv("isPrimaryKey", isPrimaryKey ) %>
+	<% generateDetailDiv("length", length ) %>
 
 <%script type="becontent.AttributeVarchar" name="AttributeVarchar" file="<%Cleaner(generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

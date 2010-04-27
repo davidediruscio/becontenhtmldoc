@@ -6,10 +6,10 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.AttributeFileToFolder" name="generate" post="trim"%>
-	<% generateDetailDiv("Name", name ) %>
-	<% generateDetailDiv("IsMandatory", isMandatory ) %>
+	<% generateDetailDiv("name", name ) %>
+	<% generateDetailDiv("isMandatory", isMandatory ) %>
 	<%for (fileExtensions){%>
-		<% generateReferenceDetailDiv("File Extension", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model) %>
+		<% generateReferenceDetailDiv("fileExtensions", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model) %>
 	<%}%>
 
 <%script type="becontent.AttributeFileToFolder" name="AttributeFileToFolder" file="<%Cleaner(current().generateFilename())%>"%>

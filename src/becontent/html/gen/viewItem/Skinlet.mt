@@ -6,8 +6,8 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.Skinlet" name="generate" post="trim"%>
-	<% generateDetailDiv("Template", template ) %>
-	<% generateDetailDiv("Id_Model", _id_model ) %>
+	<% generateDetailDiv("template", template ) %>
+	<% generateDetailDiv("_id_model", _id_model ) %>
 	
 <%script type="becontent.Skinlet" name="Skinlet" file="<%Cleaner(current().generateFilename())%>"%>
 	<% generateHTML(_id_model.toUpperCase(), current().generate() ) %>
