@@ -9,5 +9,5 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("name", name ) %>
 	<% generateDetailDiv("isMandatory", isMandatory ) %>
 
-<%script type="becontent.AttributeFile" name="AttributeFile" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.AttributeFile" name="AttributeFile" file="<%cleaner(generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

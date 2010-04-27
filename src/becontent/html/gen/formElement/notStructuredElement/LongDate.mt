@@ -14,5 +14,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.LongDate" name="LongDate" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.LongDate" name="LongDate" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

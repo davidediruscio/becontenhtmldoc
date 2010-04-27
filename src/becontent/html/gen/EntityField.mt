@@ -11,5 +11,5 @@ import becontent.html.gen.services.StringService
  <% generateDetailDiv("IsSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("IsTextSearch", isTextSearch ) %>
  
-<%script type="becontent.EntityField" name="EntityField" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.EntityField" name="EntityField" file="<%cleaner(current().generateFilename())%>"%>
  <% generateHTML( current.eClass().name, current().generate() ) %>

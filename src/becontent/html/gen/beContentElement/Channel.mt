@@ -9,8 +9,8 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("parameters", parameters ) %>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 	<%for (channel) {%> 
-		<% generateReferenceDetailDiv("channel", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<% generateReferenceDetailDiv("channel", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 	<%}%>
 
-<%script type="becontent.Channel" name="Channel" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.Channel" name="Channel" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML(_id_model.toUpperCase().toUpperCase(), current().generate() ) %>

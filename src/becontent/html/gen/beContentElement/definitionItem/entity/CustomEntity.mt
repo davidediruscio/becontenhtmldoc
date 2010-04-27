@@ -23,16 +23,16 @@ import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
 	<% generateDetailDiv("isOwned", isOwned ) %>
 	<% generateDetailDiv("presentationString", presentationString ) %>
 	<% generateDetailDiv("rssFilter", rssFilter ) %>
-	<% generateDetailDiv("wqwqqw", Cleaner(current().getGeneratedFilesPath+current().generateFilename()) ) %>
+	<% generateDetailDiv("wqwqqw", cleaner(current().getGeneratedFilesPath+current().generateFilename()) ) %>
 	<%for (fields){%>
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (rss){%>
-		<% generateReferenceDetailDiv("rss", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
 	<%for (handler){%>
-		<% generateReferenceDetailDiv("handler", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName() ) %>
+		<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName() ) %>
 	<%}%>
 
-<%script type="becontent.CustomEntity" name="CustomEntity" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.CustomEntity" name="CustomEntity" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML(name.toUpperCase(), current().generate())%>

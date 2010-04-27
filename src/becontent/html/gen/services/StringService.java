@@ -7,7 +7,7 @@ import fr.obeo.acceleo.gen.template.scripts.IScript;
 import fr.obeo.acceleo.gen.template.scripts.SpecificScript;
 
 public class StringService {
-	public String Cleaner(ENode node, String toClean) {
+	public String cleaner(ENode node, String toClean) {
 		toClean = toClean.replaceAll("\n", "");
 		toClean = toClean.replaceAll("\r", "");
 		toClean = toClean.replaceAll("\t", ""); 

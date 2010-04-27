@@ -16,5 +16,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Textarea" name="Textarea" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Textarea" name="Textarea" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

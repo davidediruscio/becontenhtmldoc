@@ -8,8 +8,8 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Reference" name="generate" post="trim"%>
 	<% generateDetailDiv("name", name ) %>
 	<%for (referredEntity) {%> 
-		<% generateReferenceDetailDiv("referredEntity", Cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 	<%}%>
 	
-<%script type="becontent.Reference" name="Reference" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.Reference" name="Reference" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>

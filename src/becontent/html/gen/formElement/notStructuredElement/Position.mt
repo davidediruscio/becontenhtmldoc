@@ -17,5 +17,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Position" name="Position" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Position" name="Position" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

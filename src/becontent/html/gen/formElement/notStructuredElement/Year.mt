@@ -16,5 +16,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Year" name="Year" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Year" name="Year" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

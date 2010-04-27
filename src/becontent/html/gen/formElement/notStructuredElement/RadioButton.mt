@@ -14,5 +14,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.RadioButton" name="RadioButton" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.RadioButton" name="RadioButton" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

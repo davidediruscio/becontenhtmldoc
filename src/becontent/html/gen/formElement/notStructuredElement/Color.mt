@@ -15,5 +15,5 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.Color" name="Color" file="<%Cleaner(generateFilename())%>"%>
+<%script type="becontent.Color" name="Color" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>

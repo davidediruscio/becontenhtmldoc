@@ -38,7 +38,7 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	<%}%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 
-<%script type="becontent.Validation" name="Validation" file="<%Cleaner(current().generateFilename())%>"%>
+<%script type="becontent.Validation" name="Validation" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML( _id_model.toUpperCase(), current().generate() ) %>
 
 
