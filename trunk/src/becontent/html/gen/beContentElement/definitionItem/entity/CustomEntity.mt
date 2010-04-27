@@ -23,7 +23,6 @@ import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
 	<% generateDetailDiv("isOwned", isOwned ) %>
 	<% generateDetailDiv("presentationString", presentationString ) %>
 	<% generateDetailDiv("rssFilter", rssFilter ) %>
-	<% generateDetailDiv("wqwqqw", cleaner(current().getGeneratedFilesPath+current().generateFilename()) ) %>
 	<%for (fields){%>
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>

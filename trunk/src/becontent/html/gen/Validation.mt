@@ -30,11 +30,11 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 <%script type="becontent.Validation" name="generate" post="trim()"%>
 	<% generateDetailDiv("condition", "TODO" ) %>
 	<% generateDetailDiv("message", message ) %>
-	<%if firstElement != null {%>
-		<% generateInnerDetailDiv(current().eClass().name, " ", current().generate() ) %>
+	<%for (firstElement) {%>
+		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
-	<%if secondElement != null {%>
-		<% generateInnerDetailDiv(current().eClass().name, " ", current().generate() ) %>
+	<%for (secondElement) {%>
+		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 
