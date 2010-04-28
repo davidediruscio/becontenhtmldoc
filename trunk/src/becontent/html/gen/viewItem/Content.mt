@@ -13,5 +13,19 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("filter", filter ) %>
 	<% generateDetailDiv("limit", limit ) %>
 	<% generateDetailDiv("style", style ) %>
-	<% generateDetailDiv("presentationFields", presentationFields ) %>
+	<%-- BISOGNA IMPLEMENTARE SystemEntity <%for (mainEntity) {%> 
+		<% generateReferenceDetailDiv("mainEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+	<%}%> --%>
+	<%for (joinEntities) {%> 
+		<% generateReferenceDetailDiv("joinEntities", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+	<%}%>
+	<%for (commands) {%> 
+		<% generateDetailDiv("commands", "TODO" ) %>
+	<%}%>
+	<%for (conditionalTemplate) {%> 
+		<% generateDetailDiv("conditionalTemplate", "TODO" ) %>
+	<%}%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
+	
+<%script type="becontent.Content" name="Content" file="<%cleaner(current().generateFilename())%>"%>
+	<% generateHTML(_id_model.toUpperCase(), current().generate())%>

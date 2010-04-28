@@ -11,7 +11,13 @@ import becontent.html.gen.services.StringService
 	<% generateDetailDiv("mainSkinPagerLength", mainSkinPagerLength ) %>
 	<% generateDetailDiv("mainSkinPlaceholder", mainSkinPlaceholder ) %>
 	<%--<%for (viewItems) {%> 
-		<% generateReferenceDetailDiv("ViewItems", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName ) %>
+		<% generateReferenceDetailDiv("viewItems", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName ) %>
+	<%}%>--%>
+	<%for (mainSkin) {%> 
+		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+	<%}%>
+	<%--<%for (mainSkinGetContent) {%> 
+		<% generateReferenceDetailDiv("mainSkinGetContent", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName ) %>
 	<%}%>--%>
 	
 <%script type="becontent.Handler" name="Handler" file="<%cleaner(current().generateFilename())%>" %>
