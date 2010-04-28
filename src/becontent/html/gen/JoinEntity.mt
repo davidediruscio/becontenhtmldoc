@@ -10,8 +10,8 @@ import becontent.html.gen.services.StringService
 	<%for (joinRule) {%>		
 		<% generateReferenceDetailDiv("joinRule", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
-	<%if referredEntity != null {%> 
-		<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+	<%for (referredEntity) {%> 
+		<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 	<%}%>
 
 <%script type="becontent.JoinEntity" name="JoinEntity" file="<%cleaner(current().generateFilename())%>" %>
