@@ -25,7 +25,7 @@ import becontent.html.gen.viewItem.Content
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
 	<%for (mainSkinGetContent) {%> 
-		<%if (current().eClass().name.equalsIgnoreCase("Skin")) {%>
+		<%if (current().eClass().name.trim().equalsIgnoreCase("Skin")) {%>
 			<% generateReferenceDetailDiv("viewItems", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 		<%}else{%>
 			<% generateReferenceDetailDiv("viewItems", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
