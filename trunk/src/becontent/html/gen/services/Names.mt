@@ -456,6 +456,17 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.Template" name="getCompleteName" post="trim()"%>
 <%cleaner(current().eClass().name+"_"+current()._id_model)%>
 
+<%-- ConditionalTemplate --%>
+<%script type="becontent.ConditionalTemplate" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.ConditionalTemplate" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current()._id_model)%>
+
 <%-- Skinlet --%>
 <%script type="becontent.Skinlet" name="generateFilename" post="trim()"%>
 <%for (ancestor().nReverse()) {%>
