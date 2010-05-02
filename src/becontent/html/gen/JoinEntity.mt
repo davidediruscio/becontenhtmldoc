@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.JoinEntity" name="generate" post="trim"%>
+<%script type="becontent.JoinEntity" name="generate" post="trim()"%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 	<%for (joinRule) {%>		
 		<% generateReferenceDetailDiv("joinRule", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>

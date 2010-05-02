@@ -9,7 +9,7 @@ import becontent.html.gen.viewItem.Template
 import becontent.html.gen.viewItem.Content
 %>
 
-<%script type="becontent.Handler" name="generate" post="trim"%>
+<%script type="becontent.Handler" name="generate" post="trim()"%>
 	<% generateDetailDiv("fileName", fileName ) %>
 	<% generateDetailDiv("mainSkinWithPager", mainSkinWithPager ) %>
 	<% generateDetailDiv("mainSkinPagerLength", mainSkinPagerLength ) %>

@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.Skin" name="generate" post="trim"%>
+<%script type="becontent.Skin" name="generate" post="trim()"%>
 	<% generateDetailDiv("name", name ) %>
 
 <%script type="becontent.Skin" name="Skin" file="<%cleaner(current().generateFilename())%>"%>

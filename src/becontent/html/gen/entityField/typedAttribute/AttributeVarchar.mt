@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.AttributeVarchar" name="generate" post="trim"%>
+<%script type="becontent.AttributeVarchar" name="generate" post="trim()"%>
 	<% generateDetailDiv("name", name ) %>
 	<% generateDetailDiv("isMandatory", isMandatory ) %>
 	<% generateDetailDiv("isPrimaryKey", isPrimaryKey ) %>
