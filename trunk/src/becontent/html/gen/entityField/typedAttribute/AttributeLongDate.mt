@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.AttributeLongDate" name="generate" post="trim"%>
+<%script type="becontent.AttributeLongDate" name="generate" post="trim()"%>
 	<% generateDetailDiv("name", name ) %>
 	<% generateDetailDiv("isMandatory", isMandatory ) %>
 

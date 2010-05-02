@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.Channel" name="generate" post="trim"%>
+<%script type="becontent.Channel" name="generate" post="trim()"%>
 	<% generateDetailDiv("parameters", parameters ) %>
 	<% generateDetailDiv("_id_model", _id_model ) %>
 	<%for (channel) {%> 

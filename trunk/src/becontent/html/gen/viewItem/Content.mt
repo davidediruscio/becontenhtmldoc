@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.Content" name="generate" post="trim"%>
+<%script type="becontent.Content" name="generate" post="trim()"%>
 	<% generateDetailDiv("template", template ) %>
 	<% generateDetailDiv("presentationFields", presentationFields ) %>
 	<% generateDetailDiv("orderFields", orderFields ) %>

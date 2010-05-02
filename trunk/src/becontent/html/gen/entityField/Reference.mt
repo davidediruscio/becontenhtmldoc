@@ -5,7 +5,7 @@ import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
 %>
 
-<%script type="becontent.Reference" name="generate" post="trim"%>
+<%script type="becontent.Reference" name="generate" post="trim()"%>
 	<% generateDetailDiv("name", name ) %>
 	<%for (referredEntity) {%> 
 		<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
