@@ -33,7 +33,7 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	<%}%>
 	<% generateDetailDiv("name", name ) %>
 	<% generateDetailDiv("className", className ) %>
-	<% generateDetailDiv("method", "TODO" ) %>
+	<% generateDetailDiv("method", method ) %>
 	<% generateDetailDiv("description", description ) %>
 	<%for (elements){%>
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
