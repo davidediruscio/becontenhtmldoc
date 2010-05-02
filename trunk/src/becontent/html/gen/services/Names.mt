@@ -565,3 +565,25 @@ import becontent.html.gen.services.StringService
 <%current().getCompleteName().trim()+".html"%>
 <%script type="becontent.JoinEntity" name="getCompleteName" post="trim()"%>
 <%cleaner(current().eClass().name+"_"+current()._id_model)%>
+
+<%-- SystemRelation --%>
+<%script type="becontent.SystemRelation" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.SystemRelation" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- CustomRelation --%>
+<%script type="becontent.CustomRelation" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.CustomRelation" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current().name)%>
