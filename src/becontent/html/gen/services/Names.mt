@@ -675,3 +675,91 @@ import becontent.html.gen.services.StringService
 <%current().getCompleteName().trim()+".html"%>
 <%script type="becontent.CustomRelation" name="getCompleteName" post="trim()"%>
 <%cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- Parameter --%>
+<%script type="becontent.Parameter" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Parameter" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- UnsetParameter --%>
+<%script type="becontent.UnsetParameter" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.UnsetParameter" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- Copy --%>
+<%script type="becontent.Copy" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Copy" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current()._id_model)%>
+
+<%-- Propagate --%>
+<%script type="becontent.Propagate" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Propagate" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current()._id_model)%>
+
+<%-- Trigger --%>
+<%script type="becontent.Trigger" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Trigger" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current().name)%>
+
+<%-- Apply --%>
+<%script type="becontent.Apply" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.Apply" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current()._id_model)%>
+
+<%-- ApplyItem --%>
+<%script type="becontent.ApplyItem" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.ApplyItem" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current()._id_model)%>
+
+<%-- ApplyIndexed --%>
+<%script type="becontent.ApplyIndexed" name="generateFilename" post="trim()"%>
+<%for (ancestor().nReverse()) {%>
+	<%if !current().eClass().name().equalsIgnoreCase("BeContentModel") {%>
+		<%current().getCompleteName().trim()+"/"%>
+	<%}%>
+<%}%> 
+<%current().getCompleteName().trim()+".html"%>
+<%script type="becontent.ApplyIndexed" name="getCompleteName" post="trim()"%>
+<%cleaner(current().eClass().name+"_"+current()._id_model)%>

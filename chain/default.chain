@@ -69,6 +69,14 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributePosition.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeText.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeVarchar.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/Parameter.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/UnsetParameter.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/Copy.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/Propagate.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/Trigger.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/applyCommand/Apply.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/applyCommand/ApplyItem.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/applyCommand/ApplyIndexed.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
@@ -135,5 +143,13 @@
     <actions xsi:type="chain:Generate" documentation="SystemAttributeVarchar" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.67" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="SystemAttributeFile" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.59" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="SystemAttributeFileToFolder" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.60" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Parameter" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.68" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="UnsetParameter" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.69" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Copy" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.70" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Propagate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.71" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Trigger" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.72" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Apply" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.73" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ApplyItem" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.74" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ApplyIndexed" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.75" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
