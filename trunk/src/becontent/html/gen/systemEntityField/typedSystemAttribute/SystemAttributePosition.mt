@@ -6,12 +6,12 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.SystemAttributePosition" name="generate" post="trim()"%>
- <% generateDetailDiv("name", name ) %>
  <% generateDetailDiv("isMandatory", isMandatory ) %>
  <% generateDetailDiv("isPresented", isPresented ) %>
  <% generateDetailDiv("isSearchPresentationBody", isSearchPresentationBody ) %>
  <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isTextSearch", isTextSearch ) %>
+ <% generateDetailDiv("name", name ) %>
  
 <%script type="becontent.SystemAttributePosition" name="SystemAttributePosition" file="<%cleaner(current().generateFilename())%>"%>
  <% generateHTML( current.eClass().name, current().generate() ) %>
