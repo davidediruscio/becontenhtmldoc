@@ -6,15 +6,16 @@ import becontent.html.gen.services.Names
 %>
 
 <%script type="becontent.Password" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("size", size ) %>
-<% generateDetailDiv("isMandatory", isMandatory ) %>
-<% generateDetailDiv("maxLength", maxLength ) %>
 <%if helper != null {%>
 	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
 <%}%>
-
+<% generateDetailDiv("isMandatory", isMandatory ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
+<% generateDetailDiv("maxLength", maxLength ) %>
+<% generateDetailDiv("size", size ) %>
 
 <%script type="becontent.Password" name="Password" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
