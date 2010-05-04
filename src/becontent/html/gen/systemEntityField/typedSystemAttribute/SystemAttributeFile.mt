@@ -8,8 +8,8 @@ import becontent.html.gen.services.StringService
 <%script type="becontent.SystemAttributeFile" name="generate" post="trim()"%>
  <% generateDetailDiv("isMandatory", isMandatory ) %>
  <% generateDetailDiv("isPresented", isPresented ) %>
- <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isSearchPresentationBody", isSearchPresentationBody ) %>
+ <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isTextSearch", isTextSearch ) %>
  <% generateDetailDiv("name", name ) %>
  
