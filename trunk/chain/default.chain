@@ -10,7 +10,7 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/BeContentModel.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Text.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/Form.mt"/>
-    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/ExtendedForm.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/form/ExtendedForm.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/CustomPager.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/Validation.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/formElement/notStructuredElement/Checkbox.mt"/>
