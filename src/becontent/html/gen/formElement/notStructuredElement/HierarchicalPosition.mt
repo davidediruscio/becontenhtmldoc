@@ -6,14 +6,16 @@ import becontent.html.gen.services.Names
 %>
 
 <%script type="becontent.HierarchicalPosition" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("controlledField", controlledField ) %>
-<% generateDetailDiv("referenceField", referenceField ) %>
-<% generateDetailDiv("size", size ) %>
 <%if helper != null {%>
 	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
 <%}%>
+<% generateDetailDiv("controlledField", controlledField ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
+<% generateDetailDiv("referenceField", referenceField ) %>
+<% generateDetailDiv("size", size ) %>
 
 
 <%script type="becontent.HierarchicalPosition" name="HierarchicalPosition" file="<%cleaner(generateFilename())%>"%>
