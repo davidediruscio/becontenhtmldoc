@@ -7,14 +7,15 @@ import becontent.html.gen.services.Names
 
 
 <%script type="becontent.Checkbox" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("value", value ) %>
-<% generateDetailDiv("isChecked", isChecked ) %>
 <%if helper != null {%>
 	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
 <%}%>
-
+<% generateDetailDiv("isChecked", isChecked ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
+<% generateDetailDiv("value", value ) %>
 
 <%script type="becontent.Checkbox" name="Checkbox" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
