@@ -6,11 +6,15 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.AttributeFileToFolder" name="generate" post="trim()"%>
-	<% generateDetailDiv("name", name ) %>
-	<% generateDetailDiv("isMandatory", isMandatory ) %>
 	<%for (fileExtensions){%>
 		<% generateReferenceDetailDiv("fileExtensions", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model) %>
 	<%}%>
-
+	<% generateDetailDiv("isMandatory", isMandatory ) %>
+	<% generateDetailDiv("isPresented", isPresented ) %>
+ 	<% generateDetailDiv("isSearchPresentationBody", isSearchPresentationBody ) %>
+ 	<% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
+ 	<% generateDetailDiv("isTextSearch", isTextSearch ) %>
+	<% generateDetailDiv("name", name ) %>
+	
 <%script type="becontent.AttributeFileToFolder" name="AttributeFileToFolder" file="<%cleaner(current().generateFilename())%>"%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
