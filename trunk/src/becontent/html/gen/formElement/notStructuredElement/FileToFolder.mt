@@ -7,15 +7,16 @@ import becontent.html.gen.services.Names
 
 
 <%script type="becontent.FileToFolder" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("isMandatory", isMandatory ) %>
-<% generateDetailDiv("extension", extension ) %>
-<% generateDetailDiv("extensionMessage", extensionMessage ) %>
 <%if helper != null {%>
 	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
 <%}%>
-
+<% generateDetailDiv("extension", extension ) %>
+<% generateDetailDiv("extensionMessage", extensionMessage ) %>
+<% generateDetailDiv("isMandatory", isMandatory ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
 
 <%script type="becontent.FileToFolder" name="File" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
