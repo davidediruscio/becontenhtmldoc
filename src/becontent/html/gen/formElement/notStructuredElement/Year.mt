@@ -6,15 +6,16 @@ import becontent.html.gen.services.Names
 %>
 
 <%script type="becontent.Year" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("start", start ) %>
 <% generateDetailDiv("end", end ) %>
-<% generateDetailDiv("isMandatory", isMandatory ) %>
 <%if helper != null {%>
 	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
 <%}%>
-
+<% generateDetailDiv("isMandatory", isMandatory ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
+<% generateDetailDiv("start", start ) %>
 
 <%script type="becontent.Year" name="Year" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
