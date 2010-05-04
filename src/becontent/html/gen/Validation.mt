@@ -28,16 +28,16 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 %>
 
 <%script type="becontent.Validation" name="generate" post="trim()"%>
+	<% generateDetailDiv("_id_model", _id_model ) %>
 	<% generateDetailDiv("condition", condition ) %>
-	<% generateDetailDiv("message", message ) %>
 	<%for (firstElement) {%>
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
+	<% generateDetailDiv("message", message ) %>	
 	<%for (secondElement) {%>
 		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
 	<%}%>
-	<% generateDetailDiv("_id_model", _id_model ) %>
-
+	
 <%script type="becontent.Validation" name="Validation" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML( _id_model.toUpperCase(), current().generate() ) %>
 

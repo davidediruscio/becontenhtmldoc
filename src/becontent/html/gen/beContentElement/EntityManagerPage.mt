@@ -7,14 +7,14 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.EntityManagerPage" name="generate" post="trim()"%>
-	<% generateDetailDiv("fileName", fileName ) %>
-	<% generateDetailDiv("skin", skin ) %>
-	<%for (forms){%>
-		<% generateReferenceDetailDiv("forms", cleaner(current().generateFilename()), current().name ) %>
-	<%}%>	
 	<%for (customPagers) {%> 
 		<% generateReferenceDetailDiv("customPagers", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
+	<% generateDetailDiv("fileName", fileName ) %>
+	<%for (forms){%>
+		<% generateReferenceDetailDiv("forms", cleaner(current().generateFilename()), current().name ) %>
+	<%}%>
+	<% generateDetailDiv("skin", skin ) %>
 	<%for (validations) {%> 
 		<% generateReferenceDetailDiv("validations", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
