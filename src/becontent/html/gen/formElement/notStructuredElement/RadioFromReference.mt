@@ -6,16 +6,18 @@ import becontent.html.gen.services.Names
 %>
 
 <%script type="becontent.RadioFromReference" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
+<%if helper != null {%>
+	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
+<%}%>
 <% generateDetailDiv("isMandatory", isMandatory ) %>
-<% generateDetailDiv("restrictCondition", restrictCondition ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
 <%for (referredEntity) {%>
 <%generateInnerDetailDiv(current().eClass().name, current().name, current().generate() )%>
 <%}%>
-<%if helper != null {%>
-	<% generateDetailDiv("helper", helper ) %>
-<%}%>
+<% generateDetailDiv("restrictCondition", restrictCondition ) %>
 
 <%script type="becontent.RadioFromReference" name="RadioFromReference" file="<%cleaner(generateFilename())%>"%>
 <%generateHTML(name.toUpperCase(), current().generate())%>
