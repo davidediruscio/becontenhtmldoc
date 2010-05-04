@@ -6,17 +6,18 @@ import becontent.html.gen.services.Names
 %>
 
 <%script type="becontent.SelectFromReference" name="generate" post="trim()"%>
-<% generateDetailDiv("name", name ) %>
-<% generateDetailDiv("label", label ) %>
+<%if helper != null {%>
+	<% generateDetailDiv("helper", helper ) %>
+<%}else{%>
+	<% generateDetailDiv("helper", "..." ) %>
+<%}%>
 <% generateDetailDiv("isMandatory", isMandatory ) %>
-<% generateDetailDiv("restrictCondition", restrictCondition ) %>
+<% generateDetailDiv("label", label ) %>
+<% generateDetailDiv("name", name ) %>
 <%for (referredEntity) {%> 
 	<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 <%}%>
-<%if ( helper != null ) {%>
-	<% generateDetailDiv("helper", helper ) %>
-<%}%>
-
+<% generateDetailDiv("restrictCondition", restrictCondition ) %>
 
 <%script type="becontent.SelectFromReference" name="SelectFromReference" file="<%cleaner(generateFilename())%>"%>
 <% generateHTML( name.toUpperCase(), current().generate() ) %>
