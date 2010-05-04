@@ -11,8 +11,8 @@ import becontent.html.gen.services.StringService
  <%}%>
  <% generateDetailDiv("isMandatory", isMandatory ) %>
  <% generateDetailDiv("isPresented", isPresented ) %>
- <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isSearchPresentationBody", isSearchPresentationBody ) %>
+ <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isTextSearch", isTextSearch ) %>
  <% generateDetailDiv("name", name ) %>
  
