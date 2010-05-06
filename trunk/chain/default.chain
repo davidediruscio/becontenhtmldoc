@@ -76,6 +76,7 @@
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/applyCommand/Apply.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/applyCommand/ApplyItem.mt"/>
     <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/contentCommand/applyCommand/ApplyIndexed.mt"/>
+    <files xsi:type="chain:Generator" path="/becontent.html.gen/src/becontent/html/gen/beContentElement/definitionItem/entity/SystemEntity.mt"/>
   </repository>
   <actions>
     <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
@@ -149,5 +150,6 @@
     <actions xsi:type="chain:Generate" documentation="Apply" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.72" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="ApplyItem" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.73" folder="//@repository/@files.1"/>
     <actions xsi:type="chain:Generate" documentation="ApplyIndexed" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.74" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemEntity" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.75" folder="//@repository/@files.1"/>
   </actions>
 </chain:Chain>
