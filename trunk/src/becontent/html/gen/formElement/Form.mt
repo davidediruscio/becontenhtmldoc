@@ -33,7 +33,7 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	<%}%>
 	<% generateDetailDiv("description", description ) %>
 	<%for (elements){%>
-		<% generateInnerDetailDiv("elements", current().name, current().generate() ) %>
+		<% generateInnerDetailDiv("elements", current().eClass().name + ": " + current().name, current().generate() ) %>
 	<%}%>
 	<%for (mainEntity) {%> 
 		<% generateReferenceDetailDiv("mainEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
