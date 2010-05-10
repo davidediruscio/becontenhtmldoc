@@ -29,6 +29,36 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- AttributeImage --%>
+<%script type="becontent.BeContentModel" name="generateAttributeImage" post="trim()"%>
+<%for (eAllContents("AttributeImage")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- AttributeInteger --%>
+<%script type="becontent.BeContentModel" name="generateAttributeInteger" post="trim()"%>
+<%for (eAllContents("AttributeInteger")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- AttributeLongDate --%>
+<%script type="becontent.BeContentModel" name="generateAttributeLongDate" post="trim()"%>
+<%for (eAllContents("AttributeLongDate")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- AttributePassword --%>
+<%script type="becontent.BeContentModel" name="generateAttributePassword" post="trim()"%>
+<%for (eAllContents("AttributePassword")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- AttributePosition --%>
+<%script type="becontent.BeContentModel" name="generateAttributePosition" post="trim()"%>
+<%for (eAllContents("AttributePosition")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Channel --%>
 <%script type="becontent.BeContentModel" name="generateChannel" post="trim()"%>
 <%for (eAllContents("Channel")) {%>
@@ -108,6 +138,26 @@ import becontent.html.gen.services.Names
 		AttributeFileToFolder
 		<ul>
 		<%generateAttributeFileToFolder()%> 
+		</ul>
+		AttributeImage
+		<ul>
+		<%generateAttributeImage()%> 
+		</ul>
+		AttributeInteger
+		<ul>
+		<%generateAttributeInteger()%> 
+		</ul>
+		AttributeLongDate
+		<ul>
+		<%generateAttributeLongDate()%> 
+		</ul>
+		AttributePassword
+		<ul>
+		<%generateAttributePassword()%> 
+		</ul>
+		AttributePosition
+		<ul>
+		<%generateAttributePosition()%> 
 		</ul>
 		Channel
 		<ul>
