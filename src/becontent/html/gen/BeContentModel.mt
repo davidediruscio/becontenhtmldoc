@@ -5,6 +5,12 @@ import becontent.html.gen.services.StringService
 import becontent.html.gen.services.Names
 %>
 
+<%-- AttributeColor --%>
+<%script type="becontent.BeContentModel" name="generateAttributeColor" post="trim()"%>
+<%for (eAllContents("AttributeColor")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Channel --%>
 <%script type="becontent.BeContentModel" name="generateChannel" post="trim()"%>
 <%for (eAllContents("Channel")) {%>
@@ -69,6 +75,10 @@ import becontent.html.gen.services.Names
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
 <%generateHeader("BeContent Model")%>
 	<body>
+		AttributeColor
+		<ul>
+		<%generateAttributeColor()%> 
+		</ul>
 		Channel
 		<ul>
 		<%generateCustomEntity()%> 
