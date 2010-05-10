@@ -28,17 +28,31 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 %>
 
 <%script type="becontent.Validation" name="generate" post="trim()"%>
+<%if _id_model != null && _id_model != "" {%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
+<%}else{%>
+	<% generateDetailDiv("_id_model", "..." ) %>
+<%}%>
 	<% generateDetailDiv("condition", condition ) %>
 	<%for (firstElement) {%>
-		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<%if current().name != null && current().name != "" {%>
+			<% generateInnerDetailDiv("firstElement", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%}else{%>
+			<% generateInnerDetailDiv("firstElement", current().eClass().name + ": ...", current().generate() ) %>
+		<%}%>
 	<%}%>
-	<% generateDetailDiv("message", message ) %>	
+	<% generateDetailDiv("message", message ) %>
 	<%for (secondElement) {%>
-		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
-	<%}%>
+		<%if current().name != null && current().name != "" {%>
+			<% generateInnerDetailDiv("secondElement", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%}else{%>
+			<% generateInnerDetailDiv("secondElement", current().eClass().name + ": ...", current().generate() ) %>
+		<%}%>
+	<%}%>	
 	
 <%script type="becontent.Validation" name="Validation" file="<%cleaner(current().generateFilename())%>"%>
+<%if _id_model != null && _id_model != "" {%>
 	<% generateHTML( _id_model.toUpperCase(), current().generate() ) %>
-
-
+<%}else{%>
+	<% generateHTML( "...", current().generate() ) %>
+<%}%>
