@@ -11,6 +11,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- AttributeDate --%>
+<%script type="becontent.BeContentModel" name="generateAttributeDate" post="trim()"%>
+<%for (eAllContents("AttributeDate")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Channel --%>
 <%script type="becontent.BeContentModel" name="generateChannel" post="trim()"%>
 <%for (eAllContents("Channel")) {%>
@@ -78,6 +84,10 @@ import becontent.html.gen.services.Names
 		AttributeColor
 		<ul>
 		<%generateAttributeColor()%> 
+		</ul>
+		AttributeDate
+		<ul>
+		<%generateAttributeDate()%> 
 		</ul>
 		Channel
 		<ul>
