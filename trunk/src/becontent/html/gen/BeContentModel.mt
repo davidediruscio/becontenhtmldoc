@@ -41,6 +41,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().fileName, current().generateFilename())%>
 <%}%>
 
+<%-- Reference --%>
+<%script type="becontent.BeContentModel" name="generateReference" post="trim()"%>
+<%for (eAllContents("Reference")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemEntity --%>
 <%script type="becontent.BeContentModel" name="generateSystemEntity" post="trim()"%>
 <%for (eAllContents("SystemEntity")) {%>
@@ -86,6 +92,10 @@ import becontent.html.gen.services.Names
 		FileToFolderExtension
 		<ul>
 		<%generateFileToFolderExtension()%>
+		</ul>
+		Reference
+		<ul>
+		<%generateReference()%>
 		</ul>
 		SystemEntity
 		<ul>
