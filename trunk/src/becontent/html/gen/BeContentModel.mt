@@ -3,12 +3,23 @@ metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.StringService
 import becontent.html.gen.services.Names
-import becontent.html.gen.beContentElement.Handler
 %>
+
+<%-- Channel --%>
+<%script type="becontent.BeContentModel" name="generateChannel" post="trim()"%>
+<%for (eAllContents("Channel")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
 
 <%-- CustomEntity --%>
 <%script type="becontent.BeContentModel" name="generateCustomEntity" post="trim()"%>
 <%for (eAllContents("CustomEntity")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- CustomRelation --%>
+<%script type="becontent.BeContentModel" name="generateCustomRelation" post="trim()"%>
+<%for (eAllContents("CustomRelation")) {%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -18,10 +29,16 @@ import becontent.html.gen.beContentElement.Handler
 	<%generateIndexLink(current().fileName, current().generateFilename())%>
 <%}%>
 
-<%-- CustomRelation --%>
-<%script type="becontent.BeContentModel" name="generateCustomRelation" post="trim()"%>
-<%for (eAllContents("CustomRelation")) {%>
-	<%generateIndexLink(current().name, current().generateFilename())%>
+<%-- FileToFolderExtension --%>
+<%script type="becontent.BeContentModel" name="generateFileToFolderExtension" post="trim()"%>
+<%for (eAllContents("FileToFolderExtension")){%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
+<%-- Handler --%>
+<%script type="becontent.BeContentModel" name="generateHandler" post="trim()"%>
+<%for (eAllContents("Handler")){%>
+	<%generateIndexLink(current().fileName, current().generateFilename())%>
 <%}%>
 
 <%-- SystemEntity --%>
@@ -36,12 +53,6 @@ import becontent.html.gen.beContentElement.Handler
 	<%generateIndexLink(current().variableName, current().generateFilename())%>
 <%}%>
 
-<%-- Handler --%>
-<%script type="becontent.BeContentModel" name="generateHandler" post="trim()"%>
-<%for (eAllContents("Handler")){%>
-	<%generateIndexLink(current().fileName, current().generateFilename())%>
-<%}%>
-
 <%-- Text --%>
 <%script type="becontent.BeContentModel" name="generateText" post="trim()"%>
 <%for (eAllContents("Text")) {%>
@@ -52,9 +63,17 @@ import becontent.html.gen.beContentElement.Handler
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
 <%generateHeader("BeContent Model")%>
 	<body>
+		Channel
+		<ul>
+		<%generateCustomEntity()%> 
+		</ul>
 		CustomEntity
 		<ul>
 		<%generateCustomEntity()%> 
+		</ul>
+		CustomRelation
+		<ul>
+		<%generateCustomRelation()%> 
 		</ul>
 		EntityManagerPage	
 		<ul>
@@ -63,10 +82,10 @@ import becontent.html.gen.beContentElement.Handler
 		Handler
 		<ul>
 		<%generateHandler()%>
-		</ul>
-		CustomRelation
+		</ul>		
+		FileToFolderExtension
 		<ul>
-		<%generateCustomRelation()%> 
+		<%generateFileToFolderExtension()%>
 		</ul>
 		SystemEntity
 		<ul>
