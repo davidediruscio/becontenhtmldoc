@@ -59,6 +59,18 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- AttributeText --%>
+<%script type="becontent.BeContentModel" name="generateAttributeText" post="trim()"%>
+<%for (eAllContents("AttributeText")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- AttributeVarchar --%>
+<%script type="becontent.BeContentModel" name="generateAttributeVarchar" post="trim()"%>
+<%for (eAllContents("AttributeVarchar")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Channel --%>
 <%script type="becontent.BeContentModel" name="generateChannel" post="trim()"%>
 <%for (eAllContents("Channel")) {%>
@@ -158,6 +170,14 @@ import becontent.html.gen.services.Names
 		AttributePosition
 		<ul>
 		<%generateAttributePosition()%> 
+		</ul>
+		AttributeText
+		<ul>
+		<%generateAttributeText()%> 
+		</ul>
+		AttributeVarchar
+		<ul>
+		<%generateAttributeVarchar()%> 
 		</ul>
 		Channel
 		<ul>
