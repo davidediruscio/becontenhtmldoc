@@ -113,6 +113,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- SystemAttributeColor --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributeColor" post="trim()"%>
+<%for (eAllContents("SystemAttributeColor")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemEntity --%>
 <%script type="becontent.BeContentModel" name="generateSystemEntity" post="trim()"%>
 <%for (eAllContents("SystemEntity")) {%>
@@ -212,6 +218,10 @@ import becontent.html.gen.services.Names
 		Reference
 		<ul>
 		<%generateReference()%>
+		</ul>
+		SystemAttributeColor
+		<ul>
+		<%generateSystemAttributeColor()%> 
 		</ul>
 		SystemEntity
 		<ul>
