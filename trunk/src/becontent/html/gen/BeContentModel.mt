@@ -137,6 +137,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- SystemAttributeImage --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributeImage" post="trim()"%>
+<%for (eAllContents("SystemAttributeImage")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemEntity --%>
 <%script type="becontent.BeContentModel" name="generateSystemEntity" post="trim()"%>
 <%for (eAllContents("SystemEntity")) {%>
@@ -252,6 +258,10 @@ import becontent.html.gen.services.Names
 		SystemAttributeFileToFolder
 		<ul>
 		<%generateSystemAttributeFileToFolder()%> 
+		</ul>
+		SystemAttributeImage
+		<ul>
+		<%generateSystemAttributeImage()%> 
 		</ul>
 		SystemEntity
 		<ul>
