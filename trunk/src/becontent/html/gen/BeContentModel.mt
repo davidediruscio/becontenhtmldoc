@@ -77,6 +77,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- Content --%>
+<%script type="becontent.BeContentModel" name="generateContent" post="trim()"%>
+<%for (eAllContents("Content")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 <%-- CustomEntity --%>
 <%script type="becontent.BeContentModel" name="generateCustomEntity" post="trim()"%>
 <%for (eAllContents("CustomEntity")) {%>
@@ -111,6 +117,18 @@ import becontent.html.gen.services.Names
 <%script type="becontent.BeContentModel" name="generateReference" post="trim()"%>
 <%for (eAllContents("Reference")){%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Skin --%>
+<%script type="becontent.BeContentModel" name="generateSkin" post="trim()"%>
+<%for (eAllContents("Skin")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Skinlet --%>
+<%script type="becontent.BeContentModel" name="generateSkinlet" post="trim()"%>
+<%for (eAllContents("Skinlet")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
 <%-- SystemAttributeColor --%>
@@ -197,6 +215,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().variableName, current().generateFilename())%>
 <%}%>
 
+<%-- Template --%>
+<%script type="becontent.BeContentModel" name="generateTemplate" post="trim()"%>
+<%for (eAllContents("Template")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 <%-- Text --%>
 <%script type="becontent.BeContentModel" name="generateText" post="trim()"%>
 <%for (eAllContents("Text")) {%>
@@ -255,6 +279,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateChannel()%> 
 		</ul>
+		Content
+		<ul>
+		<%generateContent()%> 
+		</ul>
 		CustomEntity
 		<ul>
 		<%generateCustomEntity()%> 
@@ -278,6 +306,14 @@ import becontent.html.gen.services.Names
 		Reference
 		<ul>
 		<%generateReference()%>
+		</ul>
+		Skin
+		<ul>
+		<%generateSkin()%> 
+		</ul>
+		Skinlet
+		<ul>
+		<%generateSkinlet()%> 
 		</ul>
 		SystemAttributeColor
 		<ul>
@@ -335,6 +371,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateSystemRelation()%> 
 		</ul>	
+		Template
+		<ul>
+		<%generateTemplate()%>
+		</ul>
 		Text
 		<ul>
 		<%generateText()%>
