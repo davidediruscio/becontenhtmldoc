@@ -141,6 +141,17 @@
     <forms name="" mainEntity="//@modelElements.19">
       <elements xsi:type="becontent:Text" name="name" label="Name" size="40" isMandatory="true"/>
       <elements xsi:type="becontent:Date" helper="" name="data" label="Data di oggi" isMandatory="true"/>
+      <elements xsi:type="becontent:Checkbox" helper="" name="checkBoxName" label="CheckBoxLabel"/>
+      <elements xsi:type="becontent:Date" name="dateName" label="DateLabel"/>
+      <elements xsi:type="becontent:Editor" name="editorName" label="EditorLabel"/>
+      <elements xsi:type="becontent:File" name="fileName" label="FileLabel"/>
+      <elements xsi:type="becontent:FileToFolder" name="fileToFolderName" label="FileToFolderLabel"/>
+      <elements xsi:type="becontent:Hidden" name="hiddenName" values="HiddenLabel"/>
+      <elements xsi:type="becontent:Image" name="imageName" label="ImageLabel"/>
+      <elements xsi:type="becontent:Link" name="linkName" label="LinkLabel"/>
+      <elements xsi:type="becontent:LongDate" name="longDateName" label="LongDateLabel"/>
+      <elements xsi:type="becontent:Password" name="passwordName" label="PasswordLabel"/>
+      <elements xsi:type="becontent:RadioButton" name="radioButtonName" label="RadioButtonLabel"/>
     </forms>
   </modelElements>
   <modelElements xsi:type="becontent:Handler" fileName="home" mainSkinPlaceholder="body" mainSkin="//@modelElements.18/@viewItems.0" mainSkinGetContent="//@modelElements.21/@viewItems.0">

@@ -43,6 +43,34 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	<%for (validations) {%> 
 		<% generateReferenceDetailDiv("validations", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
 	<%}%>
+	<br />
+	<br />
+	<div style="float: left; background-color: #CCCCFF; width: 100%; border: 1px solid silver" >
+ 		<font size="+2">
+		<b>Form Preview</b>
+		</font>
+	</div>
+	<div class="detailDiv">
+		<div id="becontent">
+			<form name="" method="POST" enctype="multipart/form-data">
+	  			<table border="0">
+					<%for (elements){%>
+						<tr>
+							<td>
+								<% current().label %>
+							</td>
+							<td>
+								<% current().generateFormHTML() %>
+							</td>
+						</tr>
+					<%}%>
+					</table>
+			</form>
+			<div class="closing" style="background: #E2F5FB url('<% current().getGeneratedFilesPath %>img/form-bar.png') no-repeat left;">
+				<input type="button" value="Aggiungi">
+			</div>
+		</div>
+	</div>
 	
 <%script type="becontent.Form" name="Form" file="<%cleaner(current().generateFilename())%>"%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
