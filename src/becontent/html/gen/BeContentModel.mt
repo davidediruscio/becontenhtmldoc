@@ -155,6 +155,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- SystemAttributePassword --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributePassword" post="trim()"%>
+<%for (eAllContents("SystemAttributePassword")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemEntity --%>
 <%script type="becontent.BeContentModel" name="generateSystemEntity" post="trim()"%>
 <%for (eAllContents("SystemEntity")) {%>
@@ -282,6 +288,10 @@ import becontent.html.gen.services.Names
 		SystemAttributeLongDate
 		<ul>
 		<%generateSystemAttributeLongDate()%> 
+		</ul>
+		SystemAttributePassword
+		<ul>
+		<%generateSystemAttributePassword()%> 
 		</ul>
 		SystemEntity
 		<ul>
