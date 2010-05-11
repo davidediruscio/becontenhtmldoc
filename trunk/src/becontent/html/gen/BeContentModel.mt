@@ -119,6 +119,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- SystemReference --%>
+<%script type="becontent.BeContentModel" name="generateSystemReference" post="trim()"%>
+<%for (eAllContents("SystemReference")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemRelation --%>
 <%script type="becontent.BeContentModel" name="generateSystemRelation" post="trim()"%>
 <%for (eAllContents("SystemRelation")) {%>
@@ -210,6 +216,10 @@ import becontent.html.gen.services.Names
 		SystemEntity
 		<ul>
 		<%generateSystemEntity()%> 
+		</ul>	
+		SystemReference
+		<ul>
+		<%generateSystemReference()%> 
 		</ul>		
 		SystemRelation
 		<ul>
