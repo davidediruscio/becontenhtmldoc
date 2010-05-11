@@ -143,6 +143,18 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- SystemAttributeInteger --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributeInteger" post="trim()"%>
+<%for (eAllContents("SystemAttributeInteger")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- SystemAttributeLongDate --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributeLongDate" post="trim()"%>
+<%for (eAllContents("SystemAttributeLongDate")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemEntity --%>
 <%script type="becontent.BeContentModel" name="generateSystemEntity" post="trim()"%>
 <%for (eAllContents("SystemEntity")) {%>
@@ -262,6 +274,14 @@ import becontent.html.gen.services.Names
 		SystemAttributeImage
 		<ul>
 		<%generateSystemAttributeImage()%> 
+		</ul>
+		SystemAttributeInteger
+		<ul>
+		<%generateSystemAttributeInteger()%> 
+		</ul>
+		SystemAttributeLongDate
+		<ul>
+		<%generateSystemAttributeLongDate()%> 
 		</ul>
 		SystemEntity
 		<ul>
