@@ -161,6 +161,24 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- SystemAttributePosition --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributePosition" post="trim()"%>
+<%for (eAllContents("SystemAttributePosition")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- SystemAttributeText --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributeText" post="trim()"%>
+<%for (eAllContents("SystemAttributeText")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- SystemAttributeVarchar --%>
+<%script type="becontent.BeContentModel" name="generateSystemAttributeVarchar" post="trim()"%>
+<%for (eAllContents("SystemAttributeVarchar")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- SystemEntity --%>
 <%script type="becontent.BeContentModel" name="generateSystemEntity" post="trim()"%>
 <%for (eAllContents("SystemEntity")) {%>
@@ -292,6 +310,18 @@ import becontent.html.gen.services.Names
 		SystemAttributePassword
 		<ul>
 		<%generateSystemAttributePassword()%> 
+		</ul>
+		SystemAttributePosition
+		<ul>
+		<%generateSystemAttributePosition()%> 
+		</ul>
+		SystemAttributeText
+		<ul>
+		<%generateSystemAttributeText()%> 
+		</ul>
+		SystemAttributeVarchar
+		<ul>
+		<%generateSystemAttributeVarchar()%> 
 		</ul>
 		SystemEntity
 		<ul>
