@@ -95,6 +95,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- ConditionalTemplate --%>
+<%script type="becontent.BeContentModel" name="generateConditionalTemplate" post="trim()"%>
+<%for (eAllContents("ConditionalTemplate")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 <%-- Content --%>
 <%script type="becontent.BeContentModel" name="generateContent" post="trim()"%>
 <%for (eAllContents("Content")) {%>
@@ -141,6 +147,12 @@ import becontent.html.gen.services.Names
 <%script type="becontent.BeContentModel" name="generateHandler" post="trim()"%>
 <%for (eAllContents("Handler")){%>
 	<%generateIndexLink(current().fileName, current().generateFilename())%>
+<%}%>
+
+<%-- JoinEntity --%>
+<%script type="becontent.BeContentModel" name="generateJoinEntity" post="trim()"%>
+<%for (eAllContents("JoinEntity")){%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
 <%-- Parameter --%>
@@ -351,6 +363,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateChannel()%> 
 		</ul>
+		ConditionalTemplate
+		<ul>
+		<%generateConditionalTemplate()%> 
+		</ul>
 		Content
 		<ul>
 		<%generateContent()%> 
@@ -375,13 +391,17 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateEntityManagerPage()%> 
 		</ul>
+		FileToFolderExtension
+		<ul>
+		<%generateFileToFolderExtension()%>
+		</ul>
 		Handler
 		<ul>
 		<%generateHandler()%>
 		</ul>		
-		FileToFolderExtension
+		JoinEntity
 		<ul>
-		<%generateFileToFolderExtension()%>
+		<%generateJoinEntity()%>
 		</ul>
 		Parameter
 		<ul>
