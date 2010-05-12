@@ -5,6 +5,24 @@ import becontent.html.gen.services.StringService
 import becontent.html.gen.services.Names
 %>
 
+<%-- Apply --%>
+<%script type="becontent.BeContentModel" name="generateApply" post="trim()"%>
+<%for (eAllContents("Apply")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
+<%-- ApplyIndexed --%>
+<%script type="becontent.BeContentModel" name="generateApplyIndexed" post="trim()"%>
+<%for (eAllContents("ApplyIndexed")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
+<%-- ApplyItem --%>
+<%script type="becontent.BeContentModel" name="generateApplyItem" post="trim()"%>
+<%for (eAllContents("ApplyItem")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 <%-- AttributeColor --%>
 <%script type="becontent.BeContentModel" name="generateAttributeColor" post="trim()"%>
 <%for (eAllContents("AttributeColor")) {%>
@@ -83,6 +101,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- Copy --%>
+<%script type="becontent.BeContentModel" name="generateCopy" post="trim()"%>
+<%for (eAllContents("Copy")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 <%-- CustomEntity --%>
 <%script type="becontent.BeContentModel" name="generateCustomEntity" post="trim()"%>
 <%for (eAllContents("CustomEntity")) {%>
@@ -111,6 +135,18 @@ import becontent.html.gen.services.Names
 <%script type="becontent.BeContentModel" name="generateHandler" post="trim()"%>
 <%for (eAllContents("Handler")){%>
 	<%generateIndexLink(current().fileName, current().generateFilename())%>
+<%}%>
+
+<%-- Parameter --%>
+<%script type="becontent.BeContentModel" name="generateParameter" post="trim()"%>
+<%for (eAllContents("Parameter")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Propagate --%>
+<%script type="becontent.BeContentModel" name="generatePropagate" post="trim()"%>
+<%for (eAllContents("Propagate")){%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
 <%-- Reference --%>
@@ -227,10 +263,34 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- Trigger --%>
+<%script type="becontent.BeContentModel" name="generateTrigger" post="trim()"%>
+<%for (eAllContents("Trigger")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- UnsetParameter --%>
+<%script type="becontent.BeContentModel" name="generateUnsetParameter" post="trim()"%>
+<%for (eAllContents("UnsetParameter")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
 <%generateHeader("BeContent Model")%>
 	<body>
+		Apply
+		<ul>
+		<%generateApply()%> 
+		</ul>
+		ApplyIndexed
+		<ul>
+		<%generateApplyIndexed()%> 
+		</ul>
+		ApplyItem
+		<ul>
+		<%generateApplyItem()%> 
+		</ul>
 		AttributeColor
 		<ul>
 		<%generateAttributeColor()%> 
@@ -283,6 +343,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateContent()%> 
 		</ul>
+		Copy
+		<ul>
+		<%generateCopy()%> 
+		</ul>
 		CustomEntity
 		<ul>
 		<%generateCustomEntity()%> 
@@ -302,6 +366,14 @@ import becontent.html.gen.services.Names
 		FileToFolderExtension
 		<ul>
 		<%generateFileToFolderExtension()%>
+		</ul>
+		Parameter
+		<ul>
+		<%generateParameter()%>
+		</ul>
+		Propagate
+		<ul>
+		<%generatePropagate()%>
 		</ul>
 		Reference
 		<ul>
@@ -378,6 +450,14 @@ import becontent.html.gen.services.Names
 		Text
 		<ul>
 		<%generateText()%>
+		</ul>
+		Trigger
+		<ul>
+		<%generateTrigger()%>
+		</ul>
+		UnsetParameter
+		<ul>
+		<%generateUnsetParameter()%>
 		</ul>
 	</body>
 </html>
