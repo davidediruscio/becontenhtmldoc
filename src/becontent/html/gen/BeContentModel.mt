@@ -113,6 +113,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- CustomPager --%>
+<%script type="becontent.BeContentModel" name="generateCustomPager" post="trim()"%>
+<%for (eAllContents("CustomPager")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 <%-- CustomRelation --%>
 <%script type="becontent.BeContentModel" name="generateCustomRelation" post="trim()"%>
 <%for (eAllContents("CustomRelation")) {%>
@@ -275,6 +281,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- Validation --%>
+<%script type="becontent.BeContentModel" name="generateValidation" post="trim()"%>
+<%for (eAllContents("Validation")) {%>
+	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
 
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
 <%generateHeader("BeContent Model")%>
@@ -350,6 +362,10 @@ import becontent.html.gen.services.Names
 		CustomEntity
 		<ul>
 		<%generateCustomEntity()%> 
+		</ul>
+		CustomPager
+		<ul>
+		<%generateCustomPager()%> 
 		</ul>
 		CustomRelation
 		<ul>
@@ -458,6 +474,10 @@ import becontent.html.gen.services.Names
 		UnsetParameter
 		<ul>
 		<%generateUnsetParameter()%>
+		</ul>
+		Validation
+		<ul>
+		<%generateValidation()%>
 		</ul>
 	</body>
 </html>
