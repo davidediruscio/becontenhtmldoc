@@ -95,6 +95,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- Checkbox --%>
+<%script type="becontent.BeContentModel" name="generateCheckbox" post="trim()"%>
+<%for (eAllContents("Checkbox")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- ConditionalTemplate --%>
 <%script type="becontent.BeContentModel" name="generateConditionalTemplate" post="trim()"%>
 <%for (eAllContents("ConditionalTemplate")) {%>
@@ -137,10 +143,22 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().fileName, current().generateFilename())%>
 <%}%>
 
+<%-- ExtendedForm --%>
+<%script type="becontent.BeContentModel" name="generateExtendedForm" post="trim()"%>
+<%for (eAllContents("ExtendedForm")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- FileToFolderExtension --%>
 <%script type="becontent.BeContentModel" name="generateFileToFolderExtension" post="trim()"%>
 <%for (eAllContents("FileToFolderExtension")){%>
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+<%}%>
+
+<%-- Form --%>
+<%script type="becontent.BeContentModel" name="generateForm" post="trim()"%>
+<%for (eAllContents("Form")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
 <%-- Handler --%>
@@ -363,6 +381,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateChannel()%> 
 		</ul>
+		Checkbox
+		<ul>
+		<%generateCheckbox()%> 
+		</ul>
 		ConditionalTemplate
 		<ul>
 		<%generateConditionalTemplate()%> 
@@ -391,9 +413,17 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateEntityManagerPage()%> 
 		</ul>
+		ExtendedForm	
+		<ul>
+		<%generateExtendedForm()%> 
+		</ul>
 		FileToFolderExtension
 		<ul>
 		<%generateFileToFolderExtension()%>
+		</ul>
+		Form
+		<ul>
+		<%generateForm()%>
 		</ul>
 		Handler
 		<ul>
