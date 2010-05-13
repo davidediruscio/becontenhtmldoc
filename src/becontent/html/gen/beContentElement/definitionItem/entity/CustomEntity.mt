@@ -19,19 +19,39 @@ import becontent.html.gen.entityField.typedAttribute.AttributeVarchar
 
 <%script type="becontent.CustomEntity" name="generate" post="trim()"%>
 	<%for (fields){%>
-		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<%if current().name != null && current().name != "" {%>
+			<% generateInnerDetailDiv("fields", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%}else{%>
+			<% generateInnerDetailDiv("fields", current().eClass().name + ": ...", current().generate() ) %>
+		<%}%>
 	<%}%>
 	<%for (handler){%>
-		<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName() ) %>
+		<%if current().fileName != null && current().fileName != "" {%>
+			<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName() ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("isOwned", isOwned ) %>
-	<% generateDetailDiv("name", name ) %>
+	<%if name != null && name != "" {%>
+		<% generateDetailDiv("name", name ) %>
+	<%}else{%>
+		<% generateDetailDiv("name", "..." ) %>
+	<%}%>
 	<% generateDetailDiv("presentationString", presentationString ) %>
 	<%for (rss){%>
-		<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<%if _id_model != null && _id_model != "" {%>
+			<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("rssFilter", rssFilter ) %>
 	<% generateDetailDiv("variableName", variableName ) %>
 
 <%script type="becontent.CustomEntity" name="CustomEntity" file="<%cleaner(current().generateFilename())%>"%>
+<%if name != null && name != "" {%>
 	<% generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<% generateHTML("...", current().generate())%>
+<%}%>
