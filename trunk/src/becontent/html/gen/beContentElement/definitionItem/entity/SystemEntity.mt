@@ -31,22 +31,46 @@ import becontent.html.gen.systemEntityField.typedSystemAttribute.SystemAttribute
 
 <%script type="becontent.SystemEntity" name="generate" post="trim()"%>
 	<%for (fields){%>
-		<% generateInnerDetailDiv("fields", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%if current().name != null && current().name != "" {%>
+			<% generateInnerDetailDiv("fields", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%}else{%>
+			<% generateInnerDetailDiv("fields", current().eClass().name + ": ...", current().generate() ) %>
+		<%}%>
 	<%}%>
 	<%for (handler){%>
-		<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName() ) %>
+		<%if current().fileName != null && current().fileName != "" {%>
+			<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().fileName() ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("handler", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("isOwned", isOwned ) %>
-	<% generateDetailDiv("name", name ) %>
+	<%if name != null && name != "" {%>
+		<% generateDetailDiv("name", name ) %>
+	<%}else{%>
+		<% generateDetailDiv("name", "..." ) %>
+	<%}%>
 	<% generateDetailDiv("presentationString", presentationString ) %>
 	<%for (rss){%>
-		<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<%if _id_model != null && _id_model != "" {%>
+			<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("rss", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("rssFilter", rssFilter ) %>
 	<%for (systemFields){%>
-		<% generateInnerDetailDiv("systemFields", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%if current().name != null && current().name != "" {%>
+			<% generateInnerDetailDiv("systemFields", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%}else{%>
+			<% generateInnerDetailDiv("systemFields", current().eClass().name + ": ...", current().generate() ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("variableName", variableName ) %>
 
 <%script type="becontent.SystemEntity" name="SystemEntity" file="<%cleaner(current().generateFilename())%>"%>
+<%if name != null && name != "" {%>
 	<% generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<% generateHTML("...", current().generate())%>
+<%}%>
