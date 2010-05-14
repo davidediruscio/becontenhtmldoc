@@ -11,8 +11,16 @@ import becontent.html.gen.services.Names
 <%}else{%>
 	<% generateDetailDiv("helper", "..." ) %>
 <%}%>
-<% generateDetailDiv("name", name ) %>
+<%if (name != null && name != ""){%>
+	<% generateDetailDiv("name", name ) %>
+<%}else{%>
+	<% generateDetailDiv("name", "..." ) %>
+<%}%>
 <% generateDetailDiv("values", values ) %>
 
 <%script type="becontent.Hidden" name="Hidden" file="<%cleaner(generateFilename())%>"%>
-<%generateHTML(name.toUpperCase(), current().generate())%>
+<%if (name != null && name != ""){%>
+	<%generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<%generateHTML("...", current().generate())%>
+<%}%>

@@ -14,11 +14,19 @@ import becontent.html.gen.services.Names
 <% generateDetailDiv("isMandatory", isMandatory ) %>
 <% generateDetailDiv("label", label ) %>
 <% generateDetailDiv("maxLength", maxLength ) %>
-<% generateDetailDiv("name", name ) %>
+<%if (name != null && name != ""){%>
+	<% generateDetailDiv("name", name ) %>
+<%}else{%>
+	<% generateDetailDiv("name", "..." ) %>
+<%}%>
 <% generateDetailDiv("size", size ) %>
 
 <%script type="becontent.Text" name="generateFormHTML" post="trim()"%>
 <input type="text" size="<% size %>" name="<% name %>" id="<% name %>">	
 
 <%script type="becontent.Text" name="Text" file="<%cleaner(generateFilename())%>"%>
-<%generateHTML(name.toUpperCase(), current().generate())%>
+<%if (name != null && name != ""){%>
+	<%generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<%generateHTML("...", current().generate())%>
+<%}%>
