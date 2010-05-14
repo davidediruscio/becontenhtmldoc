@@ -185,9 +185,21 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- RadioButton --%>
+<%script type="becontent.BeContentModel" name="generateRadioButton" post="trim()"%>
+<%for (eAllContents("RadioButton")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Reference --%>
 <%script type="becontent.BeContentModel" name="generateReference" post="trim()"%>
 <%for (eAllContents("Reference")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Section --%>
+<%script type="becontent.BeContentModel" name="generateSection" post="trim()"%>
+<%for (eAllContents("Section")) {%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -441,9 +453,17 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generatePropagate()%>
 		</ul>
+		RadioButton
+		<ul>
+		<%generateRadioButton()%>
+		</ul>
 		Reference
 		<ul>
 		<%generateReference()%>
+		</ul>
+		Section
+		<ul>
+		<%generateSection()%> 
 		</ul>
 		Skin
 		<ul>
