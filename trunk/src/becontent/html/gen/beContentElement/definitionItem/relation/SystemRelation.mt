@@ -6,15 +6,31 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.SystemRelation" name="generate" post="trim()"%>
-	<%for (leftForeignkey) {%> 
-		<% generateReferenceDetailDiv("leftForeignKey", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+	<%for (leftForeignkey) {%>
+		<%if (current().name != null && current().name != ""){%>
+			<% generateReferenceDetailDiv("leftForeignKey", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("leftForeignKey", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>		
 	<%}%>
-	<% generateDetailDiv("name", name ) %>
+	<%if (name != null && name != ""){%>
+		<% generateDetailDiv("name", name ) %>
+	<%}else{%>
+		<% generateDetailDiv("...", name ) %>
+	<%}%>
 	<%for (rightForeignkey) {%> 
-		<% generateReferenceDetailDiv("rightForeignKey", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<%if (current().name != null && current().name != ""){%>
+			<% generateReferenceDetailDiv("rightForeignKey", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("rightForeignKey", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("variableName", variableName ) %>
 	
 <%script type="becontent.SystemRelation" name="SystemRelation" file="<%cleaner(current().generateFilename())%>"%>
-	<% generateHTML(name.toUpperCase().toUpperCase(), current().generate() ) %>
+<%if (name != null && name != ""){%>
+	<% generateHTML(name.toUpperCase(), current().generate() ) %>
+<%}else{%>
+	<% generateHTML("...", current().generate() ) %>
+<%}%>
 
