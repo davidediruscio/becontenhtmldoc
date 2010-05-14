@@ -10,10 +10,22 @@ import becontent.html.gen.services.StringService
  <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isSearchPresentationBody", isSearchPresentationBody ) %>
  <% generateDetailDiv("isTextSearch", isTextSearch ) %>
- <% generateDetailDiv("name", name ) %>
+ <%if (name != null && name != ""){%>
+ 	<% generateDetailDiv("name", name ) %>
+ <%}else{%>
+ 	<% generateDetailDiv("name", "..." ) %>
+ <%}%>
  <%for (referredEntity) {%> 
-		<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+ <%if (current().name != null && current().name != ""){%>
+ 	<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+ <%}else{%>
+ 	<% generateReferenceDetailDiv("referredEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+ <%}%>
  <%}%>
 
 <%script type="becontent.SystemReference" name="SystemReference" file="<%cleaner(current().generateFilename())%>"%>
- <% generateHTML( current.eClass().name, current().generate() ) %>
+<%if (name != null && name != ""){%>
+ 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
+ <%}else{%>
+ 	<% generateHTML( "...", current().generate() ) %>
+ <%}%>
