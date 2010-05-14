@@ -14,10 +14,18 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("isMandatory", isMandatory ) %>
 <% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("name", name ) %>
+<%if (name != null && name != ""){%>
+	<% generateDetailDiv("name", name ) %>
+<%}else{%>
+	<% generateDetailDiv("name", "..." ) %>
+<%}%>
 
 <%script type="becontent.Date" name="generateFormHTML" post="trim()"%>
 <input value="" name="<% name %>"><img width=16 height=16 src="<% current().getGeneratedFilesPath %>img/calendar.ico" style="padding: 0px 0px 0px 2px;">	
 
 <%script type="becontent.Date" name="Date" file="<%cleaner(generateFilename())%>"%>
-<%generateHTML(name.toUpperCase(), current().generate())%>
+<%if (name != null && name != ""){%>
+	<%generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<%generateHTML("...", current().generate())%>
+<%}%>

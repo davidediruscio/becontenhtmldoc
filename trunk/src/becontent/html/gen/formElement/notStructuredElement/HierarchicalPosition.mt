@@ -13,10 +13,18 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("controlledField", controlledField ) %>
 <% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("name", name ) %>
+<%if (name != null && name != ""){%>
+	<% generateDetailDiv("name", name ) %>
+<%}else{%>
+	<% generateDetailDiv("name", "..." ) %>
+<%}%>
 <% generateDetailDiv("referenceField", referenceField ) %>
 <% generateDetailDiv("size", size ) %>
 
 
 <%script type="becontent.HierarchicalPosition" name="HierarchicalPosition" file="<%cleaner(generateFilename())%>"%>
-<%generateHTML(name.toUpperCase(), current().generate())%>
+<%if (name != null && name != ""){%>
+	<%generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<%generateHTML("...", current().generate())%>
+<%}%>

@@ -15,8 +15,16 @@ import becontent.html.gen.services.Names
 <% generateDetailDiv("columns", columns ) %>
 <% generateDetailDiv("isMandatory", isMandatory ) %>
 <% generateDetailDiv("label", label ) %>
-<% generateDetailDiv("name", name ) %>
+<%if (name != null && name != ""){%>
+	<% generateDetailDiv("name", name ) %>
+<%}else{%>
+	<% generateDetailDiv("name", "..." ) %>
+<%}%>
 <% generateDetailDiv("rows", rows ) %>
 
 <%script type="becontent.Editor" name="Editor" file="<%cleaner(generateFilename())%>"%>
-<%generateHTML(name.toUpperCase(), current().generate())%>
+<%if (name != null && name != ""){%>
+	<%generateHTML(name.toUpperCase(), current().generate())%>
+<%}else{%>
+	<%generateHTML("...", current().generate())%>
+<%}%>
