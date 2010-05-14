@@ -6,9 +6,17 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.Copy" name="generate" post="trim()"%>
-	<% generateDetailDiv("_id_model", _id_model ) %>
+	<%if (_id_model != null && _id_model != ""){%>
+		<% generateDetailDiv("_id_model", _id_model ) %>
+	<%}else{%>
+		<% generateDetailDiv("_id_model", "..." ) %>
+	<%}%>
 	<% generateDetailDiv("fieldName1", fieldName1 ) %>
 	<% generateDetailDiv("fieldName2", fieldName2 ) %>
 	
 <%script type="becontent.Copy" name="Copy" file="<%cleaner(current().generateFilename())%>"%>
+<%if (_id_model != null && _id_model != ""){%>
 	<% generateHTML( _id_model.toUpperCase(), current().generate() ) %>
+<%}else{%>
+	<% generateHTML( "...", current().generate() ) %>
+<%}%>
