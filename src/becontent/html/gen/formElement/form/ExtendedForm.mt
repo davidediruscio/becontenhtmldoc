@@ -29,21 +29,45 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 	
 <%script type="becontent.ExtendedForm" name="generate" post="trim()"%>
 	<% generateDetailDiv("className", className ) %>
-	<%for (customPager) {%> 
-		<% generateReferenceDetailDiv("customPager", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+	<%for (customPager) {%>
+		<%if (current()._id_model != null && current()._id_model != ""){%>
+			<% generateReferenceDetailDiv("customPager", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("customPager", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	<% generateDetailDiv("description", description ) %>
 	<%for (elements){%>
-		<% generateInnerDetailDiv(current().eClass().name, current().name, current().generate() ) %>
+		<%if (current().name != null && current().name != ""){%>
+			<% generateInnerDetailDiv("elements", current().eClass().name + ": " + current().name, current().generate() ) %>
+		<%}else{%>
+			<% generateInnerDetailDiv("elements", current().eClass().name + ": ...", current().generate() ) %>
+		<%}%>
 	<%}%>
-	<%for (mainEntity) {%> 
-		<% generateReferenceDetailDiv("mainEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+	<%for (mainEntity) {%>
+		<%if (current().name != null && current().name != ""){%>
+			<% generateReferenceDetailDiv("mainEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("mainEntity", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>		
 	<%}%>
 	<% generateDetailDiv("method", method ) %>
-	<% generateDetailDiv("name", name ) %>	
-	<%for (validations) {%> 
-		<% generateReferenceDetailDiv("validations", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+	<%if (name != null && name != ""){%>
+		<% generateDetailDiv("name", name ) %>
+	<%}else{%>
+		<% generateDetailDiv("name", "..." ) %>
+	<%}%>
+	<%for (validations) {%>
+		<%if (current()._id_model != null && current()._id_model != ""){%>
+			<% generateReferenceDetailDiv("validations", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current()._id_model ) %>
+		<%}else{%>
+			<% generateReferenceDetailDiv("validations", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
+		<%}%>
 	<%}%>
 	
 <%script type="becontent.ExtendedForm" name="ExtendedForm" file="<%cleaner(current().generateFilename())%>"%>
+<%if (name != null && name != ""){%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
+<%}else{%>
+	<% generateHTML( "...", current().generate() ) %>
+<%}%>
