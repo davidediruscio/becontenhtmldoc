@@ -137,6 +137,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- Editor --%>
+<%script type="becontent.BeContentModel" name="generateEditor" post="trim()"%>
+<%for (eAllContents("Editor")) {%>
+	<%generateIndexLink(current().fileName, current().generateFilename())%>
+<%}%>
+
 <%-- EntityManagerPage --%>
 <%script type="becontent.BeContentModel" name="generateEntityManagerPage" post="trim()"%>
 <%for (eAllContents("EntityManagerPage")) {%>
@@ -200,6 +206,12 @@ import becontent.html.gen.services.Names
 <%-- Section --%>
 <%script type="becontent.BeContentModel" name="generateSection" post="trim()"%>
 <%for (eAllContents("Section")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Select --%>
+<%script type="becontent.BeContentModel" name="generateSelect" post="trim()"%>
+<%for (eAllContents("Select")) {%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -308,6 +320,12 @@ import becontent.html.gen.services.Names
 <%-- Text --%>
 <%script type="becontent.BeContentModel" name="generateText" post="trim()"%>
 <%for (eAllContents("Text")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- TextArea --%>
+<%script type="becontent.BeContentModel" name="generateTextArea" post="trim()"%>
+<%for (eAllContents("TextArea")) {%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -421,6 +439,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateCustomRelation()%> 
 		</ul>
+		Editor	
+		<ul>
+		<%generateEditor()%> 
+		</ul>
 		EntityManagerPage	
 		<ul>
 		<%generateEntityManagerPage()%> 
@@ -464,6 +486,10 @@ import becontent.html.gen.services.Names
 		Section
 		<ul>
 		<%generateSection()%> 
+		</ul>
+		Select
+		<ul>
+		<%generateSelect()%> 
 		</ul>
 		Skin
 		<ul>
@@ -536,6 +562,10 @@ import becontent.html.gen.services.Names
 		Text
 		<ul>
 		<%generateText()%>
+		</ul>
+		TextArea
+		<ul>
+		<%generateTextArea()%>
 		</ul>
 		Trigger
 		<ul>
