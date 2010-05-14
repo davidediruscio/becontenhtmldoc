@@ -6,10 +6,16 @@ import becontent.html.gen.services.StringService
 %>
 
 <%script type="becontent.Skinlet" name="generate" post="trim()"%>
-	<% generateDetailDiv("_id_model", _id_model ) %>
+	<%if (_id_model != null && _id_model != ""){%>
+		<% generateDetailDiv("_id_model", _id_model ) %>
+	<%}else{%>
+		<% generateDetailDiv("_id_model", "..." ) %>
+	<%}%>
 	<% generateDetailDiv("template", template ) %>
 	
 <%script type="becontent.Skinlet" name="Skinlet" file="<%cleaner(current().generateFilename())%>"%>
-	<% generateHTML(_id_model.toUpperCase(), current().generate() ) %>
-
-
+<%if (_id_model != null && _id_model != ""){%>
+	<% generateHTML(_id_model.toUpperCase(), current().generate())%>
+<%}else{%>
+	<% generateHTML("...", current().generate())%>
+<%}%>
