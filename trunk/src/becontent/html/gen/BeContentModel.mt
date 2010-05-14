@@ -107,6 +107,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- Color --%>
+<%script type="becontent.BeContentModel" name="generateColor" post="trim()"%>
+<%for (eAllContents("Color")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Content --%>
 <%script type="becontent.BeContentModel" name="generateContent" post="trim()"%>
 <%for (eAllContents("Content")) {%>
@@ -146,7 +152,7 @@ import becontent.html.gen.services.Names
 <%-- Editor --%>
 <%script type="becontent.BeContentModel" name="generateEditor" post="trim()"%>
 <%for (eAllContents("Editor")) {%>
-	<%generateIndexLink(current().fileName, current().generateFilename())%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
 <%-- EntityManagerPage --%>
@@ -191,6 +197,24 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().fileName, current().generateFilename())%>
 <%}%>
 
+<%-- HierarchicalPosition --%>
+<%script type="becontent.BeContentModel" name="generateHierarchicalPosition" post="trim()"%>
+<%for (eAllContents("HierarchicalPosition")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Hidden --%>
+<%script type="becontent.BeContentModel" name="generateHidden" post="trim()"%>
+<%for (eAllContents("Hidden")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Image --%>
+<%script type="becontent.BeContentModel" name="generateImage" post="trim()"%>
+<%for (eAllContents("Image")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- JoinEntity --%>
 <%script type="becontent.BeContentModel" name="generateJoinEntity" post="trim()"%>
 <%for (eAllContents("JoinEntity")){%>
@@ -221,6 +245,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- Position --%>
+<%script type="becontent.BeContentModel" name="generatePosition" post="trim()"%>
+<%for (eAllContents("Position")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Propagate --%>
 <%script type="becontent.BeContentModel" name="generatePropagate" post="trim()"%>
 <%for (eAllContents("Propagate")){%>
@@ -233,9 +263,21 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- RadioFromReference --%>
+<%script type="becontent.BeContentModel" name="generateRadioFromReference" post="trim()"%>
+<%for (eAllContents("RadioFromReference")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Reference --%>
 <%script type="becontent.BeContentModel" name="generateReference" post="trim()"%>
 <%for (eAllContents("Reference")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- RelationManager --%>
+<%script type="becontent.BeContentModel" name="generateRelationManager" post="trim()"%>
+<%for (eAllContents("RelationManager")){%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -248,6 +290,12 @@ import becontent.html.gen.services.Names
 <%-- Select --%>
 <%script type="becontent.BeContentModel" name="generateSelect" post="trim()"%>
 <%for (eAllContents("Select")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- SelectFromReference --%>
+<%script type="becontent.BeContentModel" name="generateSelectFromReference" post="trim()"%>
+<%for (eAllContents("SelectFromReference")) {%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -383,6 +431,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- Year --%>
+<%script type="becontent.BeContentModel" name="generateYear" post="trim()"%>
+<%for (eAllContents("Year")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 
 <%script type="becontent.BeContentModel" name="Index" file="index.html"%>
 <%generateHeader("BeContent Model")%>
@@ -451,6 +505,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateCheckbox()%> 
 		</ul>
+		Color
+		<ul>
+		<%generateColor()%> 
+		</ul>
 		ConditionalTemplate
 		<ul>
 		<%generateConditionalTemplate()%> 
@@ -510,7 +568,19 @@ import becontent.html.gen.services.Names
 		Handler
 		<ul>
 		<%generateHandler()%>
-		</ul>		
+		</ul>	
+		Hidden
+		<ul>
+		<%generateHidden()%>
+		</ul>	
+		HierarchicalPosition
+		<ul>
+		<%generateHierarchicalPosition()%>
+		</ul>	
+		Image
+		<ul>
+		<%generateImage()%>
+		</ul>	
 		JoinEntity
 		<ul>
 		<%generateJoinEntity()%>
@@ -531,6 +601,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generatePassword()%>
 		</ul>
+		Position
+		<ul>
+		<%generatePosition()%>
+		</ul>		
 		Propagate
 		<ul>
 		<%generatePropagate()%>
@@ -539,9 +613,17 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateRadioButton()%>
 		</ul>
+		RadioFromReference
+		<ul>
+		<%generateRadioFromReference()%>
+		</ul>
 		Reference
 		<ul>
 		<%generateReference()%>
+		</ul>
+		RelationManager
+		<ul>
+		<%generateRelationManager()%>
 		</ul>
 		Section
 		<ul>
@@ -550,6 +632,10 @@ import becontent.html.gen.services.Names
 		Select
 		<ul>
 		<%generateSelect()%> 
+		</ul>
+		SelectFromReference
+		<ul>
+		<%generateSelectFromReference()%> 
 		</ul>
 		Skin
 		<ul>
@@ -639,5 +725,9 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateValidation()%>
 		</ul>
+		Year
+		<ul>
+		<%generateYear()%>
+		</ul>		
 	</body>
 </html>
