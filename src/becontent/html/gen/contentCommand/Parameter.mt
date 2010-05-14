@@ -7,8 +7,17 @@ import becontent.html.gen.services.StringService
 
 <%script type="becontent.Parameter" name="generate" post="trim()"%>
 	<% generateDetailDiv("_id_model", _id_model ) %>
+	<%if (name != null && name != ""){%>
+		<% generateDetailDiv("name", name ) %>
+	<%}else{%>
+		<% generateDetailDiv("name", "..." ) %>
+	<%}%>
 	<% generateDetailDiv("name", name ) %>
 	<% generateDetailDiv("value", value ) %>
 	
 <%script type="becontent.Parameter" name="Parameter" file="<%cleaner(current().generateFilename())%>"%>
+<%if (name != null && name != ""){%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
+<%}else{%>
+	<% generateHTML( "...", current().generate() ) %>
+<%}%>
