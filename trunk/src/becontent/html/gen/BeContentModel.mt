@@ -161,6 +161,18 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- File --%>
+<%script type="becontent.BeContentModel" name="generateFile" post="trim()"%>
+<%for (eAllContents("File")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- FileToFolder --%>
+<%script type="becontent.BeContentModel" name="generateFileToFolder" post="trim()"%>
+<%for (eAllContents("FileToFolder")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- FileToFolderExtension --%>
 <%script type="becontent.BeContentModel" name="generateFileToFolderExtension" post="trim()"%>
 <%for (eAllContents("FileToFolderExtension")){%>
@@ -188,6 +200,12 @@ import becontent.html.gen.services.Names
 <%-- Link --%>
 <%script type="becontent.BeContentModel" name="generateLink" post="trim()"%>
 <%for (eAllContents("Link")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- LongDate --%>
+<%script type="becontent.BeContentModel" name="generateLongDate" post="trim()"%>
+<%for (eAllContents("LongDate")){%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -473,6 +491,14 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateExtendedForm()%> 
 		</ul>
+		File
+		<ul>
+		<%generateFile()%>
+		</ul>
+		FileToFolder
+		<ul>
+		<%generateFileToFolder()%>
+		</ul>
 		FileToFolderExtension
 		<ul>
 		<%generateFileToFolderExtension()%>
@@ -492,6 +518,10 @@ import becontent.html.gen.services.Names
 		Link
 		<ul>
 		<%generateLink()%>
+		</ul>
+		LongDate
+		<ul>
+		<%generateLongDate()%>
 		</ul>
 		Parameter
 		<ul>
