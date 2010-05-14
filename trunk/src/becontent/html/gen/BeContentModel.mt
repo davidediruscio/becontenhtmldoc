@@ -137,6 +137,12 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
+<%-- Date --%>
+<%script type="becontent.BeContentModel" name="generateDate" post="trim()"%>
+<%for (eAllContents("Date")) {%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Editor --%>
 <%script type="becontent.BeContentModel" name="generateEditor" post="trim()"%>
 <%for (eAllContents("Editor")) {%>
@@ -179,9 +185,21 @@ import becontent.html.gen.services.Names
 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
 <%}%>
 
+<%-- Link --%>
+<%script type="becontent.BeContentModel" name="generateLink" post="trim()"%>
+<%for (eAllContents("Link")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
 <%-- Parameter --%>
 <%script type="becontent.BeContentModel" name="generateParameter" post="trim()"%>
 <%for (eAllContents("Parameter")){%>
+	<%generateIndexLink(current().name, current().generateFilename())%>
+<%}%>
+
+<%-- Password --%>
+<%script type="becontent.BeContentModel" name="generatePassword" post="trim()"%>
+<%for (eAllContents("Password")){%>
 	<%generateIndexLink(current().name, current().generateFilename())%>
 <%}%>
 
@@ -439,6 +457,10 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateCustomRelation()%> 
 		</ul>
+		Date	
+		<ul>
+		<%generateDate()%> 
+		</ul>
 		Editor	
 		<ul>
 		<%generateEditor()%> 
@@ -467,9 +489,17 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateJoinEntity()%>
 		</ul>
+		Link
+		<ul>
+		<%generateLink()%>
+		</ul>
 		Parameter
 		<ul>
 		<%generateParameter()%>
+		</ul>
+		Password
+		<ul>
+		<%generatePassword()%>
 		</ul>
 		Propagate
 		<ul>
