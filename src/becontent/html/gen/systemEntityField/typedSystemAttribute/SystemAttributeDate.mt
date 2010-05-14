@@ -11,7 +11,15 @@ import becontent.html.gen.services.StringService
  <% generateDetailDiv("isSearchPresentationBody", isSearchPresentationBody ) %>
  <% generateDetailDiv("isSearchPresentationHead", isSearchPresentationHead ) %>
  <% generateDetailDiv("isTextSearch", isTextSearch ) %>
- <% generateDetailDiv("name", name ) %>
+ <%if (name != null && name != ""){%>
+ 	<% generateDetailDiv("name", name ) %>
+ <%}else{%>
+ 	<% generateDetailDiv("name", "..." ) %>
+ <%}%>
  
 <%script type="becontent.SystemAttributeDate" name="SystemAttributeDate" file="<%cleaner(current().generateFilename())%>"%>
- <% generateHTML( current.eClass().name, current().generate() ) %>
+<%if (name != null && name != ""){%>
+ 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
+ <%}else{%>
+ 	<% generateHTML( "...", current().generate() ) %>
+ <%}%>
