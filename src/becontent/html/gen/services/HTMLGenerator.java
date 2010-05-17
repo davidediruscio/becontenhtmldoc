@@ -1,5 +1,7 @@
 package becontent.html.gen.services;
 
+import java.io.IOException;
+
 import fr.obeo.acceleo.gen.template.eval.ENode;
 import fr.obeo.acceleo.gen.template.eval.ENodeCastException;
 
@@ -90,8 +92,10 @@ public class HTMLGenerator {
 	 * @param node
 	 * @param title Title of the page
 	 * @return The HTML code of the page header section
+	 * @throws IOException 
 	 */
-	public String generateHeader(ENode node, String title){
+	public String generateHeader(ENode node, String title) throws IOException{
+		FileService.createImgFolder();
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n")
 				 		.append(" <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> \n")
@@ -108,7 +112,7 @@ public class HTMLGenerator {
 	public String generateBody(ENode node, String elementName, String content) throws ENodeCastException{
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append(" <body> \n") 
-				.append(" <a href=\""+StringService.getGeneratedFilesPath(node)+"index.html\">Indice</a> \n")		
+				.append(" <a href=\""+FileService.getGeneratedFilesPath(node)+"index.html\">Indice</a> \n")		
 				.append(" <hr /> \n")
 				.append(" 	<h2> \n")
 				.append(" 		<font size=\"-1\">").append(node.getEObject().eClass().getName()).append("</font> \n")
@@ -129,7 +133,7 @@ public class HTMLGenerator {
 		return toReturn.toString();
 	}
 
-	public String generateHTML(ENode node, String elementName, String bodyContent) {
+	public String generateHTML(ENode node, String elementName, String bodyContent) throws IOException {
 		StringBuffer toReturn = new StringBuffer();
 		try {
 			toReturn.append(generateHeader(node, elementName)).append(generateBody(node, elementName, bodyContent));
