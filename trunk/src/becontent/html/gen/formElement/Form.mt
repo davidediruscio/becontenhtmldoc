@@ -3,6 +3,7 @@ metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.Names
 import becontent.html.gen.services.StringService
+import becontent.html.gen.services.FileService
 import becontent.html.gen.formElement.notStructuredElement.Checkbox
 import becontent.html.gen.formElement.notStructuredElement.Color
 import becontent.html.gen.formElement.notStructuredElement.Date
@@ -66,7 +67,7 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 					<%}%>
 					</table>
 			</form>
-			<div class="closing" style="background: #E2F5FB url('<% current().getGeneratedFilesPath %>img/form-bar.png') no-repeat left;">
+			<div class="closing" style="background: #E2F5FB url(<% current().getGeneratedFilesPath %>img/form-bar.png) no-repeat left;">
 				<input type="button" value="Aggiungi">
 			</div>
 		</div>
