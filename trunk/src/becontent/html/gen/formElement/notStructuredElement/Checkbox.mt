@@ -21,6 +21,9 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("value", value ) %>
 
+<%script type="becontent.Checkbox" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>" type="checkbox">
+
 <%script type="becontent.Checkbox" name="Checkbox" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
