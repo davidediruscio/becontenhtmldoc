@@ -3,6 +3,7 @@ metamodel http://becontent.metamodel
 import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.StringService
 import becontent.html.gen.services.Names
+import becontent.html.gen.services.FileService
 %>
 
 
@@ -21,6 +22,9 @@ import becontent.html.gen.services.Names
 	<% generateDetailDiv("name", "..." ) %>
 <%}%>
 <% generateDetailDiv("rows", rows ) %>
+
+<%script type="becontent.Editor" name="generateFormHTML" post="trim()"%>
+<img src="<% current().getGeneratedFilesPath %>img/editor.png" style="padding: 0px 0px 0px 2px;">	
 
 <%script type="becontent.Editor" name="Editor" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>

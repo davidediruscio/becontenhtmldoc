@@ -19,6 +19,9 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("values", values ) %>
 
+<%script type="becontent.RadioButton" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>" type="radio">
+
 <%script type="becontent.RadioButton" name="RadioButton" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

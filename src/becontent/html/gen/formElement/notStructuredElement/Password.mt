@@ -21,6 +21,9 @@ import becontent.html.gen.services.Names
 <% generateDetailDiv("maxLength", maxLength ) %>
 <% generateDetailDiv("size", size ) %>
 
+<%script type="becontent.Password" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>" type="password">
+
 <%script type="becontent.Password" name="Password" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

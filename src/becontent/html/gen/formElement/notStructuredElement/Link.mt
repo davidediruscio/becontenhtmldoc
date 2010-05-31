@@ -21,6 +21,10 @@ import becontent.html.gen.services.Names
 <% generateDetailDiv("maxLength", maxLength ) %>
 <% generateDetailDiv("size", size ) %>
 
+<%script type="becontent.Link" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>">
+
+
 <%script type="becontent.Link" name="Link" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
