@@ -4,6 +4,7 @@ import becontent.html.gen.services.HTMLGenerator
 import becontent.html.gen.services.Names
 import becontent.html.gen.formElement.Form
 import becontent.html.gen.services.StringService
+import becontent.html.gen.services.FileService
 %>
 
 <%script type="becontent.EntityManagerPage" name="generate" post="trim()"%>
