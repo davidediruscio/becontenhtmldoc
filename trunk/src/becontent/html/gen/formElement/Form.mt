@@ -56,14 +56,16 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 			<form name="" method="POST" enctype="multipart/form-data">
 	  			<table border="0">
 					<%for (elements){%>
-						<tr>
-							<td>
-								<% current().label %>
-							</td>
-							<td>
-								<% current().generateFormHTML() %>
-							</td>
-						</tr>
+						<%if (!current().eClass().name.equalsIgnoreCase("CustomPager") && !current().eClass().name.equalsIgnoreCase("Validations") && !current().eClass().name.equalsIgnoreCase("Section") && !current().eClass().name.equalsIgnoreCase("Hidden")){%>
+							<tr>
+								<td>
+									<% current().label %>
+								</td>
+								<td>
+									<% current().generateFormHTML() %>
+								</td>
+							</tr>
+						<%}%>
 					<%}%>
 					</table>
 			</form>
