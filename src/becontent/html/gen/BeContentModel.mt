@@ -8,19 +8,31 @@ import becontent.html.gen.services.Names
 <%-- Apply --%>
 <%script type="becontent.BeContentModel" name="generateApply" post="trim()"%>
 <%for (eAllContents("Apply")) {%>
-	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+	<%if (current()._id_model.equalsIgnoreCase("") || current()._id_model == null){%>
+	 	<%generateIndexLink("...", current().generateFilename())%>
+	 <%}else{%>
+	 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+	 <%}%>
 <%}%>
 
 <%-- ApplyIndexed --%>
 <%script type="becontent.BeContentModel" name="generateApplyIndexed" post="trim()"%>
 <%for (eAllContents("ApplyIndexed")) {%>
-	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+	<%if (current()._id_model.equalsIgnoreCase("") || current()._id_model == null){%>
+	 	<%generateIndexLink("...", current().generateFilename())%>
+	 <%}else{%>
+	 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+	 <%}%>
 <%}%>
 
 <%-- ApplyItem --%>
 <%script type="becontent.BeContentModel" name="generateApplyItem" post="trim()"%>
 <%for (eAllContents("ApplyItem")) {%>
-	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+	 <%if (current()._id_model.equalsIgnoreCase("") || current()._id_model == null){%>
+	 	<%generateIndexLink("...", current().generateFilename())%>
+	 <%}else{%>
+	 	<%generateIndexLink(current()._id_model, current().generateFilename())%>
+	 <%}%>
 <%}%>
 
 <%-- AttributeColor --%>
