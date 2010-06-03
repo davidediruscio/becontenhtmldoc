@@ -23,8 +23,8 @@ public class HTMLGenerator {
 				.append("		color: gray; \n")
 				.append("	} \n")
 				.append(" 	.detailDiv   { background-color: #FFFFFF; width: 100%; clear: both;  border: 1px dotted #cccccc; line-height: 1.3em; } \n")
-				.append(" 	.detailLabel { float: left; width: 25%; } \n")
-				.append(" 	.detailValue { float: right; width: 75%; } \n")
+				.append(" 	.detailLabel { float: left; width: 300px; } \n")
+				.append(" 	.detailValue { float: left; width: auto; } \n")
 				.append(" 	.detailValue a { text-decoration: none; } \n")
 				.append("	#becontent { \n")
 				.append("		font-family: verdana, sans-serif; \n")
@@ -207,7 +207,7 @@ public class HTMLGenerator {
 				.append("   	<code>" + label + ": </code> \n")
 				.append(" 	</span> \n")
 				.append(" 	<span class=\"detailValue\"> \n")
-				.append(" 		<code><b><a href=\""+ path +"\">"+ (!"".equals(name)?name:"...") +"</a></b></code> \n")
+				.append(" 		<code><b><a href=\"file:///"+ path +"\">"+ (!"".equals(name)?name:"...") +"</a></b></code> \n")
 				.append(" 	</span> \n")
 				.append(" </div> \n");
 		return toReturn.toString();
