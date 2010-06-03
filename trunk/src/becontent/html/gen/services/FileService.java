@@ -24,9 +24,32 @@ public class FileService {
 		return res;
 	}
 	
+	/**
+	 * Return the complete path of the generated files folder. 
+	 * The path separator is system-dependent.
+	 * 
+	 * @param node
+	 * @param toOSString
+	 * @return
+	 */
 	public static String getGeneratedFilesPath(ENode node){
-		System.out.println("PATH: " + ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString());
-		return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+"/generatedFiles/";		
+		return FileService.getGeneratedFilesPath(node, true);		
+	}
+
+	/**
+	 * Return the complete path of the generated files folder. 
+	 * If toOSString is true the path separator is <i>system-dependent</i>
+	 * otherwise the path separator is <i>the slash (/)</i>.
+	 * 
+	 * @param node
+	 * @param toOSString
+	 * @return the complete path of the generated files folder
+	 */
+	public static String getGeneratedFilesPath(ENode node, boolean toOSString){
+		if ( toOSString )
+			return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;
+		else
+			return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation()+"/generatedFiles/";		
 	}
 	
 	public static void createImgFolder() throws IOException{

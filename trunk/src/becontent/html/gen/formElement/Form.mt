@@ -69,11 +69,15 @@ import becontent.html.gen.formElement.notStructuredElement.Year
 					<%}%>
 					</table>
 			</form>
-			<div class="closing" style="background: #E2F5FB url(<% current().getGeneratedFilesPath %>img/form-bar.png) no-repeat left;">
+			<div class="closing" style="background: #E2F5FB url(file:///<% current().getGeneratedFilesPath(false) %>img/form-bar.png) no-repeat left;">
 				<input type="button" value="Aggiungi">
 			</div>
 		</div>
 	</div>
 	
 <%script type="becontent.Form" name="Form" file="<%cleaner(current().generateFilename())%>"%>
+<%if (name != null && name != ""){%>
 	<% generateHTML( name.toUpperCase(), current().generate() ) %>
+<%}else{%>
+	<% generateHTML( "...", current().generate() ) %>
+<%}%>

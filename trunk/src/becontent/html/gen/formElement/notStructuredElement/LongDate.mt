@@ -21,7 +21,7 @@ import becontent.html.gen.services.FileService
 <%}%>
 
 <%script type="becontent.LongDate" name="generateFormHTML" post="trim()"%>
-<input value="" name="<% name %>"><img width=16 height=16 src="<% current().getGeneratedFilesPath %>img/calendar.ico" style="padding: 0px 0px 0px 2px;"><input value="" name="<% name %>">&nbsp;(HH:mm)	
+<input value="" name="<% name %>"><img width=16 height=16 src="file:///<% current().getGeneratedFilesPath(false) %>img/calendar.ico" style="padding: 0px 0px 0px 2px;"><input value="" name="<% name %>">&nbsp;(HH:mm)	
 
 <%script type="becontent.LongDate" name="LongDate" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
