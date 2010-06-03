@@ -24,7 +24,7 @@ import becontent.html.gen.services.FileService
 <% generateDetailDiv("rows", rows ) %>
 
 <%script type="becontent.Editor" name="generateFormHTML" post="trim()"%>
-<img src="<% current().getGeneratedFilesPath %>img/editor.png" style="padding: 0px 0px 0px 2px;">	
+<img src="file:///<% current().getGeneratedFilesPath(false) %>img/editor.png" style="padding: 0px 0px 0px 2px;">	
 
 <%script type="becontent.Editor" name="Editor" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
