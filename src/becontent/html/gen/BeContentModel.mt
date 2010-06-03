@@ -457,14 +457,18 @@ import becontent.html.gen.services.Names
 		<ul>
 		<%generateApply()%> 
 		</ul>
-		ApplyIndexed
-		<ul>
-		<%generateApplyIndexed()%> 
-		</ul>
-		ApplyItem
-		<ul>
-		<%generateApplyItem()%> 
-		</ul>
+		<%if (eAllContents("ApplyIndexed") != null){%>
+			ApplyIndexed
+			<ul>
+			<%generateApplyIndexed()%> 
+			</ul>
+		<%}%>
+		<%if (eAllContents("ApplyItem") != null){%>
+			ApplyItem
+			<ul>
+			<%generateApplyItem()%> 
+			</ul>
+		<%}%>
 		AttributeColor
 		<ul>
 		<%generateAttributeColor()%> 
