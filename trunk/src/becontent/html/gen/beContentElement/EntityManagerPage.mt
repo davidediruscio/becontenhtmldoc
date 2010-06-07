@@ -22,9 +22,9 @@ import becontent.html.gen.services.FileService
 	<%}%>
 	<%for (forms){%>
 		<%if current().name != null && current().name != "" {%>
-			<% generateReferenceDetailDiv("forms", cleaner(current().generateFilename()), current().name ) %>
+			<% generateReferenceDetailDiv("forms", cleaner(current().getGeneratedFilesPath+current().generateFilename()), current().name ) %>
 		<%}else{%>
-			<% generateReferenceDetailDiv("forms", cleaner(current().generateFilename()), "..." ) %>
+			<% generateReferenceDetailDiv("forms", cleaner(current().getGeneratedFilesPath+current().generateFilename()), "..." ) %>
 		<%}%>
 	<%}%>
 	<% generateDetailDiv("skin", skin ) %>
