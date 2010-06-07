@@ -207,7 +207,7 @@ public class HTMLGenerator {
 				.append("   	<code>" + label + ": </code> \n")
 				.append(" 	</span> \n")
 				.append(" 	<span class=\"detailValue\"> \n")
-				.append(" 		<code><b><a href=\""+ path +"\">"+ (!"".equals(name)?name:"...") +"</a></b></code> \n")
+				.append(" 		<code><b><a href=\"file:///"+ path +"\">"+ (!"".equals(name)?name:"...") +"</a></b></code> \n")
 				.append(" 	</span> \n")
 				.append(" </div> \n");
 		return toReturn.toString();
