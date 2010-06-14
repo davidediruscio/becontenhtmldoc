@@ -19,6 +19,9 @@ import becontent.html.gen.services.Names
 	<% generateDetailDiv("name", "..." ) %>
 <%}%>
 
+<%script type="becontent.Image" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>">
+
 <%script type="becontent.Image" name="Image" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

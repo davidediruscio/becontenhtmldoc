@@ -18,6 +18,9 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("values", values ) %>
 
+<%script type="becontent.Hidden" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>" type="hidden">
+
 <%script type="becontent.Hidden" name="Hidden" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
