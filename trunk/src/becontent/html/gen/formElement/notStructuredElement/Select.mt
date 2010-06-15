@@ -20,6 +20,9 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("values", values ) %>
 
+<%script type="becontent.Select" name="generateFormHTML" post="trim()"%>
+<select name="<%name%>"></select>
+
 <%script type="becontent.Select" name="Select" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>

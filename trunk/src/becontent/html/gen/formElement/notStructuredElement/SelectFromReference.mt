@@ -28,6 +28,9 @@ import becontent.html.gen.services.FileService
 <%}%>
 <% generateDetailDiv("restrictCondition", restrictCondition ) %>
 
+<%script type="becontent.SelectFromReference" name="generateFormHTML" post="trim()"%>
+<select name="<%name%>"></select>
+
 <%script type="becontent.SelectFromReference" name="SelectFromReference" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
