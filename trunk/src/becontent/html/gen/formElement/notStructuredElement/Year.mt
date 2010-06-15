@@ -23,9 +23,9 @@ import becontent.html.gen.services.Names
 
 <%script type="becontent.Year" name="generateFormHTML" post="trim()"%>
 <select name="<%name%>">
-	<option value="<%start%>"><%start%></otion>
-	<option value="...">...</otion>
-	<option value="<%end%>"><%end%></otion>
+	<option value="<%end%>"><%end%></option>
+	<option value="...">...</option>
+	<option value="<%start%>"><%start%></option>
 </select>
 
 <%script type="becontent.Year" name="Year" file="<%cleaner(generateFilename())%>"%>
