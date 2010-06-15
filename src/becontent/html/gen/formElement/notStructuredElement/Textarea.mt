@@ -21,6 +21,9 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("rows", rows ) %>
 
+<%script type="becontent.Textarea" name="generateFormHTML" post="trim()"%>
+<input type="textarea" cols="<%columns%> rows="<%rows%>" name="<% name %>" id="<% name %>">	
+
 <%script type="becontent.Textarea" name="Textarea" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
