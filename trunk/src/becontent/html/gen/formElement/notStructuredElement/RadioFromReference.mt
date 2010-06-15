@@ -27,6 +27,9 @@ import becontent.html.gen.services.Names
 <%}%>
 <% generateDetailDiv("restrictCondition", restrictCondition ) %>
 
+<%script type="becontent.RadioFromReference" name="generateFormHTML" post="trim()"%>
+<input value="" name="<% name %>" type="radio"></input>
+
 <%script type="becontent.RadioFromReference" name="RadioFromReference" file="<%cleaner(generateFilename())%>"%>
 <%if (name != null && name != ""){%>
 	<%generateHTML(name.toUpperCase(), current().generate())%>
