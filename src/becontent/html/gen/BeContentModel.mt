@@ -726,8 +726,8 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.BeContentModel" name="Index" file="index.html"%>
-<%generateHeader("BeContent Model")%>
+<%script type="becontent.BeContentModel" name="TypesFrame" file="Types_frame.html"%>
+<%generateHeader("Types and Entities")%>
 	<body>
 		<%if (eAllContents("Apply") != null){%>
 			Apply
