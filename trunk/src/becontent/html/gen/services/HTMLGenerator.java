@@ -215,7 +215,7 @@ public class HTMLGenerator {
 	
 	public String generateIndexLink(ENode node, String name, String link) throws ENodeCastException {
 		StringBuffer toReturn = new StringBuffer();
-		toReturn.append("<li><code><b><a href=\"").append(link+"\">"+name+"</a></b></code></li> \n");
+		toReturn.append("<li><code><b><a href=\"").append(link+"\" target=\"Contents\">"+name+"</a></b></code></li> \n");
 		return toReturn.toString();
 	}
 }
