@@ -1116,7 +1116,7 @@ import becontent.html.gen.services.Names
 		<%}%>
 		<%if (eAllContents("SelectFromReference") != null){%>
 			<li><a href="#" onclick="toggle_visibility('selectfromreference')">SelectFromReference</a></li>
-			<div id="div_seectfromreference" style="display : none;">
+			<div id="div_selectfromreference" style="display : none;">
 			<ul>
 			<%generateSelectFromReference()%> 
 			</ul>
