@@ -739,130 +739,172 @@ import becontent.html.gen.services.Names
 			</div>
 		<%}%>
 		<%if (eAllContents("ApplyIndexed") != null){%>
-			ApplyIndexed
+			<li><a href="#" onclick="toggle_visibility('applyindexed')">ApplyIndexed</a></li>
+			<div id="div_applyindexed" style="display : none;">
 			<ul>
 			<%generateApplyIndexed()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("ApplyItem") != null){%>
-			ApplyItem
+			<li><a href="#" onclick="toggle_visibility('applyitem')">ApplyItem</a></li>
+			<div id="div_applyitem" style="display : none;">
 			<ul>
 			<%generateApplyItem()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeColor") != null){%>
-			AttributeColor
+			<li><a href="#" onclick="toggle_visibility('attributecolor')">AttributeColor</a></li>
+			<div id="div_attributecolor" style="display : none;">
 			<ul>
 			<%generateAttributeColor()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeDate") != null){%>
-			AttributeDate
+			<li><a href="#" onclick="toggle_visibility('attributedate')">AttributeDate</a></li>
+			<div id="div_attributedate" style="display : none;">
 			<ul>
 			<%generateAttributeDate()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeFile") != null){%>
-			AttributeFile
+			<li><a href="#" onclick="toggle_visibility('attributefile')">AttributeFile</a></li>
+			<div id="div_attributefile" style="display : none;">
 			<ul>
 			<%generateAttributeFile()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeFileToFolder") != null){%>
-			AttributeFileToFolder
+			<li><a href="#" onclick="toggle_visibility('attributefiletofolder')">AttributeFileToFolder</a></li>
+			<div id="div_attributefiletofolder" style="display : none;">
 			<ul>
 			<%generateAttributeFileToFolder()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeImage") != null){%>
-			AttributeImage
+			<li><a href="#" onclick="toggle_visibility('attributeimage')">AttributeImage</a></li>
+			<div id="div_attributeimage" style="display : none;">
 			<ul>
 			<%generateAttributeImage()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeInteger") != null){%>
-			AttributeInteger
+			<li><a href="#" onclick="toggle_visibility('attributeinteger')">AttributeInteger</a></li>
+			<div id="div_attributeinteger" style="display : none;">
 			<ul>
 			<%generateAttributeInteger()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeLongDate") != null){%>
-			AttributeLongDate
+			<li><a href="#" onclick="toggle_visibility('attributelongdate')">AttributeLongDate</a></li>
+			<div id="div_attributelongdate" style="display : none;">
 			<ul>
 			<%generateAttributeLongDate()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributePassword") != null){%>
-			AttributePassword
+			<li><a href="#" onclick="toggle_visibility('attributepassword')">AttributePassword</a></li>
+			<div id="div_attributepassword" style="display : none;">
 			<ul>
 			<%generateAttributePassword()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributePosition") != null){%>
-			AttributePosition
+			<li><a href="#" onclick="toggle_visibility('attributeposition')">AttributePosition</a></li>
+			<div id="div_attributeposition" style="display : none;">
 			<ul>
 			<%generateAttributePosition()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeText") != null){%>
-			AttributeText
+			<li><a href="#" onclick="toggle_visibility('attributetext')">AttributeText</a></li>
+			<div id="div_attributetext" style="display : none;">
 			<ul>
 			<%generateAttributeText()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("AttributeVarchar") != null){%>
-			AttributeVarchar
+			<li><a href="#" onclick="toggle_visibility('attributevarchar')">AttributeVarchar</a></li>
+			<div id="div_attributevarchar" style="display : none;">
 			<ul>
 			<%generateAttributeVarchar()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("Channel") != null){%>
-			Channel
+			<li><a href="#" onclick="toggle_visibility('channel')">Channel</a></li>
+			<div id="div_channel" style="display : none;">
 			<ul>
 			<%generateChannel()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("Checkbox") != null){%>
-			Checkbox
+			<li><a href="#" onclick="toggle_visibility('checkbox')">Checkbox</a></li>
+			<div id="div_checkbox" style="display : none;">
 			<ul>
 			<%generateCheckbox()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("Color") != null){%>
-			Color
+			<li><a href="#" onclick="toggle_visibility('color')">Color</a></li>
+			<div id="div_color" style="display : none;">
 			<ul>
 			<%generateColor()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("ConditionalTemplate") != null){%>
-			ConditionalTemplate
+			<li><a href="#" onclick="toggle_visibility('conditionaltemplate')">ConditionalTemplate</a></li>
+			<div id="div_conditionaltemplate" style="display : none;">
 			<ul>
 			<%generateConditionalTemplate()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("Content") != null){%>
-			Content
+			<li><a href="#" onclick="toggle_visibility('content')">Content</a></li>
+			<div id="div_content" style="display : none;">
 			<ul>
 			<%generateContent()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("Copy") != null){%>
-			Copy
+			<li><a href="#" onclick="toggle_visibility('copy')">Copy</a></li>
+			<div id="div_copy" style="display : none;">
 			<ul>
 			<%generateCopy()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("CustomEntity") != null){%>
-			CustomEntity
+			<li><a href="#" onclick="toggle_visibility('customentity')">CustomEntity</a></li>
+			<div id="div_customentity" style="display : none;">
 			<ul>
 			<%generateCustomEntity()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("CustomPager") != null){%>
-			CustomPager
+			<li><a href="#" onclick="toggle_visibility('custompager')">CustomPager</a></li>
+			<div id="div_custompager" style="display : none;">
 			<ul>
 			<%generateCustomPager()%> 
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("CustomRelation") != null){%>
 			CustomRelation
