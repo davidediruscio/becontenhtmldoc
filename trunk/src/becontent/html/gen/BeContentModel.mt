@@ -1043,7 +1043,7 @@ import becontent.html.gen.services.Names
 			</div>
 		<%}%>
 		<%if (eAllContents("Password") != null){%>
-			<li><a href="#" onclick="toggle_visibility('password')"></a>Password</li>
+			<li><a href="#" onclick="toggle_visibility('password')">Password</a></li>
 			<div id="div_password" style="display : none;">
 			<ul>
 			<%generatePassword()%> 
