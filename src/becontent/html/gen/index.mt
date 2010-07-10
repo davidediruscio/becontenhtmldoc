@@ -8,8 +8,8 @@ metamodel http://becontent.metamodel
 <head>
 	<title>BeContent Model</title>
 	<frameset cols="25%, 75%">
-		<frame src="Types_frame.html" name="Types" />
-		<frame name="Entities" />
+		<frame src="Types_frame.html" name="Entities" />
+		<frame name="Contents" />
 	</frameset>
 </head>
 </html>

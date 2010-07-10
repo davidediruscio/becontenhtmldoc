@@ -729,11 +729,14 @@ import becontent.html.gen.services.Names
 <%script type="becontent.BeContentModel" name="TypesFrame" file="Types_frame.html"%>
 <%generateHeader("Types and Entities")%>
 	<body>
+		<ul>
 		<%if (eAllContents("Apply") != null){%>
-			Apply
+			<li><a href="#" onclick="toggle_visibility('apply')">Apply</a></li>
+			<div id="div_apply" style="display : none;">
 			<ul>
-			<%generateApply()%> 
+			<%generateApply()%>
 			</ul>
+			</div>
 		<%}%>
 		<%if (eAllContents("ApplyIndexed") != null){%>
 			ApplyIndexed
@@ -1160,6 +1163,7 @@ import becontent.html.gen.services.Names
 			<ul>
 			<%generateYear()%> 
 			</ul>
-		<%}%>	
+		<%}%>
+		</ul>
 	</body>
 </html>
