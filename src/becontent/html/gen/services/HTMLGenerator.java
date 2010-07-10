@@ -112,8 +112,6 @@ public class HTMLGenerator {
 	public String generateBody(ENode node, String elementName, String content) throws ENodeCastException{
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append(" <body> \n") 
-				.append(" <a href=\"file:///"+FileService.getGeneratedFilesPath(node, false)+"index.html\">Indice</a> \n")		
-				.append(" <hr /> \n")
 				.append(" 	<h2> \n")
 				.append(" 		<font size=\"-1\">").append(node.getEObject().eClass().getName()).append("</font> \n")
 				.append(" 		<br /> \n")
