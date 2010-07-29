@@ -47,7 +47,7 @@ public class NewAction implements IObjectActionDelegate {
 
 		
 		
-		String chainFileUri = "/chain/default.chain";
+		String chainFileUri = "/src/chain/default.chain";
 		CChain chain = getCalledChain(new Path(chainFileUri));
 		try {
 			IGenFilter genFilter = new IGenFilter() {
