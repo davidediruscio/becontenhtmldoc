@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
+
    <extension
-         point="fr.obeo.acceleo.gen.module">
-      <module
-			category="beContent"
-            chainPath="chain/default.chain"
-            description="Generatore beContent to Php"
-            title="beContent to Php">
-		<parameter
-               description="Error log"
-               dialog="FILE_SELECTION"
-               extensions="log"/>
-		<parameter
-               description="Source code output folder"
-               dialog="FOLDER_SELECTION"/>
-          <parameter
-               defaultFile="default/default.becontent"
-               description="Input beContent model"
-               dialog="FILE_SELECTION"
-               extensions="becontent"/>
-      </module>
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.becontent"
+            id="ProvaPlugin.contribution1">
+         <menu
+               label="New Submenu"
+               path="additions"
+               id="ProvaPlugin.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="New Action"
+               class="provaplugin.popup.actions.NewAction"
+               menubarPath="ProvaPlugin.menu1/group1"
+               enablesFor="1"
+               id="ProvaPlugin.newAction">
+         </action>
+      </objectContribution>
    </extension>
 
 </plugin>

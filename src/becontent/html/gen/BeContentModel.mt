@@ -726,586 +726,440 @@ import becontent.html.gen.services.Names
 <%}%>
 
 
-<%script type="becontent.BeContentModel" name="TypesFrame" file="Types_frame.html"%>
-<%generateHeader("Types and Entities")%>
+<%script type="becontent.BeContentModel" name="Index" file="index.html"%>
+<%generateHeader("BeContent Model")%>
 	<body>
-		<ul>
 		<%if (eAllContents("Apply") != null){%>
-			<li><a href="#" onclick="toggle_visibility('apply')">Apply</a></li>
-			<div id="div_apply" style="display : none;">
+			Apply
 			<ul>
-			<%generateApply()%>
+			<%generateApply()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("ApplyIndexed") != null){%>
-			<li><a href="#" onclick="toggle_visibility('applyindexed')">ApplyIndexed</a></li>
-			<div id="div_applyindexed" style="display : none;">
+			ApplyIndexed
 			<ul>
 			<%generateApplyIndexed()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("ApplyItem") != null){%>
-			<li><a href="#" onclick="toggle_visibility('applyitem')">ApplyItem</a></li>
-			<div id="div_applyitem" style="display : none;">
+			ApplyItem
 			<ul>
 			<%generateApplyItem()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeColor") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributecolor')">AttributeColor</a></li>
-			<div id="div_attributecolor" style="display : none;">
+			AttributeColor
 			<ul>
 			<%generateAttributeColor()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeDate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributedate')">AttributeDate</a></li>
-			<div id="div_attributedate" style="display : none;">
+			AttributeDate
 			<ul>
 			<%generateAttributeDate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeFile") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributefile')">AttributeFile</a></li>
-			<div id="div_attributefile" style="display : none;">
+			AttributeFile
 			<ul>
 			<%generateAttributeFile()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeFileToFolder") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributefiletofolder')">AttributeFileToFolder</a></li>
-			<div id="div_attributefiletofolder" style="display : none;">
+			AttributeFileToFolder
 			<ul>
 			<%generateAttributeFileToFolder()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeImage") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributeimage')">AttributeImage</a></li>
-			<div id="div_attributeimage" style="display : none;">
+			AttributeImage
 			<ul>
 			<%generateAttributeImage()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeInteger") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributeinteger')">AttributeInteger</a></li>
-			<div id="div_attributeinteger" style="display : none;">
+			AttributeInteger
 			<ul>
 			<%generateAttributeInteger()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeLongDate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributelongdate')">AttributeLongDate</a></li>
-			<div id="div_attributelongdate" style="display : none;">
+			AttributeLongDate
 			<ul>
 			<%generateAttributeLongDate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributePassword") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributepassword')">AttributePassword</a></li>
-			<div id="div_attributepassword" style="display : none;">
+			AttributePassword
 			<ul>
 			<%generateAttributePassword()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributePosition") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributeposition')">AttributePosition</a></li>
-			<div id="div_attributeposition" style="display : none;">
+			AttributePosition
 			<ul>
 			<%generateAttributePosition()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeText") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributetext')">AttributeText</a></li>
-			<div id="div_attributetext" style="display : none;">
+			AttributeText
 			<ul>
 			<%generateAttributeText()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("AttributeVarchar") != null){%>
-			<li><a href="#" onclick="toggle_visibility('attributevarchar')">AttributeVarchar</a></li>
-			<div id="div_attributevarchar" style="display : none;">
+			AttributeVarchar
 			<ul>
 			<%generateAttributeVarchar()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Channel") != null){%>
-			<li><a href="#" onclick="toggle_visibility('channel')">Channel</a></li>
-			<div id="div_channel" style="display : none;">
+			Channel
 			<ul>
 			<%generateChannel()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Checkbox") != null){%>
-			<li><a href="#" onclick="toggle_visibility('checkbox')">Checkbox</a></li>
-			<div id="div_checkbox" style="display : none;">
+			Checkbox
 			<ul>
 			<%generateCheckbox()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Color") != null){%>
-			<li><a href="#" onclick="toggle_visibility('color')">Color</a></li>
-			<div id="div_color" style="display : none;">
+			Color
 			<ul>
 			<%generateColor()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("ConditionalTemplate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('conditionaltemplate')">ConditionalTemplate</a></li>
-			<div id="div_conditionaltemplate" style="display : none;">
+			ConditionalTemplate
 			<ul>
 			<%generateConditionalTemplate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Content") != null){%>
-			<li><a href="#" onclick="toggle_visibility('content')">Content</a></li>
-			<div id="div_content" style="display : none;">
+			Content
 			<ul>
 			<%generateContent()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Copy") != null){%>
-			<li><a href="#" onclick="toggle_visibility('copy')">Copy</a></li>
-			<div id="div_copy" style="display : none;">
+			Copy
 			<ul>
 			<%generateCopy()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("CustomEntity") != null){%>
-			<li><a href="#" onclick="toggle_visibility('customentity')">CustomEntity</a></li>
-			<div id="div_customentity" style="display : none;">
+			CustomEntity
 			<ul>
 			<%generateCustomEntity()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("CustomPager") != null){%>
-			<li><a href="#" onclick="toggle_visibility('custompager')">CustomPager</a></li>
-			<div id="div_custompager" style="display : none;">
+			CustomPager
 			<ul>
 			<%generateCustomPager()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("CustomRelation") != null){%>
-			<li><a href="#" onclick="toggle_visibility('customrelation')">CustomRelation</a></li>
-			<div id="div_customrelation" style="display : none;">
+			CustomRelation
 			<ul>
 			<%generateCustomRelation()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Date") != null){%>
-			<li><a href="#" onclick="toggle_visibility('date')">Date</a></li>
-			<div id="div_date" style="display : none;">
+			Date
 			<ul>
 			<%generateDate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Editor") != null){%>
-			<li><a href="#" onclick="toggle_visibility('editor')">Editor</a></li>
-			<div id="div_editor" style="display : none;">
+			Editor
 			<ul>
 			<%generateEditor()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("EntityManagerPage") != null){%>
-			<li><a href="#" onclick="toggle_visibility('entitymanagerpage')">EntityManagerPage</a></li>
-			<div id="div_entitymanagerpage" style="display : none;">
+			EntityManagerPage
 			<ul>
 			<%generateEntityManagerPage()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("ExtendedForm") != null){%>
-			<li><a href="#" onclick="toggle_visibility('extendedform')">ExtendedForm</a></li>
-			<div id="div_extendedform" style="display : none;">
+			ExtendedForm
 			<ul>
 			<%generateExtendedForm()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("File") != null){%>
-			<li><a href="#" onclick="toggle_visibility('file')">File</a></li>
-			<div id="div_file" style="display : none;">
+			File
 			<ul>
 			<%generateFile()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("FileToFolder") != null){%>
-			<li><a href="#" onclick="toggle_visibility('filetofolder')">FileToFolder</a></li>
-			<div id="div_filetofolder" style="display : none;">
+			FileToFolder
 			<ul>
 			<%generateFileToFolder()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("FileToFolderExtension") != null){%>
-			<li><a href="#" onclick="toggle_visibility('filetofolderextension')">FileToFolderExtension</a></li>
-			<div id="div_filetofolderextension" style="display : none;">
+			FileToFolderExtension
 			<ul>
 			<%generateFileToFolderExtension()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Form") != null){%>
-			<li><a href="#" onclick="toggle_visibility('form')">Form</a></li>
-			<div id="div_form" style="display : none;">
+			Form
 			<ul>
 			<%generateForm()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Handler") != null){%>
-			<li><a href="#" onclick="toggle_visibility('handler')">Handler</a></li>
-			<div id="div_handler" style="display : none;">
+			Handler
 			<ul>
 			<%generateHandler()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Hidden") != null){%>
-			<li><a href="#" onclick="toggle_visibility('hidden')">Hidden</a></li>
-			<div id="div_hidden" style="display : none;">
+			Hidden
 			<ul>
 			<%generateHidden()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("HierarchicalPosition") != null){%>
-			<li><a href="#" onclick="toggle_visibility('hierarchicalposition')">HierarchicalPosition</a></li>
-			<div id="div_hierarchicalposition" style="display : none;">
+			HierarchicalPosition
 			<ul>
 			<%generateHierarchicalPosition()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Image") != null){%>
-			<li><a href="#" onclick="toggle_visibility('image')">Image</a></li>
-			<div id="div_image" style="display : none;">
+			Image
 			<ul>
 			<%generateImage()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("JoinEntity") != null){%>
-			<li><a href="#" onclick="toggle_visibility('joinentity')">JoinEntity</a></li>
-			<div id="div_joinentity" style="display : none;">
+			JoinEntity
 			<ul>
 			<%generateJoinEntity()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Link") != null){%>
-			<li><a href="#" onclick="toggle_visibility('link')">Link</a></li>
-			<div id="div_link" style="display : none;">
+			Link
 			<ul>
 			<%generateLink()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("LongDate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('longdate')">LongDate</a></li>
-			<div id="div_longdate" style="display : none;">
+			LongDate
 			<ul>
 			<%generateLongDate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Parameter") != null){%>
-			<li><a href="#" onclick="toggle_visibility('parameter')">Parameter</a></li>
-			<div id="div_parameter" style="display : none;">
+			Parameter
 			<ul>
 			<%generateParameter()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Password") != null){%>
-			<li><a href="#" onclick="toggle_visibility('password')">Password</a></li>
-			<div id="div_password" style="display : none;">
+			Password
 			<ul>
 			<%generatePassword()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Position") != null){%>
-			<li><a href="#" onclick="toggle_visibility('position')">Position</a></li>
-			<div id="div_position" style="display : none;">
+			Position
 			<ul>
 			<%generatePosition()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("Propagate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('propagate')">Propagate</a></li>
-			<div id="div_propagate" style="display : none;">
+			Propagate
 			<ul>
 			<%generatePropagate()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("RadioButton") != null){%>
-			<li><a href="#" onclick="toggle_visibility('radiobutton')">RadioButton</a></li>
-			<div id="div_radiobutton" style="display : none;">
+			RadioButton
 			<ul>
 			<%generateRadioButton()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("RadioFromReference") != null){%>
-			<li><a href="#" onclick="toggle_visibility('radiofromreference')">RadioFromReference</a></li>
-			<div id="div_radiofromreference" style="display : none;">
+			RadioFromReference
 			<ul>
 			<%generateRadioFromReference()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("Reference") != null){%>
-			<li><a href="#" onclick="toggle_visibility('reference')">Reference</a></li>
-			<div id="div_reference" style="display : none;">
+			Reference
 			<ul>
 			<%generateReference()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("RelationManager") != null){%>
-			<li><a href="#" onclick="toggle_visibility('relationmanager')">RelationManager</a></li>
-			<div id="div_relationmanager" style="display : none;">
+			RelationManager
 			<ul>
 			<%generateRelationManager()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("Section") != null){%>
-			<li><a href="#" onclick="toggle_visibility('section')">Section</a></li>
-			<div id="div_section" style="display : none;">
+			Section
 			<ul>
 			<%generateSection()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("Select") != null){%>
-			<li><a href="#" onclick="toggle_visibility('select')">Select</a></li>
-			<div id="div_select" style="display : none;">
+			Select
 			<ul>
 			<%generateSelect()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("SelectFromReference") != null){%>
-			<li><a href="#" onclick="toggle_visibility('selectfromreference')">SelectFromReference</a></li>
-			<div id="div_selectfromreference" style="display : none;">
+			SelectFromReference
 			<ul>
 			<%generateSelectFromReference()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("Skin") != null){%>
-			<li><a href="#" onclick="toggle_visibility('skin')">Skin</a></li>
-			<div id="div_skin" style="display : none;">
+			Skin
 			<ul>
 			<%generateSkin()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("Skinlet") != null){%>
-			<li><a href="#" onclick="toggle_visibility('skinlet')">Skinlet</a></li>
-			<div id="div_skinlet" style="display : none;">
+			Skinlet
 			<ul>
 			<%generateSkinlet()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributeColor") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributecolor')">SystemAttributeColor</a></li>
-			<div id="div_systemattributecolor" style="display : none;">
+			SystemAttributeColor
 			<ul>
 			<%generateSystemAttributeColor()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributeDate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributedate')">SystemAttributeDate</a></li>
-			<div id="div_systemattributedate" style="display : none;">
+			SystemAttributeDate
 			<ul>
 			<%generateSystemAttributeDate()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributeFile") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributefile')">SystemAttributeFile</a></li>
-			<div id="div_systemattributefile" style="display : none;">
+			SystemAttributeFile
 			<ul>
 			<%generateSystemAttributeFile()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("SystemAttributeFileToFolder") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributefiletofolder')">SystemAttributeFileToFolder</a></li>
-			<div id="div_systemattributefiletofolder" style="display : none;">
+			SystemAttributeFileToFolder
 			<ul>
 			<%generateSystemAttributeFileToFolder()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributeImage") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributeimage')">SystemAttributeImage</a></li>
-			<div id="div_systemattributeimage" style="display : none;">
+			SystemAttributeImage
 			<ul>
 			<%generateSystemAttributeImage()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("SystemAttributeInteger") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributeinteger')">SystemAttributeInteger</a></li>
-			<div id="div_systemattributeinteger" style="display : none;">
+			SystemAttributeInteger
 			<ul>
 			<%generateSystemAttributeInteger()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributeLongDate") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributelongdate')">SystemAttributeLongDate</a></li>
-			<div id="div_systemattributelongdate" style="display : none;">
+			SystemAttributeLongDate
 			<ul>
 			<%generateSystemAttributeLongDate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("SystemAttributePassword") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributepassword')">SystemAttributePassword</a></li>
-			<div id="div_systemattributepassword" style="display : none;">
+			SystemAttributePassword
 			<ul>
 			<%generateSystemAttributePassword()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributePosition") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributeposition')">SystemAttributePosition</a></li>
-			<div id="div_systemattributeposition" style="display : none;">
+			SystemAttributePosition
 			<ul>
 			<%generateSystemAttributePosition()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemAttributeText") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributetext')">SystemAttributeText</a></li>
-			<div id="div_systemattributetext" style="display : none;">
+			SystemAttributeText
 			<ul>
 			<%generateSystemAttributeText()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("SystemAttributeVarchar") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemattributevarchar')">SystemAttributeVarchar</a></li>
-			<div id="div_systemattributevarchar" style="display : none;">
+			SystemAttributeVarchar
 			<ul>
 			<%generateSystemAttributeVarchar()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemEntity") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systementity')">SystemEntity</a></li>
-			<div id="div_systementity" style="display : none;">
+			SystemEntity
 			<ul>
 			<%generateSystemEntity()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("SystemReference") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemreference')">SystemReference</a></li>
-			<div id="div_systemreference" style="display : none;">
+			SystemReference
 			<ul>
 			<%generateSystemReference()%> 
 			</ul>
-			</div>
 		<%}%>	
 		<%if (eAllContents("SystemRelation") != null){%>
-			<li><a href="#" onclick="toggle_visibility('systemrelation')">SystemRelation</a></li>
-			<div id="div_systemrelation" style="display : none;">
+			SystemRelation
 			<ul>
 			<%generateSystemRelation()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Template") != null){%>
-			<li><a href="#" onclick="toggle_visibility('template')">Template</a></li>
-			<div id="div_template" style="display : none;">
+			Template
 			<ul>
 			<%generateTemplate()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Text") != null){%>
-			<li><a href="#" onclick="toggle_visibility('text')">Text</a></li>
-			<div id="div_text" style="display : none;">
+			Text
 			<ul>
 			<%generateText()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("TextArea") != null){%>
-			<li><a href="#" onclick="toggle_visibility('textarea')">TextArea</a></li>
-			<div id="div_textarea" style="display : none;">
+			TextArea
 			<ul>
 			<%generateTextArea()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Trigger") != null){%>
-			<li><a href="#" onclick="toggle_visibility('trigger')">Trigger</a></li>
-			<div id="div_trigger" style="display : none;">
+			Trigger
 			<ul>
 			<%generateTrigger()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("UnsetParameter") != null){%>
-			<li><a href="#" onclick="toggle_visibility('unsetparameter')">UnsetParameter</a></li>
-			<div id="div_unsetparameter" style="display : none;">
+			UnsetParameter
 			<ul>
 			<%generateUnsetParameter()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Validation") != null){%>
-			<li><a href="#" onclick="toggle_visibility('validation')">Validation</a></li>
-			<div id="div_validation" style="display : none;">
+			Validation
 			<ul>
 			<%generateValidation()%> 
 			</ul>
-			</div>
 		<%}%>
 		<%if (eAllContents("Year") != null){%>
-			<li><a href="#" onclick="toggle_visibility('year')">Year</a></li>
-			<div id="div_year" style="display : none;">
+			Year
 			<ul>
 			<%generateYear()%> 
 			</ul>
-			</div>
-		<%}%>
-		</ul>
+		<%}%>	
 	</body>
 </html>
