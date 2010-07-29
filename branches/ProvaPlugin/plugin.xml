@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.becontent"
+            id="ProvaPlugin.contribution1">
+         <menu
+               label="New Submenu"
+               path="additions"
+               id="ProvaPlugin.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="New Action"
+               class="provaplugin.popup.actions.NewAction"
+               menubarPath="ProvaPlugin.menu1/group1"
+               enablesFor="1"
+               id="ProvaPlugin.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
