@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ASCII"?>
+<chain:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chain="http://www.obeo.fr/acceleo/chain">
+  <repository>
+    <files xsi:type="chain:Model" path="/ProvaPlugin/default/default.becontent"/>
+    <files xsi:type="chain:Folder" path="/ProvaPlugin/generatedFiles"/>
+    <files xsi:type="chain:Log" path="/ProvaPlugin/chain/default.log.txt"/>
+    <files xsi:type="chain:EmfMetamodel" path="http://becontent.metamodel"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/EntityManagerPage.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/definitionItem/entity/CustomEntity.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/BeContentModel.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Text.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/Form.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/form/ExtendedForm.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/CustomPager.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/Validation.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Checkbox.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Color.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Date.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Editor.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/File.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/FileToFolder.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Hidden.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeColor.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeDate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeFile.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeFileToFolder.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeImage.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeInteger.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeLongDate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributePassword.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributePosition.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeText.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/typedAttribute/AttributeVarchar.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/HierarchicalPosition.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Image.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Link.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/LongDate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Password.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Position.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/RadioButton.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/RadioFromReference.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/RelationManager.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/entityField/Reference.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Section.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Select.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/SelectFromReference.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Textarea.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/formElement/notStructuredElement/Year.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/Channel.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/Handler.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/viewItem/Template.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/viewItem/Skinlet.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/viewItem/Skin.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/viewItem/Content.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/JoinEntity.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/ConditionalTemplate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/definitionItem/relation/SystemRelation.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/definitionItem/relation/CustomRelation.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/SystemReference.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeColor.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeDate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeFile.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeFileToFolder.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeImage.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeInteger.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeLongDate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributePassword.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributePosition.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeText.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/systemEntityField/typedSystemAttribute/SystemAttributeVarchar.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/Parameter.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/UnsetParameter.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/Copy.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/Propagate.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/Trigger.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/applyCommand/Apply.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/applyCommand/ApplyItem.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/contentCommand/applyCommand/ApplyIndexed.mt"/>
+    <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/definitionItem/entity/SystemEntity.mt"/>
+  </repository>
+  <actions>
+    <actions xsi:type="chain:Generate" documentation="EntityManagerPage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.4" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="CustomEntity" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.5" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="BeContentModel" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.6" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Text" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.7" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Form" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.8" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ExtendedForm" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.9" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="CustomPager" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.10" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Validation" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.11" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Checkbox" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.12" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Color" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.13" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Date" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.14" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Editor" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.15" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="File" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.16" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="FileToFolder" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.17" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Hidden" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.18" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeColor" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.19" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeDate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.20" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeFile" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.21" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeFileToFolder" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.22" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeImage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.23" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeInteger" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.24" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeLongDate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.25" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributePassword" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.26" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributePosition" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.27" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeText" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.28" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="AttributeVarchar" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.29" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="HierarchicalPosition" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.30" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Image" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.31" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Link" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.32" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="LongDate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.33" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Password" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.34" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Position" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.35" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="RadioButton" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.36" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="RadioFromReference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.37" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="RelationManager" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.38" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Reference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.39" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Section" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.40" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Select" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.41" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SelectFromReference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.42" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Textarea" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.43" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Year" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.44" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Channel" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.45" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Handler" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.46" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Template" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.47" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Skinlet" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.48" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Skin" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.49" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Content" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.50" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="JoinEntity" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.51" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ConditionalTemplate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.52" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemRelation" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.53" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="CustomRelation" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.54" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemReference" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.55" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeColor" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.56" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeDate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.57" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeLongDate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.62" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeText" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.65" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributePassword" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.63" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributePosition" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.64" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeImage" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.60" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeInteger" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.61" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeVarchar" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.66" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeFile" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.58" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemAttributeFileToFolder" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.59" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Parameter" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.67" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="UnsetParameter" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.68" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Copy" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.69" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Propagate" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.70" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Trigger" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.71" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="Apply" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.72" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ApplyItem" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.73" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="ApplyIndexed" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.74" folder="//@repository/@files.1"/>
+    <actions xsi:type="chain:Generate" documentation="SystemEntity" log="//@repository/@files.2" model="//@repository/@files.0" metamodel="//@repository/@files.3" generator="//@repository/@files.75" folder="//@repository/@files.1"/>
+  </actions>
+</chain:Chain>
