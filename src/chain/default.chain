@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <chain:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chain="http://www.obeo.fr/acceleo/chain">
   <repository>
-    <files xsi:type="chain:Model" path="/ProvaPlugin/default/default.becontent"/>
+    <files xsi:type="chain:Model" path="/ProvaPlugin/src/model/default.becontent"/>
     <files xsi:type="chain:Folder" path="/ProvaPlugin/generatedFiles"/>
-    <files xsi:type="chain:Log" path="/ProvaPlugin/chain/default.log.txt"/>
+    <files xsi:type="chain:Log" path="/ProvaPlugin/src/chain/default.log.txt"/>
     <files xsi:type="chain:EmfMetamodel" path="http://becontent.metamodel"/>
     <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/EntityManagerPage.mt"/>
     <files xsi:type="chain:Generator" path="/ProvaPlugin/src/becontent/html/gen/beContentElement/definitionItem/entity/CustomEntity.mt"/>
