@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
-   <extension
-         point="fr.obeo.acceleo.gen.module">
-      <module
-            category="beContent"
-            chainPath="chain/default.chain"
-            description="beContent Model Documentation Generator"
-            title="beContent Documentation Generator">
-          <parameter
-               description="Input beContent model"
-               dialog="FILE_SELECTION"
-               extensions="becontent"/>
-		<parameter
-               description="Generated Documentation Output Folder"
-               dialog="FOLDER_SELECTION"/>
-		<parameter
-               description="Error log"
-               dialog="FILE_SELECTION"
-               extensions="log"/>
-      </module>
+      <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.becontent"
+            id="becontent.html.gen.contribution1">
+         <menu
+               label="beContent"
+               path="additions"
+               id="becontent.html.gen.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Generate Documentation"
+               class="becontent.html.gen.menu.GenerateDocumentation"
+               menubarPath="becontent.html.gen.menu1/group1"
+               enablesFor="1"
+               id="becontent.html.gen.menu1.GenerateDocumentation">
+         </action>
+      </objectContribution>
    </extension>
 
 </plugin>
