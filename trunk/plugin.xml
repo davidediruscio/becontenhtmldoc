@@ -4,22 +4,21 @@
    <extension
          point="fr.obeo.acceleo.gen.module">
       <module
-			category="beContent"
+            category="beContent"
             chainPath="chain/default.chain"
-            description="Generatore beContent to Php"
-            title="beContent to Php">
+            description="beContent Model Documentation Generator"
+            title="beContent Documentation Generator">
+          <parameter
+               description="Input beContent model"
+               dialog="FILE_SELECTION"
+               extensions="becontent"/>
+		<parameter
+               description="Generated Documentation Output Folder"
+               dialog="FOLDER_SELECTION"/>
 		<parameter
                description="Error log"
                dialog="FILE_SELECTION"
                extensions="log"/>
-		<parameter
-               description="Source code output folder"
-               dialog="FOLDER_SELECTION"/>
-          <parameter
-               defaultFile="default/default.becontent"
-               description="Input beContent model"
-               dialog="FILE_SELECTION"
-               extensions="becontent"/>
       </module>
    </extension>
 

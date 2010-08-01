@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<chain:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chain="http://www.obeo.fr/acceleo/chain">
+<chain:Chain xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:chain="http://www.obeo.fr/acceleo/chain" parametersFiles="//@repository/@files.0 //@repository/@files.1 //@repository/@files.2">
   <repository>
     <files xsi:type="chain:Model" path="/becontent.html.gen/default/default.becontent"/>
     <files xsi:type="chain:Folder" path="/becontent.html.gen/generatedFiles"/>
