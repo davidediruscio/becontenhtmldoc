@@ -1,7 +1,25 @@
 Manifest-Version: 1.0
-Bundle-Name: beContent HTML generator
+Bundle-Name: %Bundle-Name.0
 Bundle-SymbolicName: becontent.html.gen;singleton=true
 Bundle-Version: 1.0.0
 Bundle-Localization: plugin
 Require-Bundle: fr.obeo.acceleo.gen, org.eclipse.core.resources
 Import-Package: org.eclipse.core.resources, org.eclipse.core.runtime, org.eclipse.core.runtime.jobs 
+Export-Package: becontent.html.gen,
+ becontent.html.gen.beContentElement,
+ becontent.html.gen.beContentElement.definitionItem.entity,
+ becontent.html.gen.beContentElement.definitionItem.relation,
+ becontent.html.gen.contentCommand,
+ becontent.html.gen.contentCommand.applyCommand,
+ becontent.html.gen.entityField,
+ becontent.html.gen.entityField.typedAttribute,
+ becontent.html.gen.formElement,
+ becontent.html.gen.formElement.form,
+ becontent.html.gen.formElement.notStructuredElement,
+ becontent.html.gen.services,
+ becontent.html.gen.systemEntityField,
+ becontent.html.gen.systemEntityField.typedSystemAttribute,
+ becontent.html.gen.viewItem,
+ img
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: it.univaq.di
