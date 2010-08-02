@@ -16,14 +16,14 @@ import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 
+import fr.obeo.acceleo.chain.Chain;
+import fr.obeo.acceleo.chain.ChainCall;
 import fr.obeo.acceleo.chain.ChainFactory;
 import fr.obeo.acceleo.chain.Folder;
 import fr.obeo.acceleo.chain.Log;
 import fr.obeo.acceleo.chain.Model;
 import fr.obeo.acceleo.chain.impl.spec.CChain;
 import fr.obeo.acceleo.chain.tools.CLoaderUtils;
-import fr.obeo.acceleo.ecore.factories.EFactory;
-import fr.obeo.acceleo.ecore.factories.FactoryException;
 import fr.obeo.acceleo.gen.IGenFilter;
 import fr.obeo.acceleo.gen.template.eval.LaunchManager;
 import fr.obeo.acceleo.tools.plugins.AcceleoModuleProvider;
@@ -55,27 +55,13 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 		
 		String chainFileUri = "/becontent.html.gen/chain/default.chain";
 		CChain chain = getCalledChain(new Path(chainFileUri));
+		ChainFactory.eINSTANCE.getChainPackage();
 		Model model = ChainFactory.eINSTANCE.createModel();
-		try {
-			EFactory.eSet(model, "path", file.getFullPath().toOSString());
-		} catch (FactoryException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		Folder folder = ChainFactory.eINSTANCE.createFolder(); 
-		try {
-			EFactory.eSet(folder,"path", file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation");
-		} catch (FactoryException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} 
-		Log log = ChainFactory.eINSTANCE.createLog(); 
-		try {
-			EFactory.eSet(log,"path", file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
-		} catch (FactoryException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} 
+		model.setPath(file.getFullPath().toOSString());
+		Folder folder = ChainFactory.eINSTANCE.createFolder();
+		folder.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation"); 
+		Log log = ChainFactory.eINSTANCE.createLog();
+		log.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
 		
 		IGenFilter genFilter = null;
 		try {
