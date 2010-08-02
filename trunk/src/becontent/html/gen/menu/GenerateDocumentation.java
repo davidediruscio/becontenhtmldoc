@@ -1,11 +1,14 @@
 package becontent.html.gen.menu;
 
+import java.util.Iterator;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.action.IAction;
@@ -22,6 +25,7 @@ import fr.obeo.acceleo.chain.ChainFactory;
 import fr.obeo.acceleo.chain.Folder;
 import fr.obeo.acceleo.chain.Log;
 import fr.obeo.acceleo.chain.Model;
+import fr.obeo.acceleo.chain.Repository;
 import fr.obeo.acceleo.chain.impl.spec.CChain;
 import fr.obeo.acceleo.chain.tools.CLoaderUtils;
 import fr.obeo.acceleo.gen.IGenFilter;
@@ -55,9 +59,19 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 		
 		String chainFileUri = "/becontent.html.gen/chain/default.chain";
 		CChain chain = getCalledChain(new Path(chainFileUri));
-		ChainFactory.eINSTANCE.getChainPackage();
+		Repository rep = chain.getRepository();
+
 		Model model = ChainFactory.eINSTANCE.createModel();
 		model.setPath(file.getFullPath().toOSString());
+		EList lista = rep.getMembers();
+		Iterator iter = lista.iterator();
+		while ( iter.hasNext() ) {
+			String temp = (String)(iter.next());
+			MessageDialog.openInformation(
+					shell,
+					"Error",
+					temp);
+		}
 		Folder folder = ChainFactory.eINSTANCE.createFolder();
 		folder.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation"); 
 		Log log = ChainFactory.eINSTANCE.createLog();
