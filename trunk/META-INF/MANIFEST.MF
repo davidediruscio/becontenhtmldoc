@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Name: %Bundle-Name.0
+Bundle-Name: becontent.html.gen
 Bundle-SymbolicName: becontent.html.gen;singleton=true
 Bundle-Version: 1.0.0
 Bundle-Localization: plugin

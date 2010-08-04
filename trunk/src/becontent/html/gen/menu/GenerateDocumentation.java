@@ -85,22 +85,22 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 				MessageDialog.openInformation(
 						shell,
 						"Model",
-						file.getFullPath().toOSString());
+						file.getFullPath().toOSString().replace('\\', '/'));
 				 par.setPath(file.getFullPath().toOSString());
 			}
 			else if(par instanceof Folder) {
 				MessageDialog.openInformation(
 						shell,
 						"Model",
-						file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation");
-				par.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation");
+						file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/generatedDocumentation");
+				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/generatedDocumentation");
 			}
 			else if(par instanceof Log) {
 				MessageDialog.openInformation(
 						shell,
 						"Model",
-						file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
-				par.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
+						file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
+				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
 			}
 		}
 		
@@ -133,27 +133,8 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 		
 		MessageDialog.openInformation(
 			shell,
-			"ProvaPlugin Plug-in",
-			"New Action was executed.");
-	}
-	
-	/**
-	 * Creates a chain resource
-	 * @param callPath
-	 * @return the Chain resource
-	 */
-	private CChain getCalledChain(IPath callPath) {
-		IFile workspaceFile = ResourcesPlugin.getWorkspace().getRoot().getFile(callPath);
-		if (workspaceFile.exists()) {
-			return CLoaderUtils.getCChainForChainFile(workspaceFile);
-		} else {
-			java.io.File file = AcceleoModuleProvider.getDefault().getFile(callPath);
-			if (file != null && file.exists()) {
-				URI chainURI = URI.createFileURI(file.getAbsolutePath());
-				return CLoaderUtils.getCChainForChainURI(chainURI);
-			}
-		}
-		return null;
+			"Generate Documentation",
+			"The documentation has been generated.");
 	}
 
 	/**
