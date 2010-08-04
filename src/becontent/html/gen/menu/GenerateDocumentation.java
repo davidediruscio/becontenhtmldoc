@@ -1,5 +1,6 @@
 package becontent.html.gen.menu;
 
+import java.io.IOException;
 import java.util.Iterator;
 
 import org.eclipse.core.resources.IFile;
@@ -11,6 +12,9 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
@@ -22,6 +26,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import fr.obeo.acceleo.chain.Chain;
 import fr.obeo.acceleo.chain.ChainCall;
 import fr.obeo.acceleo.chain.ChainFactory;
+import fr.obeo.acceleo.chain.File;
 import fr.obeo.acceleo.chain.Folder;
 import fr.obeo.acceleo.chain.Log;
 import fr.obeo.acceleo.chain.Model;
@@ -56,26 +61,48 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 	public void run(IAction action) {		
 		Shell shell = new Shell();
 		IFile file = (IFile)((IStructuredSelection)selection).getFirstElement();
-		
-		String chainFileUri = "/becontent.html.gen/chain/default.chain";
-		CChain chain = getCalledChain(new Path(chainFileUri));
-		Repository rep = chain.getRepository();
+		String chainFilePath = "/becontent.html.gen/chain/default.chain";
 
-		Model model = ChainFactory.eINSTANCE.createModel();
-		model.setPath(file.getFullPath().toOSString());
-		EList lista = rep.getMembers();
-		Iterator iter = lista.iterator();
-		while ( iter.hasNext() ) {
-			String temp = (String)(iter.next());
+		ResourceSet resSet = new ResourceSetImpl();
+		URI chainURI = URI.createPlatformPluginURI(chainFilePath, true);
+		Resource res = resSet.createResource(chainURI);
+		try {
+			res.load(null);
+		} catch (IOException e1) {
 			MessageDialog.openInformation(
 					shell,
 					"Error",
-					temp);
+					"res.load()");
+			e1.printStackTrace();
 		}
-		Folder folder = ChainFactory.eINSTANCE.createFolder();
-		folder.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation"); 
-		Log log = ChainFactory.eINSTANCE.createLog();
-		log.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
+		
+		CChain chain = (CChain) res.getContents().get(0);
+		
+		EList<File> pars = chain.getParametersFiles();
+
+		for(File par : pars) {
+			if(par instanceof Model) {
+				MessageDialog.openInformation(
+						shell,
+						"Model",
+						file.getFullPath().toOSString());
+				 par.setPath(file.getFullPath().toOSString());
+			}
+			else if(par instanceof Folder) {
+				MessageDialog.openInformation(
+						shell,
+						"Model",
+						file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation");
+				par.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "generatedDocumentation");
+			}
+			else if(par instanceof Log) {
+				MessageDialog.openInformation(
+						shell,
+						"Model",
+						file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
+				par.setPath(file.getLocation().toOSString() + IPath.SEPARATOR + "file.log");
+			}
+		}
 		
 		IGenFilter genFilter = null;
 		try {
@@ -84,8 +111,7 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 				public boolean filter(java.io.File script, IFile targetFile, EObject object) throws CoreException {
 					return true;
 				}
-			};
-			
+			};		
 		} catch (Exception e) {
 			MessageDialog.openInformation(
 					shell,
@@ -101,6 +127,7 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 					shell,
 					"Error",
 					"2");
+			e.printStackTrace();
 		}
 		
 		
