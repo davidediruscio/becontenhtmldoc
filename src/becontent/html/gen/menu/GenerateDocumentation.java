@@ -1,14 +1,9 @@
 package becontent.html.gen.menu;
 
 import java.io.IOException;
-import java.util.Iterator;
-
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -23,19 +18,13 @@ import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 
-import fr.obeo.acceleo.chain.Chain;
-import fr.obeo.acceleo.chain.ChainCall;
-import fr.obeo.acceleo.chain.ChainFactory;
 import fr.obeo.acceleo.chain.File;
 import fr.obeo.acceleo.chain.Folder;
 import fr.obeo.acceleo.chain.Log;
 import fr.obeo.acceleo.chain.Model;
-import fr.obeo.acceleo.chain.Repository;
 import fr.obeo.acceleo.chain.impl.spec.CChain;
-import fr.obeo.acceleo.chain.tools.CLoaderUtils;
 import fr.obeo.acceleo.gen.IGenFilter;
 import fr.obeo.acceleo.gen.template.eval.LaunchManager;
-import fr.obeo.acceleo.tools.plugins.AcceleoModuleProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 
 public class GenerateDocumentation implements IObjectActionDelegate {
@@ -103,7 +92,7 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
 			}
 		}
-		
+				
 		IGenFilter genFilter = null;
 		try {
 			genFilter = new IGenFilter() {
