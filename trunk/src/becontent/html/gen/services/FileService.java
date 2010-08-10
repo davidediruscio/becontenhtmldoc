@@ -8,6 +8,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 import fr.obeo.acceleo.gen.template.eval.ENode;
 import fr.obeo.acceleo.gen.template.scripts.IScript;
@@ -46,14 +49,21 @@ public class FileService {
 	 * @return the complete path of the generated files folder
 	 */
 	public static String getGeneratedFilesPath(ENode node, boolean toOSString){
-		if ( toOSString )
-			return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;
+		if ( toOSString ) {
+			return ResourcesPlugin.getWorkspace().getRoot().getProjects()[1].getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;		
+			//return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;			
+			//return ResourcesPlugin.getWorkspace().getRoot().getProject().getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;
+		}
 		else
-			return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation()+"/generatedFiles/";		
+			return ResourcesPlugin.getWorkspace().getRoot().getProject().getLocation()+"/generatedFiles/";		
 	}
 	
 	public static void createImgFolder() throws IOException{
-		File sourceDir = new File(ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+"/src/img/");
+		String chainFilePath = "/becontent.html.gen/src/img/";
+
+		URI chainURI = URI.createPlatformPluginURI(chainFilePath, true);
+		
+		File sourceDir = new File(chainURI.toPlatformString(true));
 		File targetDir = new File(FileService.getGeneratedFilesPath(null)+"img/");
 		FileService.copyDirectory(sourceDir, targetDir);
 	}
