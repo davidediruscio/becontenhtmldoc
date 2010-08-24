@@ -8,9 +8,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.widgets.Shell;
 
 import fr.obeo.acceleo.gen.template.eval.ENode;
 import fr.obeo.acceleo.gen.template.scripts.IScript;
@@ -50,27 +54,21 @@ public class FileService {
 	 */
 	public static String getGeneratedFilesPath(ENode node, boolean toOSString){
 		if ( toOSString ) {
-			return ResourcesPlugin.getWorkspace().getRoot().getProjects()[1].getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;		
-			//return ResourcesPlugin.getWorkspace().getRoot().getProject("becontent.html.gen").getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;			
-			//return ResourcesPlugin.getWorkspace().getRoot().getProject().getLocation().toOSString()+ File.separatorChar + "generatedFiles" + File.separatorChar;
+			return ResourcesPlugin.getWorkspace().getRoot().getProjects()[0].getLocation().toOSString()+ File.separatorChar + "generatedDocumentation" + File.separatorChar;		
 		}
 		else
-			return ResourcesPlugin.getWorkspace().getRoot().getProject().getLocation()+"/generatedFiles/";		
+			return ResourcesPlugin.getWorkspace().getRoot().getProjects()[0].getLocation()+"/generatedDocumentation/";		
 	}
 	
 	public static void createImgFolder() throws IOException{
-		String chainFilePath = "/becontent.html.gen/src/img/";
-
-		URI chainURI = URI.createPlatformPluginURI(chainFilePath, true);
-		
-		File sourceDir = new File(chainURI.toPlatformString(true));
+		File sourceDir = new File(Platform.resolve(Platform.getBundle("becontent.html.gen").getEntry("/")).getPath().substring(1) + "/src/img");
 		File targetDir = new File(FileService.getGeneratedFilesPath(null)+"img/");
 		FileService.copyDirectory(sourceDir, targetDir);
 	}
 	
     private static void copyDirectory(File sourceLocation , File targetLocation)
     throws IOException {
-        
+
         if (sourceLocation.isDirectory()) {
             if (!targetLocation.exists()) {
                 targetLocation.mkdir();
@@ -78,11 +76,12 @@ public class FileService {
             
             String[] children = sourceLocation.list();
             for (int i=0; i<children.length; i++) {
-                copyDirectory(new File(sourceLocation, children[i]),
+            	if ( children[i].contains(".ico") || children[i].contains(".png") ){
+            		copyDirectory(new File(sourceLocation, children[i]),
                         new File(targetLocation, children[i]));
+            	}
             }
-        } else {
-            
+        } else {      
             InputStream in = new FileInputStream(sourceLocation);
             OutputStream out = new FileOutputStream(targetLocation);
             
