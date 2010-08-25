@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;
 
@@ -100,7 +101,7 @@ public class HTMLGenerator {
 	 * @throws IOException 
 	 */
 	public String generateHeader(ENode node, String title) throws IOException{
-		FileService.createImgFolder();
+		FileService.createImgFolder(Platform.resolve(getClass().getResource("../../../../img")).getPath());
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n")
 				 		.append(" <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"> \n")

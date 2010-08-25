@@ -60,8 +60,10 @@ public class FileService {
 			return ResourcesPlugin.getWorkspace().getRoot().getProjects()[0].getLocation()+"/generatedDocumentation/";		
 	}
 	
-	public static void createImgFolder() throws IOException{
-		File sourceDir = new File(Platform.resolve(Platform.getBundle("becontent.html.gen").getEntry("/")).getPath().substring(1) + "/src/img");
+	public static void createImgFolder(String uri) throws IOException{
+		//File sourceDir = new File(Platform.resolve(Platform.getBundle("becontent.html.gen").getEntry("/")).getPath().substring(1) + "/src/img");
+		//ClassLoader.getSystemClassLoader().getResource("C:/eclipse_Acceleo/plugins/becontent.html.gen_1.0.0.jar!/src/img");
+		File sourceDir = new File(uri);
 		File targetDir = new File(FileService.getGeneratedFilesPath(null)+"img/");
 		FileService.copyDirectory(sourceDir, targetDir);
 	}
