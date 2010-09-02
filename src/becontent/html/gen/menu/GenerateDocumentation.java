@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -69,25 +70,57 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 		
 		EList<File> pars = chain.getParametersFiles();
 
+		try {
+			MessageDialog.openInformation(
+					shell,
+					"Model",
+					"Test");
+			MessageDialog.openInformation(
+					shell,
+					"Model",
+					getClass().toString());	
+			MessageDialog.openInformation(
+					shell,
+					"Model",
+					getClass().getResource("/src/img").toString());
+			MessageDialog.openInformation(
+					shell,
+					"Model",
+					getClass().getResource("/src/img").getPath().toString());
+			java.io.File a = new java.io.File(getClass().getResource("/becontent/html/gen/img").getPath().toString());
+			MessageDialog.openInformation(
+					shell,
+					"Model",
+					String.valueOf(a.isDirectory()));
+			
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			MessageDialog.openInformation(
+					shell,
+					"Model",
+					e1.getMessage());
+		}
+		
 		for(File par : pars) {
 			if(par instanceof Model) {
 				MessageDialog.openInformation(
 						shell,
-						"Model",
+						"Model1",
 						file.getFullPath().toOSString().replace('\\', '/'));
 				 par.setPath(file.getFullPath().toOSString());
 			}
 			else if(par instanceof Folder) {
 				MessageDialog.openInformation(
 						shell,
-						"Model",
+						"Model1",
 						file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/generatedDocumentation");
 				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/generatedDocumentation");
 			}
 			else if(par instanceof Log) {
 				MessageDialog.openInformation(
 						shell,
-						"Model",
+						"Model1",
 						file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
 				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
 			}

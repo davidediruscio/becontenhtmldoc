@@ -101,6 +101,7 @@ public class HTMLGenerator {
 	 * @throws IOException 
 	 */
 	public String generateHeader(ENode node, String title) throws IOException{
+		Shell shell = new Shell();
 		FileService.createImgFolder(Platform.resolve(getClass().getResource("../../../../img")).getPath());
 		StringBuffer toReturn = new StringBuffer();
 		toReturn.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n")
