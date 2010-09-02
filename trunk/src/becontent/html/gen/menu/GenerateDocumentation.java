@@ -106,21 +106,21 @@ public class GenerateDocumentation implements IObjectActionDelegate {
 			if(par instanceof Model) {
 				MessageDialog.openInformation(
 						shell,
-						"Model1",
+						"Model",
 						file.getFullPath().toOSString().replace('\\', '/'));
 				 par.setPath(file.getFullPath().toOSString());
 			}
 			else if(par instanceof Folder) {
 				MessageDialog.openInformation(
 						shell,
-						"Model1",
+						"Folder",
 						file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/generatedDocumentation");
 				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/generatedDocumentation");
 			}
 			else if(par instanceof Log) {
 				MessageDialog.openInformation(
 						shell,
-						"Model1",
+						"Log",
 						file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
 				par.setPath(file.getFullPath().toOSString().replace('\\', '/').replace("/" + file.getName(), "") + "/file.log");
 			}
